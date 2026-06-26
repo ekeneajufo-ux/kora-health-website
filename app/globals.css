@@ -5,6 +5,8 @@
 :root {
   --background: #0A0F1E;
   --foreground: #F5EDD8;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Hedvig Letters Serif', Georgia, Cambria, serif;
 }
 
 html {
@@ -14,7 +16,27 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+p, li, a, button, input, textarea, label, span {
+  font-family: var(--font-sans);
+}
+
+/* Nav and footer use serif for editorial feel */
+nav, footer {
+  font-family: var(--font-serif);
+}
+
+nav a, footer a {
+  font-family: var(--font-sans);
 }
 
 @keyframes pulseGreen {
