@@ -150,24 +150,25 @@ export default function Home() {
 
       {/* NAVBAR */}
       <nav
+        aria-label="Kora Health main navigation"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           navScrolled ? 'bg-[#0A0F1E]/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00C896] to-[#009970] flex items-center justify-center">
+          <a href="/" aria-label="Kora Health home" className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00C896] to-[#009970] flex items-center justify-center" aria-hidden="true">
               <span className="text-white font-bold text-sm">K</span>
             </div>
             <span className="text-xl font-bold text-white">Kora</span>
             <span className="text-xs text-[#D4960A] font-semibold ml-0.5 hidden sm:inline">Health</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">
-            <a href="#capabilities" className="hover:text-white transition-colors">Capabilities</a>
-            <a href="#use-cases" className="hover:text-white transition-colors">Use Cases</a>
-            <a href="#population" className="hover:text-white transition-colors">Population Health</a>
-            <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
-            <a href="#investors" className="hover:text-white transition-colors">Investors</a>
+          </a>
+          <div className="hidden md:flex items-center gap-8 text-sm text-slate-400" role="menubar">
+            <a href="#capabilities" title="Kora Platform Capabilities" className="hover:text-white transition-colors">Capabilities</a>
+            <a href="#use-cases" title="Who Kora Serves — Clinics, Health Systems, Governments" className="hover:text-white transition-colors">Use Cases</a>
+            <a href="#population" title="Population Health Engine for Africa" className="hover:text-white transition-colors">Population Health</a>
+            <a href="#how-it-works" title="How Kora Works" className="hover:text-white transition-colors">How It Works</a>
+            <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
           </div>
           <a
             href="mailto:ekene.ajufo@gmail.com?subject=Kora Demo Request"
@@ -178,8 +179,10 @@ export default function Home() {
         </div>
       </nav>
 
+      <main>
+
       {/* HERO */}
-      <section className="relative pt-36 pb-28 px-6 overflow-hidden">
+      <section id="hero" aria-label="Hero — Kora Clinical Intelligence Platform for Africa" className="relative pt-36 pb-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/8 via-transparent to-[#D4960A]/4 pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#00C896]/4 blur-3xl pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
@@ -210,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="problem" aria-label="The Problem — Fragmented Healthcare Data in Africa" className="py-24 px-6 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -243,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* SOLUTION INTRO */}
-      <section className="py-20 px-6 text-center">
+      <section id="solution" aria-label="The Solution — Kora Clinical Intelligence Engine" className="py-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">The Solution</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Kora Clinical Intelligence Engine</h2>
@@ -254,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* CAPABILITIES */}
-      <section id="capabilities" className="py-6 pb-24 px-6">
+      <section id="capabilities" aria-label="Kora Platform Capabilities" className="py-6 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap, i) => (
@@ -269,7 +272,7 @@ export default function Home() {
       </section>
 
       {/* USE CASES */}
-      <section id="use-cases" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="use-cases" aria-label="Who Kora Serves — Clinics, Health Systems, Governments, and NGOs in Africa" className="py-24 px-6 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto">
           <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">Who We Serve</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Built for every layer of the health system.</h2>
@@ -286,9 +289,8 @@ export default function Home() {
               </button>
             ))}
           </div>
-          {(Object.entries(tabs) as [TabKey, typeof tabs[TabKey]][]).map(([key, tab]) =>
-            activeTab === key && (
-              <div key={key} className="grid md:grid-cols-2 gap-12 items-center">
+          {(Object.entries(tabs) as [TabKey, typeof tabs[TabKey]][]).map(([key, tab]) => (
+              <div key={key} className={`grid md:grid-cols-2 gap-12 items-center ${activeTab !== key ? 'hidden' : ''}`}>
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-5">{tab.headline}</h3>
                   <p className="text-slate-400 text-lg leading-relaxed mb-6">{tab.body}</p>
@@ -312,7 +314,7 @@ export default function Home() {
       </section>
 
       {/* POPULATION HEALTH */}
-      <section id="population" className="py-24 px-6 relative overflow-hidden">
+      <section id="population" aria-label="Population Health Engine — Disease Surveillance and Outbreak Detection across Africa" className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/5 to-transparent pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -364,7 +366,7 @@ export default function Home() {
       </section>
 
       {/* OFFLINE FIRST */}
-      <section className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="offline-first" aria-label="Offline-First Architecture for Low-Connectivity African Healthcare Environments" className="py-24 px-6 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
@@ -422,7 +424,7 @@ export default function Home() {
       </section>
 
       {/* DATA SYNTHESIS */}
-      <section className="py-24 px-6">
+      <section id="data-synthesis" aria-label="Data Synthesis — Paper Records, EMRs, and Digital Sources" className="py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">Data Synthesis</p>
           <h2 className="text-4xl font-bold text-white mb-6">Written. Digital. Spoken. We take it all.</h2>
@@ -447,7 +449,7 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="how-it-works" aria-label="How Kora Works — Ingest, Synthesize, Deliver" className="py-24 px-6 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto">
           <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">How It Works</p>
           <h2 className="text-4xl font-bold text-white mb-16 text-center">From fragmented data to decision-ready intelligence in three steps.</h2>
@@ -469,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* INVESTOR */}
-      <section id="investors" className="py-24 px-6 relative overflow-hidden">
+      <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/8 via-transparent to-[#D4960A]/4 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-3xl">
@@ -517,7 +519,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="py-24 px-6 bg-[#0D1B2A]">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">FAQ</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Frequently asked.</h2>
@@ -526,14 +528,13 @@ export default function Home() {
               <div key={i} className="border border-white/10 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                  aria-expanded={activeFaq === i}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
                 >
                   <span className="text-white font-semibold pr-4">{faq.q}</span>
                   <span className="text-[#00C896] flex-shrink-0 text-xl font-light">{activeFaq === i ? '−' : '+'}</span>
                 </button>
-                {activeFaq === i && (
-                  <div className="px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
-                )}
+                <div className={`px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4 ${activeFaq !== i ? 'hidden' : ''}`}>{faq.a}</div>
               </div>
             ))}
           </div>
@@ -541,7 +542,7 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-28 px-6 text-center">
+      <section id="contact" aria-label="Request a Demo of Kora Health" className="py-28 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">See what Kora looks like in your workflow.</h2>
           <p className="text-slate-400 text-lg mb-10">A 30-minute demo with our clinical team. No prep required.</p>
@@ -549,8 +550,10 @@ export default function Home() {
         </div>
       </section>
 
+      </main>
+
       {/* FOOTER */}
-      <footer className="bg-[#0D1B2A] border-t border-white/10 py-16 px-6">
+      <footer aria-label="Kora Health site footer" className="bg-[#0D1B2A] border-t border-white/10 py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div className="md:col-span-2">
