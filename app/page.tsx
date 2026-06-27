@@ -207,30 +207,36 @@ export default function Home() {
       {/* HERO */}
       <section id="hero" aria-label="Hero — Kora Clinical Intelligence Platform for Africa" className="relative pt-36 pb-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#2DD4BF]/4 blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 right-0 w-[700px] h-[700px] rounded-full bg-[#2DD4BF]/4 blur-3xl pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="h-px w-10 bg-[#EAB308]" />
-            <span className="text-[#EAB308] text-sm font-semibold tracking-widest uppercase">Africa&apos;s Clinical Intelligence Engine</span>
-          </div>
-          <h1 className="display-serif text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 max-w-5xl">
-            The answer is in your patients&apos; records.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#1BBFA8]">All of them.</span>
-          </h1>
-          <p className="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
-            Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Works offline. Digitizes paper. Tracks populations. Built for Africa.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-24">
-            <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Call</a>
-            <a href="#contact" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Investor Deck →</a>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
-            {heroStats.map((s, i) => (
-              <div key={i}>
-                <div className="text-3xl md:text-4xl font-bold text-[#2DD4BF] mb-2">{s.number}</div>
-                <div className="text-sm text-slate-500 leading-snug">{s.label}</div>
+          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
+            {/* Left — headline + CTAs */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-px w-10 bg-[#EAB308]" />
+                <span className="text-[#EAB308] text-sm font-semibold tracking-widest uppercase">Africa&apos;s Clinical Intelligence Engine</span>
               </div>
-            ))}
+              <h1 className="display-serif text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6">
+                The answer is in your patients&apos; records.{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#1BBFA8]">All of them.</span>
+              </h1>
+              <p className="text-xl text-slate-400 mb-10 leading-relaxed">
+                Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Works offline. Digitizes paper. Tracks populations. Built for Africa.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Call</a>
+                <a href="#contact" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Investor Deck →</a>
+              </div>
+            </div>
+            {/* Right — stats panel */}
+            <div className="grid grid-cols-2 gap-4">
+              {heroStats.map((s, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between">
+                  <div className="text-3xl md:text-4xl font-bold text-[#2DD4BF] mb-3">{s.number}</div>
+                  <div className="text-sm text-slate-400 leading-snug">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -650,10 +656,10 @@ export default function Home() {
                   { title: 'Proven GTM path', body: 'Private clinics → health systems → national ministries. Each stage funds the next and expands the data network effect.' },
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <span className="text-[#2DD4BF] font-bold flex-shrink-0 mt-0.5">✓</span>
+                    <span className="text-[#2DD4BF] font-bold flex-shrink-0 mt-1">✓</span>
                     <div>
-                      <div className="text-white font-semibold text-sm mb-0.5">{point.title}</div>
-                      <div className="text-slate-400 text-sm leading-relaxed">{point.body}</div>
+                      <div className="text-white font-semibold text-base mb-1">{point.title}</div>
+                      <div className="text-slate-400 text-base leading-relaxed">{point.body}</div>
                     </div>
                   </div>
                 ))}
