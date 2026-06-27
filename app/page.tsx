@@ -450,7 +450,7 @@ export default function Home() {
       <section id="how-it-works" className="py-24 px-6 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto">
           <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">How It Works</p>
-          <h2 className="text-4xl font-bold text-white mb-16 text-center">From fragmented data to clinical clarity in three steps.</h2>
+          <h2 className="text-4xl font-bold text-white mb-16 text-center">From fragmented data to decision-ready intelligence in three steps.</h2>
           <div className="grid md:grid-cols-3 gap-10">
             {[
               { step: '01', title: 'Ingest', body: 'Connect your existing EMRs, scan paper records, and upload data in any format — structured or unstructured, digital or handwritten, lab printouts or voice notes.', color: '#00C896' },
@@ -561,7 +561,7 @@ export default function Home() {
                 <span className="text-xl font-bold text-white">Kora Health</span>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-                Clinical Clarity for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence — online or offline.
+                Pulse Hub for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence — online or offline.
               </p>
             </div>
             <div>
@@ -585,7 +585,7 @@ export default function Home() {
           </div>
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-slate-600 text-sm">© 2026 Kora Health. All rights reserved.</div>
-            <div className="text-slate-600 text-sm">Clinical Clarity for Confident Decisions across Africa.</div>
+            <div className="text-slate-600 text-sm">Pulse Hub for Confident Decisions across Africa.</div>
           </div>
         </div>
       </footer>
