@@ -144,8 +144,8 @@ export default function Home() {
 
   const heroStats = [
     { number: '80%', label: 'of African healthcare data is unstructured or paper-based' },
-    { number: '40 min', label: 'average per-patient chart review time without Kora' },
-    { number: '2 min', label: 'with Kora — complete synthesis from any source' },
+    { number: '15+', label: 'languages supported for paper record OCR and digitization' },
+    { number: '2 min', label: 'to synthesize a complete patient record from any source' },
     { number: '0%', label: 'internet required for core clinical AI functions' },
   ];
 
@@ -205,10 +205,10 @@ export default function Home() {
       <main>
 
       {/* HERO */}
-      <section id="hero" aria-label="Hero — Kora Clinical Intelligence Platform for Africa" className="relative pt-36 pb-28 px-6 overflow-hidden">
+      <section id="hero" aria-label="Hero — Kora Clinical Intelligence Platform for Africa" className="relative pt-36 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
         <div className="absolute top-1/3 right-0 w-[700px] h-[700px] rounded-full bg-[#2DD4BF]/4 blur-3xl pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
             {/* Left — headline + CTAs */}
             <div>
@@ -242,8 +242,8 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" aria-label="The Problem — Fragmented Healthcare Data in Africa" className="py-24 px-6 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto">
+      <section id="problem" aria-label="The Problem — Fragmented Healthcare Data in Africa" className="px-6 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">The Problem</p>
@@ -275,8 +275,8 @@ export default function Home() {
       </section>
 
       {/* SOLUTION INTRO */}
-      <section id="solution" aria-label="The Solution — Kora Clinical Intelligence Engine" className="py-20 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
+      <section id="solution" aria-label="The Solution — Kora Clinical Intelligence Engine" className="px-6 text-center">
+        <div className="max-w-4xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">The Solution</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Kora Clinical Intelligence Engine</h2>
           <p className="text-xl text-slate-400 leading-relaxed">
@@ -286,8 +286,8 @@ export default function Home() {
       </section>
 
       {/* CAPABILITIES */}
-      <section id="capabilities" aria-label="Kora Platform Capabilities" className="py-6 pb-24 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section id="capabilities" aria-label="Kora Platform Capabilities" className="px-6">
+        <div className="max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap, i) => (
               <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 hover:border-[#2DD4BF]/40 transition-all duration-200 group">
@@ -301,8 +301,8 @@ export default function Home() {
       </section>
 
       {/* USE CASES */}
-      <section id="use-cases" aria-label="Who Kora Serves — Clinics, Health Systems, Governments, and NGOs in Africa" className="py-24 px-6 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto">
+      <section id="use-cases" aria-label="Who Kora Serves — Clinics, Health Systems, Governments, and NGOs in Africa" className="px-6 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">Who We Serve</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Built for every layer of the health system.</h2>
           <div className="flex flex-wrap gap-2 mb-12 justify-center">
@@ -343,9 +343,9 @@ export default function Home() {
       </section>
 
       {/* POPULATION HEALTH */}
-      <section id="population" aria-label="Population Health Engine — Disease Surveillance and Outbreak Detection across Africa" className="py-24 px-6 relative overflow-hidden">
+      <section id="population" aria-label="Population Health Engine — Disease Surveillance and Outbreak Detection across Africa" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Population Health</p>
@@ -395,8 +395,8 @@ export default function Home() {
       </section>
 
       {/* OFFLINE FIRST */}
-      <section id="offline-first" aria-label="Offline-First Architecture for Low-Connectivity African Healthcare Environments" className="py-24 px-6 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto">
+      <section id="offline-first" aria-label="Offline-First Architecture for Low-Connectivity African Healthcare Environments" className="px-6 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
               <div className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-8">
@@ -453,8 +453,8 @@ export default function Home() {
       </section>
 
       {/* DATA SYNTHESIS */}
-      <section id="data-synthesis" aria-label="Data Synthesis — Paper Records, EMRs, and Digital Sources" className="py-24 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section id="data-synthesis" aria-label="Data Synthesis — Paper Records, EMRs, and Digital Sources" className="px-6">
+        <div className="max-w-7xl mx-auto text-center py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Data Synthesis</p>
           <h2 className="text-4xl font-bold text-white mb-6">Written. Digital. Spoken. We take it all.</h2>
           <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
@@ -478,8 +478,8 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" aria-label="How Kora Works — Ingest, Synthesize, Deliver" className="py-24 px-6 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto">
+      <section id="how-it-works" aria-label="How Kora Works — Ingest, Synthesize, Deliver" className="px-6 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">How It Works</p>
           <h2 className="text-4xl font-bold text-white mb-16 text-center">From fragmented data to decision-ready intelligence in three steps.</h2>
           <div className="grid md:grid-cols-3 gap-10">
@@ -500,9 +500,9 @@ export default function Home() {
       </section>
 
       {/* EMR PARTNERSHIP */}
-      <section id="emr-partners" aria-label="EMR Partnership Program — Integrate Kora with Your Electronic Medical Records System" className="py-24 px-6 relative overflow-hidden">
+      <section id="emr-partners" aria-label="EMR Partnership Program — Integrate Kora with Your Electronic Medical Records System" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EAB308]/5 via-transparent to-[#2DD4BF]/5 pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto py-14">
           <div className="text-center mb-16">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">For EMR Vendors &amp; Health IT Partners</p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight max-w-3xl mx-auto">
@@ -615,9 +615,9 @@ export default function Home() {
       </section>
 
       {/* INVESTOR */}
-      <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="py-24 px-6 relative overflow-hidden">
+      <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Left column — narrative */}
             <div>
@@ -670,8 +670,8 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="py-24 px-6 bg-[#0F172A]">
-        <div className="max-w-3xl mx-auto">
+      <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="px-6 bg-[#0F172A]">
+        <div className="max-w-3xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">FAQ</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Frequently asked.</h2>
           <div className="space-y-4">
@@ -693,8 +693,8 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section id="contact" aria-label="Schedule a Call with Kora Health" className="py-28 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
+      <section id="contact" aria-label="Schedule a Call with Kora Health" className="px-6 text-center">
+        <div className="max-w-2xl mx-auto py-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">See what Kora looks like in your workflow.</h2>
           <p className="text-slate-400 text-lg mb-10">A 30-minute call with our clinical team. No prep required.</p>
           <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-10 py-5 rounded-xl hover:bg-[#1BBFA8] transition-colors inline-block text-lg">Schedule a Call →</a>
