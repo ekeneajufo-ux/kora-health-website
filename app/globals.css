@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #0A0F1E;
-  --foreground: #F5EDD8;
-  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Hedvig Letters Serif', Georgia, Cambria, serif;
+  /* Kora Health brand palette */
+  --color-navy:  #0A1A2F;
+  --color-ink:   #0F172A;
+  --color-teal:  #2DD4BF;
+  --color-amber: #EAB308;
+  --color-cream: #FAF5EB;
+
+  --background: var(--color-navy);
+  --foreground: var(--color-cream);
+
+  /* Typography */
+  --font-display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', 'Liberation Sans', Arial, sans-serif;
 }
 
 html {
@@ -16,12 +25,19 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 18px;
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Display headings use the brand serif (Liberation Serif / Libre Baskerville) */
+h1 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   letter-spacing: -0.03em;
 }
@@ -30,20 +46,22 @@ p, li, a, button, input, textarea, label, span {
   font-family: var(--font-sans);
 }
 
-/* Nav and footer use serif for editorial feel */
-nav, footer {
-  font-family: var(--font-serif);
+/* Hero display headline uses serif for editorial gravitas */
+.display-serif {
+  font-family: var(--font-display);
 }
 
-nav a, footer a {
+/* Nav and footer use sans */
+nav, footer {
   font-family: var(--font-sans);
 }
 
-@keyframes pulseGreen {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.5); }
-  50% { box-shadow: 0 0 0 10px rgba(0, 200, 150, 0); }
+/* Smooth pulse for the offline indicator dot */
+@keyframes pulseTeal {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.45); }
+  50%       { box-shadow: 0 0 0 10px rgba(45, 212, 191, 0); }
 }
 
 .pulse-green {
-  animation: pulseGreen 2s infinite;
+  animation: pulseTeal 2s infinite;
 }

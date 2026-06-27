@@ -146,22 +146,40 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A0F1E] text-white">
+    <div className="min-h-screen bg-[#0A1A2F] text-white">
 
       {/* NAVBAR */}
       <nav
         aria-label="Kora Health main navigation"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          navScrolled ? 'bg-[#0A0F1E]/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+          navScrolled ? 'bg-[#0A1A2F]/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" aria-label="Kora Health home" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00C896] to-[#009970] flex items-center justify-center" aria-hidden="true">
-              <span className="text-white font-bold text-sm">K</span>
+          <a href="/" aria-label="Kora Health home" className="flex items-center gap-3">
+            <svg viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto" aria-hidden="true">
+              {/* Kora neck */}
+              <line x1="18" y1="1" x2="18" y2="10" stroke="#EAB308" strokeWidth="2.5" strokeLinecap="round"/>
+              {/* Tuning pegs */}
+              <circle cx="14" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
+              <circle cx="22" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
+              <circle cx="14" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
+              <circle cx="22" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
+              {/* Teal strand — left sinusoid */}
+              <path d="M12 10 C2 20 28 28 12 40 C2 48 26 52 12 56" stroke="#2DD4BF" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+              {/* Amber strand — right sinusoid */}
+              <path d="M24 10 C34 20 8 28 24 40 C34 48 10 52 24 56" stroke="#EAB308" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+              {/* DNA rungs / kora strings */}
+              <line x1="13" y1="16" x2="23" y2="16" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+              <line x1="7"  y1="24" x2="29" y2="24" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
+              <line x1="7"  y1="36" x2="29" y2="36" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
+              <line x1="13" y1="44" x2="23" y2="44" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+              <line x1="7"  y1="50" x2="29" y2="50" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.35"/>
+            </svg>
+            <div>
+              <div className="text-lg font-bold text-white leading-tight tracking-tight">Kora</div>
+              <div className="text-[10px] text-[#EAB308] font-semibold tracking-[0.2em] uppercase leading-none">Health</div>
             </div>
-            <span className="text-xl font-bold text-white">Kora</span>
-            <span className="text-xs text-[#D4960A] font-semibold ml-0.5 hidden sm:inline">Health</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-slate-400" role="menubar">
             <a href="#capabilities" title="Kora Platform Capabilities" className="hover:text-white transition-colors">Capabilities</a>
@@ -172,7 +190,7 @@ export default function Home() {
           </div>
           <a
             href="mailto:ekene.ajufo@gmail.com?subject=Kora Demo Request"
-            className="bg-[#00C896] text-[#0A0F1E] font-semibold px-5 py-2 rounded-lg hover:bg-[#00A87A] transition-colors text-sm"
+            className="bg-[#2DD4BF] text-[#0A1A2F] font-semibold px-5 py-2 rounded-lg hover:bg-[#1BBFA8] transition-colors text-sm"
           >
             Request Demo
           </a>
@@ -183,28 +201,28 @@ export default function Home() {
 
       {/* HERO */}
       <section id="hero" aria-label="Hero — Kora Clinical Intelligence Platform for Africa" className="relative pt-36 pb-28 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/8 via-transparent to-[#D4960A]/4 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#00C896]/4 blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#2DD4BF]/4 blur-3xl pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <div className="h-px w-10 bg-[#D4960A]" />
-            <span className="text-[#D4960A] text-sm font-semibold tracking-widest uppercase">Africa&apos;s Clinical Intelligence Engine</span>
+            <div className="h-px w-10 bg-[#EAB308]" />
+            <span className="text-[#EAB308] text-sm font-semibold tracking-widest uppercase">Africa&apos;s Clinical Intelligence Engine</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.08] mb-6 max-w-5xl">
+          <h1 className="display-serif text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 max-w-5xl">
             The answer is in your patients&apos; records.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C896] to-[#00A87A]">All of them.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#1BBFA8]">All of them.</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
             Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Works offline. Digitizes paper. Tracks populations. Built for Africa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-24">
-            <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Demo Request" className="bg-[#00C896] text-[#0A0F1E] font-bold px-8 py-4 rounded-xl hover:bg-[#00A87A] transition-colors text-center">Request a Demo</a>
+            <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Demo Request" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Request a Demo</a>
             <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Investor Deck Request" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Investor Deck →</a>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
             {heroStats.map((s, i) => (
               <div key={i}>
-                <div className="text-3xl md:text-4xl font-bold text-[#00C896] mb-2">{s.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#2DD4BF] mb-2">{s.number}</div>
                 <div className="text-sm text-slate-500 leading-snug">{s.label}</div>
               </div>
             ))}
@@ -213,13 +231,13 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" aria-label="The Problem — Fragmented Healthcare Data in Africa" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="problem" aria-label="The Problem — Fragmented Healthcare Data in Africa" className="py-24 px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">The Problem</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Africa doesn&apos;t have a data shortage. It has a <em className="text-[#D4960A] not-italic">clarity crisis.</em>
+              <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">The Problem</p>
+              <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Africa doesn&apos;t have a data shortage. It has a <em className="text-[#EAB308] not-italic">clarity crisis.</em>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
                 African health systems generate enormous clinical data — but 80% is locked in paper records, siloed EMRs, and low-connectivity environments where data can&apos;t move, be read, or be trusted.
@@ -235,7 +253,7 @@ export default function Home() {
                 { pct: '60%', label: 'Of African clinics operate in low/no-connectivity zones', color: '#8B5CF6' },
                 { pct: '3+', label: 'Disconnected EMR systems per average health network', color: '#3B82F6' },
               ].map((item, i) => (
-                <div key={i} className="bg-[#0A0F1E] border border-white/10 rounded-xl p-5 flex items-center gap-5">
+                <div key={i} className="bg-[#0A1A2F] border border-white/10 rounded-xl p-5 flex items-center gap-5">
                   <div className="text-2xl font-bold min-w-[80px]" style={{ color: item.color }}>{item.pct}</div>
                   <div className="text-slate-400 text-sm">{item.label}</div>
                 </div>
@@ -248,7 +266,7 @@ export default function Home() {
       {/* SOLUTION INTRO */}
       <section id="solution" aria-label="The Solution — Kora Clinical Intelligence Engine" className="py-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">The Solution</p>
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">The Solution</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Kora Clinical Intelligence Engine</h2>
           <p className="text-xl text-slate-400 leading-relaxed">
             Kora retrieves, synthesizes, and structures patient data from every source — EMRs, paper records, scanned documents, and voice — into decision-ready clinical intelligence. Delivered in minutes. Works offline. Scales to populations.
@@ -261,9 +279,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap, i) => (
-              <div key={i} className="bg-[#0D1B2A] border border-white/10 rounded-2xl p-7 hover:border-[#00C896]/40 transition-all duration-200 group">
+              <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 hover:border-[#2DD4BF]/40 transition-all duration-200 group">
                 <div className="text-3xl mb-4">{cap.icon}</div>
-                <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#00C896] transition-colors">{cap.title}</h3>
+                <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#2DD4BF] transition-colors">{cap.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{cap.description}</p>
               </div>
             ))}
@@ -272,9 +290,9 @@ export default function Home() {
       </section>
 
       {/* USE CASES */}
-      <section id="use-cases" aria-label="Who Kora Serves — Clinics, Health Systems, Governments, and NGOs in Africa" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="use-cases" aria-label="Who Kora Serves — Clinics, Health Systems, Governments, and NGOs in Africa" className="py-24 px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">Who We Serve</p>
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">Who We Serve</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Built for every layer of the health system.</h2>
           <div className="flex flex-wrap gap-2 mb-12 justify-center">
             {(Object.entries(tabs) as [TabKey, typeof tabs[TabKey]][]).map(([key, tab]) => (
@@ -282,7 +300,7 @@ export default function Home() {
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all ${
-                  activeTab === key ? 'bg-[#00C896] text-[#0A0F1E]' : 'border border-white/20 text-slate-400 hover:text-white hover:border-white/40'
+                  activeTab === key ? 'bg-[#2DD4BF] text-[#0A1A2F]' : 'border border-white/20 text-slate-400 hover:text-white hover:border-white/40'
                 }`}
               >
                 {tab.label}
@@ -297,14 +315,14 @@ export default function Home() {
                   <ul className="space-y-3">
                     {tab.bullets.map((b, i) => (
                       <li key={i} className="flex items-start gap-3 text-slate-300">
-                        <span className="text-[#00C896] mt-0.5 flex-shrink-0 font-bold">✓</span>
+                        <span className="text-[#2DD4BF] mt-0.5 flex-shrink-0 font-bold">✓</span>
                         <span className="text-sm leading-relaxed">{b}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="bg-[#0A0F1E] border border-white/10 rounded-2xl p-10 text-center">
-                  <div className="text-5xl font-bold text-[#00C896] mb-3">{tab.stat}</div>
+                <div className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-10 text-center">
+                  <div className="text-5xl font-bold text-[#2DD4BF] mb-3">{tab.stat}</div>
                   <div className="text-slate-400 text-lg">{tab.statLabel}</div>
                 </div>
               </div>
@@ -315,11 +333,11 @@ export default function Home() {
 
       {/* POPULATION HEALTH */}
       <section id="population" aria-label="Population Health Engine — Disease Surveillance and Outbreak Detection across Africa" className="py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">Population Health</p>
+              <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Population Health</p>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 From individual records to national health intelligence.
               </h2>
@@ -339,8 +357,8 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="bg-[#0D1B2A] border border-[#00C896]/20 rounded-2xl p-8">
-              <div className="text-xs text-[#D4960A] font-semibold mb-5 uppercase tracking-widest">Population Dashboard — Sample View</div>
+            <div className="bg-[#0F172A] border border-[#2DD4BF]/20 rounded-2xl p-8">
+              <div className="text-xs text-[#EAB308] font-semibold mb-5 uppercase tracking-widest">Population Dashboard — Sample View</div>
               <div className="space-y-4">
                 {[
                   { label: 'Malaria Cases — Kano North', value: '2,847', change: '+12%', alert: true },
@@ -366,22 +384,22 @@ export default function Home() {
       </section>
 
       {/* OFFLINE FIRST */}
-      <section id="offline-first" aria-label="Offline-First Architecture for Low-Connectivity African Healthcare Environments" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="offline-first" aria-label="Offline-First Architecture for Low-Connectivity African Healthcare Environments" className="py-24 px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <div className="bg-[#0A0F1E] border border-white/10 rounded-2xl p-8">
+              <div className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-[#00C896] pulse-green" />
+                  <div className="w-3 h-3 rounded-full bg-[#2DD4BF] pulse-green" />
                   <span className="text-sm text-slate-400 font-medium">Kora System Status</span>
                 </div>
                 <div className="space-y-4">
                   {[
                     { label: 'Internet Connection', status: 'Unavailable', color: '#EF4444' },
-                    { label: 'Kora AI Engine', status: 'Running ✓', color: '#00C896' },
-                    { label: 'Patient Records', status: 'Accessible ✓', color: '#00C896' },
-                    { label: 'Clinical Decision Support', status: 'Active ✓', color: '#00C896' },
-                    { label: 'Population Dashboards', status: 'Active ✓', color: '#00C896' },
+                    { label: 'Kora AI Engine', status: 'Running ✓', color: '#2DD4BF' },
+                    { label: 'Patient Records', status: 'Accessible ✓', color: '#2DD4BF' },
+                    { label: 'Clinical Decision Support', status: 'Active ✓', color: '#2DD4BF' },
+                    { label: 'Population Dashboards', status: 'Active ✓', color: '#2DD4BF' },
                     { label: 'Records Queued for Sync', status: '47 records', color: '#F59E0B' },
                   ].map((row, i) => (
                     <div key={i} className="flex items-center justify-between">
@@ -396,7 +414,7 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">Offline-First Architecture</p>
+              <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Offline-First Architecture</p>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Built for Africa&apos;s realities. Works at 0% connectivity.
               </h2>
@@ -410,7 +428,7 @@ export default function Home() {
                   { title: 'Device-Agnostic', body: 'Runs on low-end Android tablets, laptops, and shared workstations. No specialized hardware required.' },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="w-1 bg-[#D4960A] rounded-full flex-shrink-0" />
+                    <div className="w-1 bg-[#EAB308] rounded-full flex-shrink-0" />
                     <div>
                       <div className="text-white font-semibold mb-1">{item.title}</div>
                       <div className="text-slate-400 text-sm leading-relaxed">{item.body}</div>
@@ -426,7 +444,7 @@ export default function Home() {
       {/* DATA SYNTHESIS */}
       <section id="data-synthesis" aria-label="Data Synthesis — Paper Records, EMRs, and Digital Sources" className="py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">Data Synthesis</p>
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Data Synthesis</p>
           <h2 className="text-4xl font-bold text-white mb-6">Written. Digital. Spoken. We take it all.</h2>
           <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
             Kora doesn&apos;t require data to already be digital. We meet health systems where they are — and bring everything into a unified, structured clinical record.
@@ -438,7 +456,7 @@ export default function Home() {
               { icon: '💻', title: 'Multiple EMRs', body: 'Connect OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and 20+ others simultaneously with zero duplication.' },
               { icon: '🔬', title: 'Lab & Diagnostic Data', body: 'Ingest PDF lab results, DICOM imaging, instrument printouts, and rapid test records from any facility.' },
             ].map((item, i) => (
-              <div key={i} className="bg-[#0D1B2A] border border-white/10 rounded-2xl p-7 text-left hover:border-[#00C896]/30 transition-colors">
+              <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 text-left hover:border-[#2DD4BF]/30 transition-colors">
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="text-white font-bold mb-3">{item.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
@@ -449,13 +467,13 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" aria-label="How Kora Works — Ingest, Synthesize, Deliver" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="how-it-works" aria-label="How Kora Works — Ingest, Synthesize, Deliver" className="py-24 px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">How It Works</p>
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">How It Works</p>
           <h2 className="text-4xl font-bold text-white mb-16 text-center">From fragmented data to decision-ready intelligence in three steps.</h2>
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { step: '01', title: 'Ingest', body: 'Connect your existing EMRs, scan paper records, and upload data in any format — structured or unstructured, digital or handwritten, lab printouts or voice notes.', color: '#00C896' },
+              { step: '01', title: 'Ingest', body: 'Connect your existing EMRs, scan paper records, and upload data in any format — structured or unstructured, digital or handwritten, lab printouts or voice notes.', color: '#2DD4BF' },
               { step: '02', title: 'Synthesize', body: "Kora's engine normalizes, deduplicates, and structures all data into a unified patient record. AI extracts clinical concepts and links every data point back to its source.", color: '#F59E0B' },
               { step: '03', title: 'Deliver', body: 'Clinicians get decision-ready summaries. Population health teams get real-time dashboards. Ministries get automated DHIS2 and WHO reports — all with full audit trails.', color: '#8B5CF6' },
             ].map((item, i) => (
@@ -472,11 +490,11 @@ export default function Home() {
 
       {/* INVESTOR */}
       <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/8 via-transparent to-[#D4960A]/4 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">For Investors</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">The infrastructure layer for African healthcare data.</h2>
+            <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">For Investors</p>
+            <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">The infrastructure layer for African healthcare data.</h2>
             <p className="text-xl text-slate-400 leading-relaxed mb-10">
               Kora sits at the highest-value layer of the African health tech stack — the clinical data infrastructure that every EMR, diagnostic company, insurer, and ministry will depend on. Founded by a physician and clinical AI consultant with deep expertise in African health systems. Kora was designed and built collaboratively by physicians practicing domestically and abroad — bringing together frontline clinical insight from multiple healthcare environments to create the most comprehensive clinical intelligence system for Africa.
             </p>
@@ -487,12 +505,12 @@ export default function Home() {
                 { metric: '54', label: 'Countries with critical health data infrastructure gaps' },
               ].map((m, i) => (
                 <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-[#00C896] mb-2">{m.metric}</div>
+                  <div className="text-3xl font-bold text-[#2DD4BF] mb-2">{m.metric}</div>
                   <div className="text-sm text-slate-400 leading-snug">{m.label}</div>
                 </div>
               ))}
             </div>
-            <div className="bg-[#0D1B2A] border border-white/10 rounded-2xl p-8 mb-10">
+            <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 mb-10">
               <h3 className="text-white font-bold text-lg mb-4">Why Kora Wins</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
@@ -504,14 +522,14 @@ export default function Home() {
                   'Go-to-market via private clinics → health systems → national ministries',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="text-[#00C896] font-bold flex-shrink-0 mt-0.5">✓</span>
+                    <span className="text-[#2DD4BF] font-bold flex-shrink-0 mt-0.5">✓</span>
                     <span className="text-slate-400 text-sm leading-relaxed">{point}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Investor Deck Request" className="bg-[#00C896] text-[#0A0F1E] font-bold px-8 py-4 rounded-xl hover:bg-[#00A87A] transition-colors text-center">Request Investor Deck</a>
+              <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Investor Deck Request" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Request Investor Deck</a>
               <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Partnership Inquiry" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Partner With Us</a>
             </div>
           </div>
@@ -519,9 +537,9 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="py-24 px-6 bg-[#0D1B2A]">
+      <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="py-24 px-6 bg-[#0F172A]">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4 text-center">FAQ</p>
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">FAQ</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Frequently asked.</h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -532,7 +550,7 @@ export default function Home() {
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
                 >
                   <span className="text-white font-semibold pr-4">{faq.q}</span>
-                  <span className="text-[#00C896] flex-shrink-0 text-xl font-light">{activeFaq === i ? '−' : '+'}</span>
+                  <span className="text-[#2DD4BF] flex-shrink-0 text-xl font-light">{activeFaq === i ? '−' : '+'}</span>
                 </button>
                 <div className={`px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4 ${activeFaq !== i ? 'hidden' : ''}`}>{faq.a}</div>
               </div>
@@ -546,26 +564,41 @@ export default function Home() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">See what Kora looks like in your workflow.</h2>
           <p className="text-slate-400 text-lg mb-10">A 30-minute demo with our clinical team. No prep required.</p>
-          <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Demo Request" className="bg-[#00C896] text-[#0A0F1E] font-bold px-10 py-5 rounded-xl hover:bg-[#00A87A] transition-colors inline-block text-lg">Request a Demo →</a>
+          <a href="mailto:ekene.ajufo@gmail.com?subject=Kora Demo Request" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-10 py-5 rounded-xl hover:bg-[#1BBFA8] transition-colors inline-block text-lg">Request a Demo →</a>
         </div>
       </section>
 
       </main>
 
       {/* FOOTER */}
-      <footer aria-label="Kora Health site footer" className="bg-[#0D1B2A] border-t border-white/10 py-16 px-6">
+      <footer aria-label="Kora Health site footer" className="bg-[#0F172A] border-t border-white/10 py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00C896] to-[#009970] flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">K</span>
+              <div className="flex items-center gap-3 mb-4">
+                <svg viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto flex-shrink-0" aria-hidden="true">
+                  <line x1="18" y1="1" x2="18" y2="10" stroke="#EAB308" strokeWidth="2.5" strokeLinecap="round"/>
+                  <circle cx="14" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
+                  <circle cx="22" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
+                  <circle cx="14" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
+                  <circle cx="22" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
+                  <path d="M12 10 C2 20 28 28 12 40 C2 48 26 52 12 56" stroke="#2DD4BF" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+                  <path d="M24 10 C34 20 8 28 24 40 C34 48 10 52 24 56" stroke="#EAB308" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+                  <line x1="13" y1="16" x2="23" y2="16" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                  <line x1="7"  y1="24" x2="29" y2="24" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
+                  <line x1="7"  y1="36" x2="29" y2="36" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
+                  <line x1="13" y1="44" x2="23" y2="44" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                  <line x1="7"  y1="50" x2="29" y2="50" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.35"/>
+                </svg>
+                <div>
+                  <div className="text-xl font-bold text-white leading-tight tracking-tight">Kora</div>
+                  <div className="text-[11px] text-[#EAB308] font-semibold tracking-[0.2em] uppercase leading-none">Health</div>
                 </div>
-                <span className="text-xl font-bold text-white">Kora Health</span>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
                 Pulse Hub for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence — online or offline.
               </p>
+              <p className="text-[#EAB308]/60 text-xs mt-3 tracking-wide italic">Rooted in Africa. Built for outcomes.</p>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4 text-xs uppercase tracking-widest">Platform</h4>
@@ -588,7 +621,7 @@ export default function Home() {
           </div>
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-slate-600 text-sm">© 2026 Kora Health. All rights reserved.</div>
-            <div className="text-slate-600 text-sm">Pulse Hub for Confident Decisions across Africa.</div>
+            <div className="text-slate-600 text-sm italic">Rooted in Africa. Built for outcomes.</div>
           </div>
         </div>
       </footer>
