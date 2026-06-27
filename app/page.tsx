@@ -77,7 +77,6 @@ export default function Home() {
       body: 'For hospital networks and multi-facility health systems, Kora provides a unified view of patient care across all locations. Eliminate information silos, reduce redundant referrals, and enable real-time clinical coordination without requiring uniform EMR adoption.',
       bullets: [
         'Unified patient record across all facilities in the network',
-        'Referral tracking and specialist communication built in',
         'Aggregate analytics across departments and campuses',
         'Integrates with existing EMR investments — no rip-and-replace',
       ],
@@ -405,7 +404,7 @@ export default function Home() {
               <div className="space-y-5">
                 {[
                   { title: 'Edge AI Inference', body: 'Clinical AI models run locally on-device or on a facility server. Full capability without cloud dependency.' },
-                  { title: 'Differential Sync', body: 'When connectivity returns, only changed data syncs — minimizing bandwidth costs on expensive mobile data.' },
+                  { title: 'Smart Sync', body: 'When connectivity returns, only changed data syncs — minimizing bandwidth costs on expensive mobile data.' },
                   { title: 'Device-Agnostic', body: 'Runs on low-end Android tablets, laptops, and shared workstations. No specialized hardware required.' },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -477,7 +476,7 @@ export default function Home() {
             <p className="text-[#D4960A] text-sm font-semibold uppercase tracking-widest mb-4">For Investors</p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">The infrastructure layer for African healthcare data.</h2>
             <p className="text-xl text-slate-400 leading-relaxed mb-10">
-              Kora sits at the highest-value layer of the African health tech stack — the clinical data infrastructure that every EMR, diagnostic company, insurer, and ministry will depend on. Founded by a physician and clinical AI consultant with deep expertise in African health systems.
+              Kora sits at the highest-value layer of the African health tech stack — the clinical data infrastructure that every EMR, diagnostic company, insurer, and ministry will depend on. Founded by a physician and clinical AI consultant with deep expertise in African health systems. Kora was designed and built collaboratively by physicians practicing domestically and abroad — bringing together frontline clinical insight from multiple healthcare environments to create the most comprehensive clinical intelligence system for Africa.
             </p>
             <div className="grid sm:grid-cols-3 gap-5 mb-10">
               {[
@@ -497,7 +496,7 @@ export default function Home() {
                 {[
                   'Offline-first architecture purpose-built for African connectivity realities',
                   'Synthesizes both paper and digital data — no other platform does this at scale in Africa',
-                  'Founded by a physician with clinical AI consulting credentials',
+                  'Built collaboratively by physicians practicing domestically and abroad — comprehensive by design',
                   'Complementary to existing EMRs — not a rip-and-replace play',
                   'Population health layer creates government and donor revenue streams',
                   'Go-to-market via private clinics → health systems → national ministries',
