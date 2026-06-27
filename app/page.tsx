@@ -133,6 +133,10 @@ export default function Home() {
       a: "Kora's Population Health Engine aggregates de-identified records into real-time district and national dashboards. Features include disease surveillance, vaccination tracking, outbreak detection, NCD burden monitoring, maternal health indicators, and automated DHIS2/WHO reporting.",
     },
     {
+      q: 'How does Kora partner with existing EMR systems?',
+      a: "Kora integrates with your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration typically takes less than a week. Contact us at ekene.ajufo@gmail.com to explore an EMR partnership.",
+    },
+    {
       q: 'What is the investment opportunity?',
       a: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. We are currently raising to fund initial deployment across Nigeria, Kenya, and Ghana. Contact us to receive our investor deck and financial model.',
     },
@@ -186,6 +190,7 @@ export default function Home() {
             <a href="#use-cases" title="Who Kora Serves — Clinics, Health Systems, Governments" className="hover:text-white transition-colors">Use Cases</a>
             <a href="#population" title="Population Health Engine for Africa" className="hover:text-white transition-colors">Population Health</a>
             <a href="#how-it-works" title="How Kora Works" className="hover:text-white transition-colors">How It Works</a>
+            <a href="#emr-partners" title="EMR Partnership Program" className="hover:text-white transition-colors">EMR Partners</a>
             <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
           </div>
           <a
@@ -488,6 +493,121 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EMR PARTNERSHIP */}
+      <section id="emr-partners" aria-label="EMR Partnership Program — Integrate Kora with Your Electronic Medical Records System" className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#EAB308]/5 via-transparent to-[#2DD4BF]/5 pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">For EMR Vendors &amp; Health IT Partners</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight max-w-3xl mx-auto">
+              Make your EMR the most powerful clinical platform in Africa.
+            </h2>
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+              Kora plugs into your existing EMR as an intelligence layer — adding AI-powered data synthesis, population health, and offline capability without displacing a single workflow your clients depend on. Your EMR gets smarter. Your clients get better outcomes. You grow.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              {
+                icon: '⚡',
+                title: 'Supercharge Your Product',
+                body: 'Add cross-system data synthesis, AI clinical decision support, and real-time population dashboards to your EMR product suite — without building it yourself. Kora’s API integrates in days, not months.',
+              },
+              {
+                icon: '🔒',
+                title: 'Deepen Client Retention',
+                body: 'Clients who see better outcomes stay longer. When Kora synthesizes the full patient record — including data from outside your EMR — your clients deliver higher-quality care and attribute that value to your platform.',
+              },
+              {
+                icon: '🌍',
+                title: 'Expand Your African Reach',
+                body: 'Kora’s offline-first architecture and paper digitization capability extend your EMR into low-connectivity rural and semi-urban markets across Africa that cloud-dependent systems can’t serve.',
+              },
+              {
+                icon: '📈',
+                title: 'New Revenue Streams',
+                body: 'Co-sell Kora’s population health and government reporting modules alongside your EMR. Partners share in subscription revenue from district dashboards, DHIS2 reporting, and national health analytics.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 hover:border-[#EAB308]/40 transition-all duration-200 group">
+                <div className="text-3xl mb-4">{item.icon}</div>
+                <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#EAB308] transition-colors">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">What EMR partners get</h3>
+              <ul className="space-y-4">
+                {[
+                  { title: 'Bi-directional API integration', body: 'Kora reads from and writes back to your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — keeping your system the system of record.' },
+                  { title: 'Patient record enrichment at point of care', body: 'When a patient opens in your EMR, Kora automatically surfaces synthesized records from every other facility they’ve visited — paper records included — directly in your UI.' },
+                  { title: 'Population health add-on module', body: 'Offer your health-system clients real-time district dashboards and automated DHIS2/WHO reporting as a co-branded feature — powered by Kora’s aggregation engine.' },
+                  { title: 'Zero infrastructure burden', body: 'Kora runs on the client’s existing hardware or Kora’s cloud. No new servers, no new contracts for your clients to manage.' },
+                  { title: 'Shared implementation support', body: 'Kora’s clinical integration team works alongside your onboarding team at joint accounts — cutting time-to-value for clients without adding to your support load.' },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <span className="text-[#EAB308] font-bold flex-shrink-0 mt-0.5">✓</span>
+                    <div>
+                      <div className="text-white font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-slate-400 text-sm leading-relaxed">{item.body}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-[#0F172A] border border-[#EAB308]/20 rounded-2xl p-8">
+                <div className="text-xs text-[#EAB308] font-semibold mb-5 uppercase tracking-widest">How Kora Complements Your EMR</div>
+                <div className="space-y-5">
+                  {[
+                    { you: 'Your EMR captures the encounter', kora: 'Kora brings in every prior record from any source' },
+                    { you: 'Your EMR holds the structured data', kora: 'Kora digitizes paper records and adds them to the record' },
+                    { you: 'Your EMR serves the facility', kora: 'Kora aggregates across all facilities into population intelligence' },
+                    { you: 'Your EMR works online', kora: 'Kora keeps it working when connectivity fails' },
+                  ].map((row, i) => (
+                    <div key={i} className="grid grid-cols-2 gap-4 border-b border-white/5 pb-4 last:border-0 last:pb-0">
+                      <div>
+                        <div className="text-[10px] text-slate-600 uppercase tracking-wider mb-1">Your EMR</div>
+                        <div className="text-white text-sm">{row.you}</div>
+                      </div>
+                      <div>
+                        <div className="text-[10px] text-[#2DD4BF]/60 uppercase tracking-wider mb-1">+ Kora</div>
+                        <div className="text-[#2DD4BF] text-sm">{row.kora}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                {[
+                  { metric: '20+', label: 'EMR systems already integrated' },
+                  { metric: '< 1 wk', label: 'Typical API integration time' },
+                  { metric: '0', label: 'Rip-and-replace required' },
+                ].map((m, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+                    <div className="text-2xl font-bold text-[#EAB308] mb-1">{m.metric}</div>
+                    <div className="text-xs text-slate-500 leading-snug">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="mailto:ekene.ajufo@gmail.com?subject=Kora EMR Partnership Inquiry"
+                className="block w-full bg-[#EAB308] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#d4a800] transition-colors text-center"
+              >
+                Become an EMR Partner →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* INVESTOR */}
       <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
@@ -607,6 +727,7 @@ export default function Home() {
                 <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
                 <li><a href="#population" className="hover:text-white transition-colors">Population Health</a></li>
                 <li><a href="#use-cases" className="hover:text-white transition-colors">Use Cases</a></li>
+                <li><a href="#emr-partners" className="hover:text-white transition-colors">EMR Partners</a></li>
               </ul>
             </div>
             <div>
