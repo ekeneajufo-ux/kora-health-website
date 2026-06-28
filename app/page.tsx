@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState('clinics');
+  const [activeTab, setActiveTab] = useState('government');
   const [navScrolled, setNavScrolled] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -58,18 +58,37 @@ export default function Home() {
     TabKey,
     { label: string; headline: string; body: string; bullets: string[]; stat: string; statLabel: string }
   > = {
-    clinics: {
-      label: 'Clinics',
-      headline: 'Complete patient history. Every visit.',
-      body: 'Clinicians at private primary care and pediatric clinics spend 40+ minutes per patient hunting through paper records and disconnected digital systems. Kora synthesizes the complete patient record in under 2 minutes — from any source — so clinicians walk into every encounter fully informed.',
+    government: {
+      label: 'Governments & NGOs',
+      headline: 'National health intelligence, without the infrastructure overhaul.',
+      body: "Ministries of Health, public health agencies, NGOs, and international health organizations use Kora to see the entire health system in real time — disease burden, service coverage, and population outcomes — without requiring uniform EMR adoption across every facility. Kora unifies paper-based and digital facilities into a single, policy-ready evidence base for national and sub-national decision-making.",
       bullets: [
-        'See all prior records from any clinic or hospital the patient visited',
-        'Works offline during power or internet outages',
-        'Surfaces relevant decision support based on patient history',
-        'Reduces duplicate testing and medication errors',
+        'National & sub-national dashboards: disease burden, coverage, and outcomes by state, LGA, and district',
+        'Real-time disease surveillance, outbreak early-warning, and notifiable-disease reporting',
+        'Automated DHIS2, WHO, IDSR, and donor (PEPFAR, Global Fund, Gavi) reporting — no manual aggregation',
+        'Evidence for resource allocation: target funding, staffing, and supplies to the highest-need regions',
+        'Program monitoring & evaluation, impact measurement, and grant/compliance reporting',
+        'Works with paper-based and digital facilities simultaneously — no facility left invisible',
+        'Data sovereignty: de-identified aggregation hosted in-country, aligned to national data-protection law',
       ],
-      stat: '40 min → 2 min',
-      statLabel: 'Chart review time',
+      stat: 'National',
+      statLabel: 'Real-time health intelligence across every facility',
+    },
+    population: {
+      label: 'Population Health',
+      headline: 'From individual records to national health intelligence.',
+      body: "Kora's Population Health Engine transforms fragmented patient records into district-wide and national intelligence ministries can act on. Track disease burden, monitor immunization and maternal-health coverage, detect outbreaks before they spread, model resource needs, and report to WHO and donors — all in real time, even where most facilities are still on paper.",
+      bullets: [
+        'Disease surveillance dashboards by region, state, LGA, and facility',
+        'Outbreak detection with early-warning alerts and case-cluster mapping',
+        'Vaccination coverage, immunization-gap, and cold-chain tracking',
+        'Maternal, newborn & child health (MNCH) indicators and trends',
+        'NCD burden monitoring — diabetes, hypertension, cancer screening',
+        'Health-equity analytics: surface underserved populations and access gaps',
+        'Automated reporting for DHIS2, WHO IDSR, and donor frameworks',
+      ],
+      stat: 'Real-time',
+      statLabel: 'Population health surveillance & reporting',
     },
     health_systems: {
       label: 'Health Systems',
@@ -83,31 +102,18 @@ export default function Home() {
       stat: '10+',
       statLabel: 'EMR systems supported simultaneously',
     },
-    population: {
-      label: 'Population Health',
-      headline: 'Real-time intelligence across entire populations.',
-      body: "Kora's Population Health Engine transforms individual patient records into district-wide and national health intelligence. Track disease burden, monitor vaccination coverage, detect outbreaks early, and report to ministries and donors — in real time.",
+    clinics: {
+      label: 'Clinics',
+      headline: 'Complete patient history. Every visit.',
+      body: 'Clinicians at private primary care and pediatric clinics spend 40+ minutes per patient hunting through paper records and disconnected digital systems. Kora synthesizes the complete patient record in under 2 minutes — from any source — so clinicians walk into every encounter fully informed.',
       bullets: [
-        'Disease surveillance dashboards by district and region',
-        'Vaccination coverage and immunization gap tracking',
-        'Outbreak detection and early warning alerts',
-        'Automated reporting for DHIS2, WHO, and donor systems',
+        'See all prior records from any clinic or hospital the patient visited',
+        'Works offline during power or internet outages',
+        'Surfaces relevant decision support based on patient history',
+        'Reduces duplicate testing and medication errors',
       ],
-      stat: 'Real-time',
-      statLabel: 'Population health surveillance',
-    },
-    government: {
-      label: 'Governments & NGOs',
-      headline: 'National health data infrastructure, without the overhaul.',
-      body: "Ministries of Health, NGOs, and international health organizations use Kora to gain visibility into health system performance and population outcomes — without requiring uniform EMR adoption across all facilities.",
-      bullets: [
-        'Aggregate insights without requiring facility-level EMR standardization',
-        'Works with paper-based and digital facilities simultaneously',
-        'Feeds directly into DHIS2 and national health information systems',
-        'Supports program evaluation, impact reporting, and grant compliance',
-      ],
-      stat: '15+',
-      statLabel: 'Data formats and sources supported',
+      stat: '40 min → 2 min',
+      statLabel: 'Chart review time',
     },
   };
 
@@ -342,12 +348,34 @@ export default function Home() {
                   '🦟  Disease surveillance & outbreak early warning',
                   '💉  Vaccination coverage & immunization gap tracking',
                   '🫀  NCD burden monitoring (diabetes, hypertension)',
-                  '👶  Maternal & child health indicators',
-                  '📊  Automated DHIS2 & WHO reporting',
+                  '👶  Maternal, newborn & child health indicators',
+                  '🏛️  National & sub-national policy dashboards (state, LGA, district)',
+                  '💰  Resource allocation & donor-fund targeting by need',
+                  '🌍  Health-equity & access-gap analytics',
+                  '📊  Automated DHIS2, WHO IDSR & donor reporting',
                   '🔔  Real-time district-level alert system',
                 ].map((item, i) => (
                   <div key={i} className="text-sm text-slate-300 py-1">{item}</div>
                 ))}
+              </div>
+
+              <div className="mt-8 bg-[#0F172A] border border-[#EAB308]/20 rounded-2xl p-6">
+                <div className="text-xs text-[#EAB308] font-semibold mb-3 uppercase tracking-widest">For Ministries of Health &amp; Donors</div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                  Kora gives government decision-makers a single, real-time evidence base across every facility — even where most still run on paper — so policy, budgets, and emergency response are driven by current data, not last year&apos;s survey.
+                </p>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { metric: '36+', label: 'States / regions on one national view' },
+                    { metric: 'IDSR', label: 'WHO-aligned surveillance reporting' },
+                    { metric: 'In-country', label: 'Data residency & sovereignty' },
+                  ].map((m, i) => (
+                    <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+                      <div className="text-lg font-bold text-[#2DD4BF] mb-1">{m.metric}</div>
+                      <div className="text-[11px] text-slate-500 leading-snug">{m.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="bg-[#0F172A] border border-[#2DD4BF]/20 rounded-2xl p-8">
@@ -358,7 +386,8 @@ export default function Home() {
                   { label: 'DPT3 Vaccination Coverage', value: '73.4%', change: '+4.2%', alert: false },
                   { label: 'TB Treatment Adherence Rate', value: '81.2%', change: '-2.1%', alert: true },
                   { label: 'Antenatal Care Visits (Q2)', value: '14,203', change: '+8.6%', alert: false },
-                  { label: 'Hypertension Screening Rate', value: '42.7%', change: '+15%', alert: false },
+                  { label: 'Facilities Reporting On-Time', value: '92.1%', change: '+6.4%', alert: false },
+                  { label: 'Essential Medicine Stockouts', value: '11 LGAs', change: 'Action', alert: true },
                   { label: 'Active Outbreak Alerts', value: '3', change: 'New', alert: true },
                 ].map((row, i) => (
                   <div key={i} className="flex items-center justify-between border-b border-white/5 pb-3 last:border-0">
