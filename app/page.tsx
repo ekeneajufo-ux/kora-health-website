@@ -160,8 +160,12 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" aria-label="Kora Health home" className="flex items-center">
-            <img src="/kora-logo-light.png" alt="Kora Health" className="h-24 w-auto" />
+          <a href="/" aria-label="Kora Health home" className="flex items-center gap-4">
+            <img src="/kora-mark.png" alt="" aria-hidden="true" className="h-16 w-auto" />
+            <div className="leading-none">
+              <div className="display-serif text-3xl md:text-4xl font-bold text-[#FAF5EB] leading-none">Kora</div>
+              <div className="text-sm md:text-base font-semibold tracking-[0.35em] uppercase text-[#EAB308] mt-1.5">Health</div>
+            </div>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-slate-400" role="menubar">
             <a href="#capabilities" title="Kora Platform Capabilities" className="hover:text-white transition-colors">Capabilities</a>
