@@ -160,11 +160,11 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" aria-label="Kora Health home" className="flex items-center gap-4">
-            <img src="/kora-mark.png" alt="" aria-hidden="true" className="h-16 w-auto" />
-            <div className="leading-none">
-              <div className="display-serif text-3xl md:text-4xl font-bold text-[#FAF5EB] leading-none">Kora</div>
-              <div className="text-sm md:text-base font-semibold tracking-[0.35em] uppercase text-[#EAB308] mt-1.5">Health</div>
+          <a href="/" aria-label="Kora Health home" className="flex items-center gap-3.5">
+            <img src="/kora-mark.png" alt="" aria-hidden="true" className="h-[84px] w-auto" />
+            <div className="flex flex-col justify-center leading-none">
+              <span className="display-serif text-4xl md:text-5xl font-bold text-[#FAF5EB] leading-[0.9] tracking-tight">Kora</span>
+              <span className="text-[11px] md:text-xs font-semibold tracking-[0.42em] uppercase text-[#EAB308] mt-1">Health</span>
             </div>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-slate-400" role="menubar">
