@@ -160,30 +160,8 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" aria-label="Kora Health home" className="flex items-center gap-3">
-            <svg viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto" aria-hidden="true">
-              {/* Kora neck */}
-              <line x1="18" y1="1" x2="18" y2="10" stroke="#EAB308" strokeWidth="2.5" strokeLinecap="round"/>
-              {/* Tuning pegs */}
-              <circle cx="14" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
-              <circle cx="22" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
-              <circle cx="14" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
-              <circle cx="22" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
-              {/* Teal strand — left sinusoid */}
-              <path d="M12 10 C2 20 28 28 12 40 C2 48 26 52 12 56" stroke="#2DD4BF" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-              {/* Amber strand — right sinusoid */}
-              <path d="M24 10 C34 20 8 28 24 40 C34 48 10 52 24 56" stroke="#EAB308" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-              {/* DNA rungs / kora strings */}
-              <line x1="13" y1="16" x2="23" y2="16" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-              <line x1="7"  y1="24" x2="29" y2="24" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
-              <line x1="7"  y1="36" x2="29" y2="36" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
-              <line x1="13" y1="44" x2="23" y2="44" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-              <line x1="7"  y1="50" x2="29" y2="50" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.35"/>
-            </svg>
-            <div>
-              <div className="text-lg font-bold text-white leading-tight tracking-tight">Kora</div>
-              <div className="text-[10px] text-[#EAB308] font-semibold tracking-[0.2em] uppercase leading-none">Health</div>
-            </div>
+          <a href="/" aria-label="Kora Health home" className="flex items-center">
+            <img src="/kora-logo.png" alt="Kora Health" className="h-14 w-auto" />
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-slate-400" role="menubar">
             <a href="#capabilities" title="Kora Platform Capabilities" className="hover:text-white transition-colors">Capabilities</a>
@@ -708,25 +686,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <svg viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto flex-shrink-0" aria-hidden="true">
-                  <line x1="18" y1="1" x2="18" y2="10" stroke="#EAB308" strokeWidth="2.5" strokeLinecap="round"/>
-                  <circle cx="14" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
-                  <circle cx="22" cy="4" r="1.5" fill="#EAB308" opacity="0.85"/>
-                  <circle cx="14" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
-                  <circle cx="22" cy="8" r="1.5" fill="#EAB308" opacity="0.6"/>
-                  <path d="M12 10 C2 20 28 28 12 40 C2 48 26 52 12 56" stroke="#2DD4BF" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-                  <path d="M24 10 C34 20 8 28 24 40 C34 48 10 52 24 56" stroke="#EAB308" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-                  <line x1="13" y1="16" x2="23" y2="16" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-                  <line x1="7"  y1="24" x2="29" y2="24" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
-                  <line x1="7"  y1="36" x2="29" y2="36" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
-                  <line x1="13" y1="44" x2="23" y2="44" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-                  <line x1="7"  y1="50" x2="29" y2="50" stroke="#2DD4BF" strokeWidth="1" strokeLinecap="round" opacity="0.35"/>
-                </svg>
-                <div>
-                  <div className="text-xl font-bold text-white leading-tight tracking-tight">Kora</div>
-                  <div className="text-[11px] text-[#EAB308] font-semibold tracking-[0.2em] uppercase leading-none">Health</div>
-                </div>
+              <div className="flex items-center mb-4">
+                <img src="/kora-logo.png" alt="Kora Health" className="h-20 w-auto flex-shrink-0" />
               </div>
               <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
                 Pulse Hub for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence — online or offline.
