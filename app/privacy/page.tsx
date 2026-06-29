@@ -16,7 +16,7 @@ export default function PrivacyPage() {
     >
       <h2>1. Who we are</h2>
       <p>
-        Kora Health (&quot;Kora&quot;, &quot;we&quot;, &quot;us&quot;) is operated by <strong>[Legal Entity Name]</strong>, registered in <strong>[Country of Incorporation]</strong> at <strong>[Registered Address]</strong>. For privacy questions or to exercise your rights, contact our Data Protection Officer at <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a>.
+        Kora Health (&quot;Kora&quot;, &quot;we&quot;, &quot;us&quot;) is operated by <strong>Kora Health Africa Ltd</strong>, registered in <strong>[Country of Incorporation]</strong> at <strong>[Registered Address]</strong>. For privacy questions or to exercise your rights, contact our Data Protection Officer at <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a>.
       </p>
 
       <h2>2. Scope of this policy</h2>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
       <p>We may update this policy from time to time. Material changes will be reflected by updating the &quot;Last updated&quot; date above and, where appropriate, by additional notice.</p>
 
       <h2>16. Contact us</h2>
-      <p>Questions or requests: <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a> · [Legal Entity Name], [Registered Address].</p>
+      <p>Questions or requests: <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a> · Kora Health Africa Ltd, [Registered Address].</p>
     </LegalShell>
   );
 }

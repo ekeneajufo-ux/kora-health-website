@@ -916,8 +916,8 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { metric: '20+', label: 'EMR systems already integrated' },
-                  { metric: '< 1 wk', label: 'Typical API integration time' },
+                  { metric: 'FHIR', label: 'Standards-based — HL7 FHIR, OpenMRS, DHIS2' },
+                  { metric: '< 1 wk', label: 'Target API integration time' },
                   { metric: '0', label: 'Rip-and-replace required' },
                 ].map((m, i) => (
                   <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
