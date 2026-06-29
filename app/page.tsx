@@ -487,7 +487,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto pb-14">
           <div className="text-center mb-8">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">See It In Practice</p>
-            <h2 className="display-serif text-3xl md:text-4xl font-bold text-white mb-3">How Kora works, in three real moments.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">How Kora works, in three real moments.</h2>
             <p className="text-slate-500 text-sm">Swipe, or use the arrows, to explore →</p>
           </div>
 
@@ -502,7 +502,7 @@ export default function Home() {
                   <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
                     <div className="relative">
-                      <h3 className="display-serif text-2xl md:text-3xl font-bold text-white mb-1.5">{s.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-1.5">{s.title}</h3>
                       <p className="text-[#EAB308] text-sm font-semibold mb-5">{s.tag}</p>
                       <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-3xl">{s.intro}</p>
 
