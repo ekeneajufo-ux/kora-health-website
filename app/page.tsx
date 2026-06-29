@@ -349,7 +349,7 @@ export default function Home() {
 
       {/* SOLUTION — IN PRACTICE SCENARIO */}
       <section id="example" aria-label="How Kora Works in Practice — a clinical scenario" className="px-6">
-        <div className="max-w-6xl mx-auto pb-14">
+        <div className="max-w-7xl mx-auto pb-14">
           <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
             <div className="relative">
@@ -359,9 +359,9 @@ export default function Home() {
                 A physician in Nairobi meets <span className="text-white font-semibold">Mrs. Wanjiku, 76</span>, for the first time. She mentions a leukemia diagnosis from a referral hospital three counties away, visits to two other clinics, and hands over a worn folder of paper lab results. Normally, piecing this together takes days of phone calls — or simply never happens. With Kora, the doctor opens one screen.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="grid md:grid-cols-2 gap-16 items-start">
                 {/* What Kora does */}
-                <div className="space-y-5">
+                <div className="space-y-6">
                   {[
                     { icon: '🔗', title: 'Pulls every record', body: "Connects to the referral hospital's EMR, both clinics' systems, and the national registry — gathering scattered visits into one place." },
                     { icon: '📄', title: 'Digitizes the paper folder', body: 'OCR reads the printed lab results and handwritten notes, turning the physical folder into structured clinical data.' },
@@ -371,8 +371,8 @@ export default function Home() {
                     <div key={i} className="flex items-start gap-4">
                       <div className="text-2xl flex-shrink-0">{step.icon}</div>
                       <div>
-                        <div className="text-white font-semibold mb-1">{step.title}</div>
-                        <div className="text-slate-400 text-base leading-relaxed">{step.body}</div>
+                        <div className="text-white font-semibold text-lg mb-1">{step.title}</div>
+                        <div className="text-slate-400 leading-relaxed">{step.body}</div>
                       </div>
                     </div>
                   ))}
