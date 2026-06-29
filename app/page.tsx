@@ -389,6 +389,7 @@ export default function Home() {
             <a href="#how-it-works" title="How Kora Works" className="hover:text-white transition-colors">How It Works</a>
             <a href="#emr-partners" title="EMR Partnership Program" className="hover:text-white transition-colors">EMR Partners</a>
             <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
+            <a href="#about" title="About Kora Health — Built by Clinicians" className="hover:text-white transition-colors">About Us</a>
           </div>
           <a
             href="#contact"
@@ -992,6 +993,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT — BUILT BY CLINICIANS */}
+      <section id="about" aria-label="About Kora Health — Built by Clinicians, for Clinicians" className="px-6">
+        <div className="max-w-7xl mx-auto py-14">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">About Us</p>
+            <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-6">Built by clinicians, for clinicians.</h2>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              Kora is designed and built by a collaborative team of practicing physicians — pairing frontline clinical insight with applied AI expertise to solve the problems they face at the bedside every day.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-7">
+              <div className="text-3xl mb-4">🩺</div>
+              <h3 className="text-white font-bold text-lg mb-3">Multi-specialty physicians</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Expertise across <span className="text-white">pediatrics, internal medicine, hospital medicine, and infectious diseases</span> — the front lines of everyday care.
+              </p>
+            </div>
+            <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-7">
+              <div className="text-4xl font-bold text-[#2DD4BF] mb-3">40+</div>
+              <h3 className="text-white font-bold text-lg mb-3">Combined years of clinical experience</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Decades at the bedside across diverse healthcare settings — Kora is built on real clinical workflows, not assumptions.
+              </p>
+            </div>
+            <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-7">
+              <div className="text-3xl mb-4">🧠</div>
+              <h3 className="text-white font-bold text-lg mb-3">Applied AI credentials</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Formal AI training and certifications from <span className="text-white">Stanford</span> and the American Board of AI in Medicine (<span className="text-white">ABAIM</span>).
+              </p>
+            </div>
+          </div>
+          <p className="text-center text-slate-500 text-sm mt-8 italic">
+            A collaborative team effort — physicians practicing domestically and abroad, building Kora together.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="px-6 bg-[#0F172A]">
         <div className="max-w-3xl mx-auto py-14">
@@ -1133,6 +1173,7 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4 text-xs uppercase tracking-widest">Company</h4>
               <ul className="space-y-2 text-slate-500 text-sm">
+                <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
                 <li><a href="#investors" className="hover:text-white transition-colors">Investors</a></li>
                 <li><a href="#emr-partners" className="hover:text-white transition-colors">Partners</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Schedule a Demo</a></li>
