@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers (Static Assets) config — serves the Next.js static export.
+  // The dashboard build/deploy commands use this file to know what to publish.
+  "name": "korahealthafrica",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./out"
+  }
+}

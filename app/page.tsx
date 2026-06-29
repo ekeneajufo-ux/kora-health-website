@@ -167,7 +167,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="/" aria-label="Kora Health home" className="flex items-center gap-3.5">
-            <img src="/kora-mark.png" alt="" aria-hidden="true" className="h-[84px] w-auto" />
+            <img src="/kora-mark.webp" alt="" aria-hidden="true" className="h-[84px] w-auto" />
             <div className="flex flex-col items-center justify-center leading-none">
               <span className="display-serif text-4xl md:text-5xl font-bold text-[#FAF5EB] leading-[0.9] tracking-tight">Kora</span>
               <span className="text-[11px] md:text-xs font-semibold tracking-[0.42em] uppercase text-[#EAB308] mt-0.5 [text-indent:0.42em]">Health</span>
@@ -720,7 +720,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center mb-4">
-                <img src="/kora-logo-light.png" alt="Kora Health" className="h-[120px] w-auto flex-shrink-0" />
+                <img src="/kora-logo-light.webp" alt="Kora Health" className="h-[120px] w-auto flex-shrink-0" />
               </div>
               <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
                 Pulse Hub for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence — online or offline.
