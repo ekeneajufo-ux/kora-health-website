@@ -13,6 +13,18 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const demoMailto =
+    `mailto:info@korahealthafrica.com?subject=${encodeURIComponent('Demo Request — Kora Health')}` +
+    `&body=${encodeURIComponent(
+      "Hello Kora Health team,\n\nI'd like to schedule a demo of the Kora platform.\n\nName:\nOrganization:\nRole / Title:\nCountry:\nPhone:\n\nWhat I'd like to see:\n\nThank you."
+    )}`;
+
+  const partnerMailto =
+    `mailto:info@korahealthafrica.com?subject=${encodeURIComponent('Partnership Inquiry — Kora Health')}` +
+    `&body=${encodeURIComponent(
+      "Hello Kora Health team,\n\nWe're interested in partnering with Kora.\n\nName:\nOrganization:\nRole / Title:\nCountry:\nPhone:\nType of partnership (EMR vendor, government/NGO, investor, other):\n\nThank you."
+    )}`;
+
   const capabilities = [
     {
       icon: '🔗',
@@ -140,11 +152,11 @@ export default function Home() {
     },
     {
       q: 'How does Kora partner with existing EMR systems?',
-      a: "Kora integrates with your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration typically takes less than a week. Schedule a call to explore an EMR partnership.",
+      a: "Kora integrates with your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration typically takes less than a week. Schedule a demo to explore an EMR partnership.",
     },
     {
       q: 'What is the investment opportunity?',
-      a: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. We are currently raising to fund initial deployment across Nigeria, Kenya, and Ghana. Schedule a call to receive our investor deck and financial model.',
+      a: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. We are currently raising to fund initial deployment across Nigeria, Kenya, and Ghana. Schedule a demo to receive our investor deck and financial model.',
     },
   ];
 
@@ -182,10 +194,10 @@ export default function Home() {
             <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
           </div>
           <a
-            href="#contact"
+            href={demoMailto}
             className="bg-[#2DD4BF] text-[#0A1A2F] font-semibold px-5 py-2 rounded-lg hover:bg-[#1BBFA8] transition-colors text-sm"
           >
-            Schedule a Call
+            Schedule a Demo
           </a>
         </div>
       </nav>
@@ -212,8 +224,7 @@ export default function Home() {
                 Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Works offline. Digitizes paper. Tracks populations. Built for Africa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Call</a>
-                <a href="#contact" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Investor Deck →</a>
+                <a href={demoMailto} className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
               </div>
             </div>
             {/* Right — stats panel */}
@@ -615,10 +626,10 @@ export default function Home() {
               </div>
 
               <a
-                href="#contact"
+                href={demoMailto}
                 className="block w-full bg-[#EAB308] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#d4a800] transition-colors text-center"
               >
-                Schedule a Call →
+                Schedule a Demo →
               </a>
             </div>
           </div>
@@ -650,8 +661,8 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Call</a>
-                <a href="#contact" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Partner With Us</a>
+                <a href={demoMailto} className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
+                <a href={partnerMailto} className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Partner With Us</a>
               </div>
             </div>
             {/* Right column — Why Kora Wins */}
@@ -704,11 +715,11 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section id="contact" aria-label="Schedule a Call with Kora Health" className="px-6 text-center">
+      <section id="contact" aria-label="Schedule a Demo with Kora Health" className="px-6 text-center">
         <div className="max-w-2xl mx-auto py-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">See what Kora looks like in your workflow.</h2>
-          <p className="text-slate-400 text-lg mb-10">A 30-minute call with our clinical team. No prep required.</p>
-          <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-10 py-5 rounded-xl hover:bg-[#1BBFA8] transition-colors inline-block text-lg">Schedule a Call →</a>
+          <p className="text-slate-400 text-lg mb-10">A 30-minute demo with our clinical team. No prep required.</p>
+          <a href={demoMailto} className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-10 py-5 rounded-xl hover:bg-[#1BBFA8] transition-colors inline-block text-lg">Schedule a Demo →</a>
         </div>
       </section>
 
@@ -742,7 +753,7 @@ export default function Home() {
               <ul className="space-y-2 text-slate-500 text-sm">
                 <li><a href="#investors" className="hover:text-white transition-colors">Investors</a></li>
                 <li><a href="#emr-partners" className="hover:text-white transition-colors">Partners</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Schedule a Call</a></li>
+                <li><a href={demoMailto} className="hover:text-white transition-colors">Schedule a Demo</a></li>
               </ul>
             </div>
           </div>
