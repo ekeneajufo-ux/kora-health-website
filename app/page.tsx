@@ -1136,6 +1136,7 @@ export default function Home() {
                 <li><a href="#investors" className="hover:text-white transition-colors">Investors</a></li>
                 <li><a href="#emr-partners" className="hover:text-white transition-colors">Partners</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Schedule a Demo</a></li>
+                <li><a href="mailto:info@korahealthafrica.com" className="hover:text-[#2DD4BF] transition-colors">info@korahealthafrica.com</a></li>
               </ul>
             </div>
           </div>
