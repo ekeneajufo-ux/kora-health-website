@@ -18,7 +18,7 @@ export default function TermsPage() {
       <p>By accessing or using korahealthafrica.com (the &quot;Site&quot;), you agree to be bound by these Terms of Service and our <a href="/privacy/">Privacy Policy</a>. If you do not agree, please do not use the Site.</p>
 
       <h2>2. About Kora</h2>
-      <p>The Site is operated by <strong>Kora Health Africa Ltd</strong> (&quot;Kora&quot;, &quot;we&quot;, &quot;us&quot;), registered in <strong>[Country of Incorporation]</strong>. Kora provides a clinical-intelligence platform and related information for healthcare providers, health systems, governments, and partners.</p>
+      <p>The Site is operated by <strong>Kora Health Africa Ltd</strong> (&quot;Kora&quot;, &quot;we&quot;, &quot;us&quot;). Kora provides a clinical-intelligence platform and related information for healthcare providers, health systems, governments, and partners.</p>
 
       <h2>3. The Site and services</h2>
       <p>The Site provides information about Kora and lets you request a demo or contact us. Access to Kora&apos;s software platform is provided separately under a written agreement. Nothing on the Site is an offer to provide medical services to the public.</p>
@@ -53,13 +53,13 @@ export default function TermsPage() {
       <p>You agree to indemnify and hold harmless Kora and its affiliates from claims, losses, and expenses arising out of your misuse of the Site or violation of these terms.</p>
 
       <h2>13. Governing law</h2>
-      <p>These terms are governed by the laws of <strong>[Governing Jurisdiction]</strong>, without regard to conflict-of-laws principles. Disputes will be subject to the courts of <strong>[Jurisdiction/Venue]</strong>, unless otherwise required by applicable law.</p>
+      <p>These terms are governed by applicable law, without regard to conflict-of-laws principles. The specific governing law and venue for any disputes will be set out here once finalized.</p>
 
       <h2>14. Changes to these terms</h2>
       <p>We may update these terms from time to time. Continued use of the Site after changes take effect constitutes acceptance of the revised terms.</p>
 
       <h2>15. Contact</h2>
-      <p>Questions about these terms: <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a> · Kora Health Africa Ltd, [Registered Address].</p>
+      <p>Questions about these terms: <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a> · Kora Health Africa Ltd.</p>
     </LegalShell>
   );
 }

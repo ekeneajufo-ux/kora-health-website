@@ -187,7 +187,7 @@ export default function Home() {
       icon: '🔗',
       title: 'Universal Data Synthesis',
       description:
-        'Connects to Epic, OpenMRS, DHIS2, KenyaEMR, iClinic, and 20+ EMR systems. Ingests paper records, scanned documents, voice notes, and lab results from any source — simultaneously.',
+        'Built to connect to Epic, OpenMRS, DHIS2, KenyaEMR, iClinic, and other major EMR systems. Ingests paper records, scanned documents, voice notes, and lab results from any source — simultaneously.',
     },
     {
       icon: '📡',
@@ -290,12 +290,12 @@ export default function Home() {
         'Aggregate analytics across departments and campuses',
         'Integrates with existing EMR investments — no rip-and-replace',
       ],
-      stat: '10+',
-      statLabel: 'EMR systems supported simultaneously',
+      stat: 'Multi-EMR',
+      statLabel: 'Built to unify records across systems',
       panelTitle: 'Network Operations — Sample View',
       panel: [
         { label: 'Facilities unified', value: '38', trend: '1 network', alert: false },
-        { label: 'EMR systems connected', value: '10+', trend: 'No replace', alert: false },
+        { label: 'EMR systems unified', value: 'Multi-source', trend: 'No replace', alert: false },
         { label: 'Records deduplicated', value: '1.2M', trend: 'Merged', alert: false },
         { label: 'Duplicate tests avoided', value: '18%', trend: '↓ cost', alert: false },
         { label: 'Referral turnaround', value: '2.1 days', trend: '-41%', alert: false },
@@ -337,7 +337,7 @@ export default function Home() {
     },
     {
       q: 'What data sources can Kora integrate with?',
-      a: 'Kora integrates with 20+ EMR systems including OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and legacy systems. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
+      a: 'Kora is built to integrate with major EMR systems — including OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and legacy systems — using open standards (HL7 FHIR, OpenMRS REST, DHIS2 API). It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
     },
     {
       q: 'How does Kora assist with digitization?',
@@ -349,7 +349,7 @@ export default function Home() {
     },
     {
       q: 'How does Kora partner with existing EMR systems?',
-      a: "Kora integrates with your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration typically takes less than a week. Schedule a demo to explore an EMR partnership.",
+      a: "Kora integrates with your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration is designed to take less than a week. Schedule a demo to explore an EMR partnership.",
     },
     {
       q: 'What is the investment opportunity?',
@@ -788,7 +788,7 @@ export default function Home() {
             {[
               { icon: '📝', title: 'Handwritten Notes', body: 'OCR and AI extract clinical data from handwritten patient notes in 15+ languages, including local scripts.' },
               { icon: '🗂️', title: 'Paper Records', body: 'Scan and digitize patient folders, lab slips, prescription history, referral letters, and ward notes.' },
-              { icon: '💻', title: 'Multiple EMRs', body: 'Connect OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and 20+ others simultaneously with zero duplication.' },
+              { icon: '💻', title: 'Multiple EMRs', body: 'Designed to connect OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and other systems simultaneously with zero duplication.' },
               { icon: '🔬', title: 'Lab & Diagnostic Data', body: 'Ingest PDF lab results, DICOM imaging, instrument printouts, and rapid test records from any facility.' },
             ].map((item, i) => (
               <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 text-left hover:border-[#2DD4BF]/30 transition-colors">
@@ -842,7 +842,7 @@ export default function Home() {
               {
                 icon: '⚡',
                 title: 'Supercharge Your Product',
-                body: "Add cross-system data synthesis, AI clinical decision support, and real-time population dashboards to your EMR product suite — without building it yourself. Kora's API integrates in days, not months.",
+                body: "Add cross-system data synthesis, AI clinical decision support, and real-time population dashboards to your EMR product suite — without building it yourself. Kora's API is designed to integrate in days, not months.",
               },
               {
                 icon: '🔒',

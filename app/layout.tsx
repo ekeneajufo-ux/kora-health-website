@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Kora Health',
   },
   description:
-    'Kora Health synthesizes fragmented patient data from 20+ EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Offline-first AI built for Nigeria, Kenya, Ghana, and all of Africa.',
+    'Kora Health synthesizes fragmented patient data from multiple EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Offline-first AI built for Nigeria, Kenya, Ghana, and all of Africa.',
   keywords: [
     'clinical intelligence platform Africa',
     'healthcare AI Africa',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     siteName: 'Kora Health',
     title: "Kora Health — Africa's Clinical Intelligence Engine",
     description:
-      'Synthesizing fragmented patient data from 20+ EMRs, paper records, and digital sources into decision-ready clinical intelligence. Offline-first. Built for Nigeria, Kenya, Ghana, and all of Africa.',
+      'Synthesizing fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Offline-first. Built for Nigeria, Kenya, Ghana, and all of Africa.',
     locale: 'en_US',
     images: [
       {
@@ -140,9 +140,9 @@ const jsonLd = {
       applicationCategory: 'HealthApplication',
       operatingSystem: 'Android, Windows, Linux, macOS',
       description:
-        'An offline-first clinical intelligence platform that synthesizes patient data from 20+ EMR systems, paper records, and digital sources into decision-ready intelligence. Built for African healthcare environments with edge AI inference for low-connectivity settings in Nigeria, Kenya, Ghana, and across Africa.',
+        'An offline-first clinical intelligence platform that synthesizes patient data from multiple EMR systems, paper records, and digital sources into decision-ready intelligence. Built for African healthcare environments with edge AI inference for low-connectivity settings in Nigeria, Kenya, Ghana, and across Africa.',
       featureList: [
-        'Universal EMR Integration — OpenMRS, DHIS2, KenyaEMR, Epic, iClinic and 20+ systems',
+        'Standards-based EMR Integration — OpenMRS, DHIS2, KenyaEMR, Epic, iClinic and other systems',
         'Offline-First Architecture with Edge AI Inference',
         'Population Health Engine and Real-Time Disease Surveillance',
         'Paper Record Digitization via OCR in 15+ Languages',
@@ -188,7 +188,7 @@ const jsonLd = {
           name: 'What EMR systems can Kora integrate with?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora integrates with 20+ EMR systems including OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and legacy systems. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
+            text: 'Kora is built to integrate with major EMR systems — including OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and legacy systems — using open standards (HL7 FHIR, OpenMRS REST, DHIS2 API). It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
           },
         },
         {
@@ -212,7 +212,7 @@ const jsonLd = {
           name: 'How can EMR vendors partner with Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration typically takes less than a week. Schedule a demo via korahealthafrica.com to discuss a partnership.',
+            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration is designed to take less than a week. Schedule a demo via korahealthafrica.com to discuss a partnership.',
           },
         },
         {
