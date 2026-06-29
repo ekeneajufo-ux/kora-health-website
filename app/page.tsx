@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('government');
@@ -13,17 +13,40 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const demoMailto =
-    `mailto:info@korahealthafrica.com?subject=${encodeURIComponent('Demo Request — Kora Health')}` +
-    `&body=${encodeURIComponent(
-      "Hello Kora Health team,\n\nI'd like to schedule a demo of the Kora platform.\n\nName:\nOrganization:\nRole / Title:\nCountry:\nPhone:\n\nWhat I'd like to see:\n\nThank you."
-    )}`;
+  const emptyForm = {
+    name: '', email: '', organization: '', role: '', country: '',
+    phone: '', interest: '', message: '', company_website: '',
+  };
+  const [form, setForm] = useState(emptyForm);
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [formError, setFormError] = useState('');
 
-  const partnerMailto =
-    `mailto:info@korahealthafrica.com?subject=${encodeURIComponent('Partnership Inquiry — Kora Health')}` +
-    `&body=${encodeURIComponent(
-      "Hello Kora Health team,\n\nWe're interested in partnering with Kora.\n\nName:\nOrganization:\nRole / Title:\nCountry:\nPhone:\nType of partnership (EMR vendor, government/NGO, investor, other):\n\nThank you."
-    )}`;
+  const updateField = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+    setFormError('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        setFormStatus('success');
+        setForm(emptyForm);
+      } else {
+        setFormStatus('error');
+        setFormError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch {
+      setFormStatus('error');
+      setFormError('Network error. Please try again, or email info@korahealthafrica.com.');
+    }
+  };
 
   const capabilities = [
     {
@@ -68,7 +91,11 @@ export default function Home() {
 
   const tabs: Record<
     TabKey,
-    { label: string; headline: string; body: string; bullets: string[]; stat: string; statLabel: string }
+    {
+      label: string; headline: string; body: string; bullets: string[]; stat: string; statLabel: string;
+      panelTitle: string;
+      panel: { label: string; value: string; trend: string; alert: boolean }[];
+    }
   > = {
     government: {
       label: 'Governments & NGOs',
@@ -85,6 +112,15 @@ export default function Home() {
       ],
       stat: 'National',
       statLabel: 'Real-time health intelligence across every facility',
+      panelTitle: 'National Health Intelligence — Sample View',
+      panel: [
+        { label: 'States / regions live', value: '36', trend: 'National', alert: false },
+        { label: 'Facilities reporting', value: '4,218', trend: '+312', alert: false },
+        { label: 'On-time IDSR reports', value: '92.1%', trend: '+6.4%', alert: false },
+        { label: 'Essential-medicine stockouts', value: '11 LGAs', trend: 'Action', alert: true },
+        { label: 'Active outbreak alerts', value: '3', trend: 'New', alert: true },
+        { label: 'Donor reports automated', value: '100%', trend: 'DHIS2/WHO', alert: false },
+      ],
     },
     population: {
       label: 'Population Health',
@@ -101,6 +137,15 @@ export default function Home() {
       ],
       stat: 'Real-time',
       statLabel: 'Population health surveillance & reporting',
+      panelTitle: 'Population Surveillance — Sample View',
+      panel: [
+        { label: 'Districts monitored', value: '774', trend: 'Live', alert: false },
+        { label: 'Indicators tracked', value: '120+', trend: 'Active', alert: false },
+        { label: 'Malaria cases — Kano North', value: '2,847', trend: '+12%', alert: true },
+        { label: 'DPT3 vaccination coverage', value: '73.4%', trend: '+4.2%', alert: false },
+        { label: 'Reporting latency', value: '< 24h', trend: 'Real-time', alert: false },
+        { label: 'Outbreak early-warnings', value: '5', trend: 'Flagged', alert: true },
+      ],
     },
     health_systems: {
       label: 'Health Systems',
@@ -113,6 +158,15 @@ export default function Home() {
       ],
       stat: '10+',
       statLabel: 'EMR systems supported simultaneously',
+      panelTitle: 'Network Operations — Sample View',
+      panel: [
+        { label: 'Facilities unified', value: '38', trend: '1 network', alert: false },
+        { label: 'EMR systems connected', value: '10+', trend: 'No replace', alert: false },
+        { label: 'Records deduplicated', value: '1.2M', trend: 'Merged', alert: false },
+        { label: 'Duplicate tests avoided', value: '18%', trend: '↓ cost', alert: false },
+        { label: 'Referral turnaround', value: '2.1 days', trend: '-41%', alert: false },
+        { label: 'Cross-site record access', value: 'Instant', trend: 'Unified', alert: false },
+      ],
     },
     clinics: {
       label: 'Clinics',
@@ -126,6 +180,15 @@ export default function Home() {
       ],
       stat: '40 min → 2 min',
       statLabel: 'Chart review time',
+      panelTitle: 'At the Point of Care — Sample View',
+      panel: [
+        { label: 'Chart review time', value: '40→2 min', trend: '-95%', alert: false },
+        { label: 'Records unified / patient', value: 'All visits', trend: 'Any source', alert: false },
+        { label: 'Offline uptime', value: '100%', trend: '0% internet', alert: false },
+        { label: 'Decision-support prompts', value: 'On', trend: 'History-aware', alert: false },
+        { label: 'Duplicate tests & errors', value: 'Reduced', trend: '↓', alert: false },
+        { label: 'Setup per clinic', value: '< 1 day', trend: 'Fast', alert: false },
+      ],
     },
   };
 
@@ -194,7 +257,7 @@ export default function Home() {
             <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
           </div>
           <a
-            href={demoMailto}
+            href="#contact"
             className="bg-[#2DD4BF] text-[#0A1A2F] font-semibold px-5 py-2 rounded-lg hover:bg-[#1BBFA8] transition-colors text-sm"
           >
             Schedule a Demo
@@ -224,7 +287,7 @@ export default function Home() {
                 Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Works offline. Digitizes paper. Tracks populations. Built for Africa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href={demoMailto} className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
+                <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
               </div>
             </div>
             {/* Right — stats panel */}
@@ -331,9 +394,26 @@ export default function Home() {
                     ))}
                   </ul>
                 </div>
-                <div className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-10 text-center">
-                  <div className="text-5xl font-bold text-[#2DD4BF] mb-3">{tab.stat}</div>
-                  <div className="text-slate-400 text-lg">{tab.statLabel}</div>
+                <div className="bg-[#0A1A2F] border border-[#2DD4BF]/20 rounded-2xl p-8">
+                  <div className="text-xs text-[#EAB308] font-semibold mb-5 uppercase tracking-widest">{tab.panelTitle}</div>
+                  <div className="text-center mb-6 pb-6 border-b border-white/10">
+                    <div className="text-5xl font-bold text-[#2DD4BF] mb-2">{tab.stat}</div>
+                    <div className="text-slate-400 text-sm">{tab.statLabel}</div>
+                  </div>
+                  <div className="space-y-4">
+                    {tab.panel.map((row, i) => (
+                      <div key={i} className="flex items-center justify-between border-b border-white/5 pb-3 last:border-0">
+                        <div className="text-sm text-slate-400">{row.label}</div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-white font-semibold text-sm">{row.value}</span>
+                          {row.trend && (
+                            <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${row.alert ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'}`}>{row.trend}</span>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 text-xs text-slate-600 italic">* Illustrative data for demonstration purposes only.</div>
                 </div>
               </div>
             )
@@ -626,7 +706,7 @@ export default function Home() {
               </div>
 
               <a
-                href={demoMailto}
+                href="#contact"
                 className="block w-full bg-[#EAB308] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#d4a800] transition-colors text-center"
               >
                 Schedule a Demo →
@@ -661,8 +741,8 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href={demoMailto} className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
-                <a href={partnerMailto} className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Partner With Us</a>
+                <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
+                <a href="#contact" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Partner With Us</a>
               </div>
             </div>
             {/* Right column — Why Kora Wins */}
@@ -715,11 +795,92 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section id="contact" aria-label="Schedule a Demo with Kora Health" className="px-6 text-center">
-        <div className="max-w-2xl mx-auto py-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">See what Kora looks like in your workflow.</h2>
-          <p className="text-slate-400 text-lg mb-10">A 30-minute demo with our clinical team. No prep required.</p>
-          <a href={demoMailto} className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-10 py-5 rounded-xl hover:bg-[#1BBFA8] transition-colors inline-block text-lg">Schedule a Demo →</a>
+      <section id="contact" aria-label="Schedule a Demo with Kora Health" className="px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto py-20">
+          <div className="text-center mb-10">
+            <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Request a Demo</p>
+            <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-4">See what Kora looks like in your workflow.</h2>
+            <p className="text-slate-400 text-lg">A 30-minute demo with our clinical team. Tell us a little about you and we&apos;ll be in touch.</p>
+          </div>
+
+          {formStatus === 'success' ? (
+            <div className="bg-[#0F172A] border border-[#2DD4BF]/30 rounded-2xl p-10 text-center">
+              <div className="text-4xl mb-4">✓</div>
+              <h3 className="text-2xl font-bold text-white mb-3">Thank you — request received.</h3>
+              <p className="text-slate-400">Our team will reach out shortly. For anything urgent, email <a href="mailto:info@korahealthafrica.com" className="text-[#2DD4BF] hover:underline">info@korahealthafrica.com</a>.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 space-y-5">
+              {/* Honeypot (hidden from humans) */}
+              <input
+                type="text" name="company_website" tabIndex={-1} autoComplete="off"
+                value={form.company_website} onChange={updateField}
+                className="hidden" aria-hidden="true"
+              />
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm text-slate-300 mb-2">Full name <span className="text-[#EAB308]">*</span></label>
+                  <input id="name" name="name" required value={form.name} onChange={updateField}
+                    className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors" placeholder="Dr. Ada Okeke" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm text-slate-300 mb-2">Work email <span className="text-[#EAB308]">*</span></label>
+                  <input id="email" name="email" type="email" required value={form.email} onChange={updateField}
+                    className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors" placeholder="you@ministry.gov.ng" />
+                </div>
+                <div>
+                  <label htmlFor="organization" className="block text-sm text-slate-300 mb-2">Organization <span className="text-[#EAB308]">*</span></label>
+                  <input id="organization" name="organization" required value={form.organization} onChange={updateField}
+                    className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors" placeholder="Federal Ministry of Health" />
+                </div>
+                <div>
+                  <label htmlFor="role" className="block text-sm text-slate-300 mb-2">Role / Title</label>
+                  <input id="role" name="role" value={form.role} onChange={updateField}
+                    className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors" placeholder="Director, Health Information" />
+                </div>
+                <div>
+                  <label htmlFor="country" className="block text-sm text-slate-300 mb-2">Country</label>
+                  <input id="country" name="country" value={form.country} onChange={updateField}
+                    className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors" placeholder="Nigeria" />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm text-slate-300 mb-2">Phone</label>
+                  <input id="phone" name="phone" value={form.phone} onChange={updateField}
+                    className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors" placeholder="+234 ..." />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="interest" className="block text-sm text-slate-300 mb-2">I&apos;m reaching out as a…</label>
+                <select id="interest" name="interest" value={form.interest} onChange={updateField}
+                  className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-[#2DD4BF] focus:outline-none transition-colors">
+                  <option value="">Select one</option>
+                  <option>Government / Ministry of Health</option>
+                  <option>NGO / Donor / Multilateral</option>
+                  <option>Hospital / Health System</option>
+                  <option>Clinic</option>
+                  <option>EMR vendor / Health IT partner</option>
+                  <option>Investor</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm text-slate-300 mb-2">What would you like to see?</label>
+                <textarea id="message" name="message" rows={4} value={form.message} onChange={updateField}
+                  className="w-full bg-[#0A1A2F] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:border-[#2DD4BF] focus:outline-none transition-colors resize-y" placeholder="Tell us about your facilities, population, or goals." />
+              </div>
+
+              {formStatus === 'error' && (
+                <div className="text-sm text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg px-4 py-3">{formError}</div>
+              )}
+
+              <button type="submit" disabled={formStatus === 'submitting'}
+                className="w-full bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+                {formStatus === 'submitting' ? 'Sending…' : 'Request a Demo →'}
+              </button>
+              <p className="text-xs text-slate-600 text-center">We&apos;ll only use your details to respond to your request.</p>
+            </form>
+          )}
         </div>
       </section>
 
@@ -753,7 +914,7 @@ export default function Home() {
               <ul className="space-y-2 text-slate-500 text-sm">
                 <li><a href="#investors" className="hover:text-white transition-colors">Investors</a></li>
                 <li><a href="#emr-partners" className="hover:text-white transition-colors">Partners</a></li>
-                <li><a href={demoMailto} className="hover:text-white transition-colors">Schedule a Demo</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">Schedule a Demo</a></li>
               </ul>
             </div>
           </div>

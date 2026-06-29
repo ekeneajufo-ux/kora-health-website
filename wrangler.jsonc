@@ -1,9 +1,12 @@
 {
-  // Cloudflare Workers (Static Assets) config — serves the Next.js static export.
-  // The dashboard build/deploy commands use this file to know what to publish.
+  // Cloudflare Worker that serves the Next.js static export (./out) and handles
+  // the /api/contact form endpoint. Static assets are served first; requests with
+  // no matching asset (e.g. /api/contact) fall through to the Worker in index.js.
   "name": "korahealthafrica",
+  "main": "worker/index.js",
   "compatibility_date": "2025-06-01",
   "assets": {
-    "directory": "./out"
+    "directory": "./out",
+    "binding": "ASSETS"
   }
 }
