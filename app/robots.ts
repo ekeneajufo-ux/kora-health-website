@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://kora-health-website.vercel.app'
+  const baseUrl = 'https://korahealthafrica.com'
 
   return {
     rules: [

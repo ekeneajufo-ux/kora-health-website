@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 
-const siteUrl = 'https://kora-health-website.vercel.app'
+const siteUrl = 'https://korahealthafrica.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -212,7 +212,7 @@ const jsonLd = {
           name: 'How can EMR vendors partner with Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration typically takes less than a week. Schedule a call via kora-health-website.vercel.app to discuss a partnership.',
+            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration typically takes less than a week. Schedule a call via korahealthafrica.com to discuss a partnership.',
           },
         },
         {
@@ -220,7 +220,7 @@ const jsonLd = {
           name: 'What is the investment opportunity with Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. The company is currently raising to fund initial deployment across Nigeria, Kenya, and Ghana, targeting 54 countries with critical health data infrastructure gaps. Schedule a call via kora-health-website.vercel.app.',
+            text: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. The company is currently raising to fund initial deployment across Nigeria, Kenya, and Ghana, targeting 54 countries with critical health data infrastructure gaps. Schedule a call via korahealthafrica.com.',
           },
         },
       ],

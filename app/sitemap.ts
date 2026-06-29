@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://kora-health-website.vercel.app'
+  const baseUrl = 'https://korahealthafrica.com'
 
   return [
     {
