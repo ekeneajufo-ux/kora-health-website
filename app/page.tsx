@@ -58,6 +58,19 @@ export default function Home() {
     setScenarioIdx(idx);
   };
 
+  // Auto-advance the scenario carousel every 30 seconds (loops back to the start).
+  useEffect(() => {
+    const id = setInterval(() => {
+      const el = scenarioRef.current;
+      if (!el) return;
+      const w = Math.max(1, el.clientWidth);
+      const next = (Math.round(el.scrollLeft / w) + 1) % 3;
+      el.scrollTo({ left: next * w, behavior: 'smooth' });
+      setScenarioIdx(next);
+    }, 30000);
+    return () => clearInterval(id);
+  }, []);
+
   const scenarios = [
     {
       title: 'A first visit, a complete picture.',
@@ -541,9 +554,9 @@ export default function Home() {
             </div>
 
             <button type="button" aria-label="Previous scenario" onClick={() => goToScenario(scenarioIdx - 1)} disabled={scenarioIdx === 0}
-              className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#0A1A2F] border border-white/15 text-white text-xl items-center justify-center hover:border-[#2DD4BF] transition-colors disabled:opacity-30 disabled:cursor-not-allowed">‹</button>
+              className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-[#EAB308] text-[#0A1A2F] text-2xl font-bold leading-none items-center justify-center shadow-lg shadow-black/40 ring-2 ring-[#EAB308]/30 hover:bg-[#d4a800] hover:scale-105 transition-all disabled:opacity-30 disabled:cursor-not-allowed">‹</button>
             <button type="button" aria-label="Next scenario" onClick={() => goToScenario(scenarioIdx + 1)} disabled={scenarioIdx === scenarios.length - 1}
-              className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#0A1A2F] border border-white/15 text-white text-xl items-center justify-center hover:border-[#2DD4BF] transition-colors disabled:opacity-30 disabled:cursor-not-allowed">›</button>
+              className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-[#EAB308] text-[#0A1A2F] text-2xl font-bold leading-none items-center justify-center shadow-lg shadow-black/40 ring-2 ring-[#EAB308]/30 hover:bg-[#d4a800] hover:scale-105 transition-all disabled:opacity-30 disabled:cursor-not-allowed">›</button>
           </div>
 
           <div className="flex justify-center gap-2.5 mt-6">
