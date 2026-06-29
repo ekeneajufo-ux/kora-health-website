@@ -484,7 +484,7 @@ export default function Home() {
 
       {/* SOLUTION — IN PRACTICE SCENARIOS (swipeable) */}
       <section id="example" aria-label="How Kora Works in Practice — clinical scenarios" className="px-6">
-        <div className="max-w-7xl mx-auto pb-14">
+        <div className="max-w-7xl mx-auto pb-4">
           <div className="text-center mb-8">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">See It In Practice</p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">How Kora works, in three real moments.</h2>
@@ -571,7 +571,7 @@ export default function Home() {
 
       {/* CAPABILITIES */}
       <section id="capabilities" aria-label="Kora Platform Capabilities" className="px-6">
-        <div className="max-w-7xl mx-auto py-14">
+        <div className="max-w-7xl mx-auto pt-4 pb-14">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap, i) => (
               <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 hover:border-[#2DD4BF]/40 transition-all duration-200 group">
@@ -941,7 +941,7 @@ export default function Home() {
       {/* INVESTOR */}
       <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto py-14">
+        <div className="relative max-w-7xl mx-auto pt-14 pb-4">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Left column — narrative */}
             <div>
@@ -995,7 +995,7 @@ export default function Home() {
 
       {/* ABOUT — BUILT BY CLINICIANS */}
       <section id="about" aria-label="About Kora Health — Built by Clinicians, for Clinicians" className="px-6">
-        <div className="max-w-7xl mx-auto py-14">
+        <div className="max-w-7xl mx-auto pt-4 pb-14">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">About Us</p>
             <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-6">Built by clinicians, for clinicians.</h2>
@@ -1034,7 +1034,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section id="faq" aria-label="Frequently Asked Questions about Kora Health" className="px-6 bg-[#0F172A]">
-        <div className="max-w-3xl mx-auto py-14">
+        <div className="max-w-3xl mx-auto pt-14 pb-4">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">FAQ</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Frequently asked.</h2>
           <div className="space-y-4">
@@ -1058,7 +1058,7 @@ export default function Home() {
       {/* FINAL CTA */}
       <section id="contact" aria-label="Schedule a Demo with Kora Health" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto py-20">
+        <div className="relative max-w-3xl mx-auto pt-6 pb-20">
           <div className="text-center mb-10">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Request a Demo</p>
             <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-4">See what Kora looks like in your workflow.</h2>
