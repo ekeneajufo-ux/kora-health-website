@@ -347,6 +347,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SOLUTION — IN PRACTICE SCENARIO */}
+      <section id="example" aria-label="How Kora Works in Practice — a clinical scenario" className="px-6">
+        <div className="max-w-6xl mx-auto pb-14">
+          <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
+            <div className="relative">
+              <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">See It In Practice</p>
+              <h3 className="display-serif text-2xl md:text-3xl font-bold text-white mb-5">A first visit, a complete picture.</h3>
+              <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-3xl">
+                A physician in Nairobi meets <span className="text-white font-semibold">Mrs. Wanjiku, 76</span>, for the first time. She mentions a leukemia diagnosis from a referral hospital three counties away, visits to two other clinics, and hands over a worn folder of paper lab results. Normally, piecing this together takes days of phone calls — or simply never happens. With Kora, the doctor opens one screen.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                {/* What Kora does */}
+                <div className="space-y-5">
+                  {[
+                    { icon: '🔗', title: 'Pulls every record', body: "Connects to the referral hospital's EMR, both clinics' systems, and the national registry — gathering scattered visits into one place." },
+                    { icon: '📄', title: 'Digitizes the paper folder', body: 'OCR reads the printed lab results and handwritten notes, turning the physical folder into structured clinical data.' },
+                    { icon: '🧠', title: 'Synthesizes one timeline', body: 'Builds a unified history: diagnosis, prior chemotherapy, transfusions, current medications, and allergies — deduplicated and source-linked.' },
+                    { icon: '⚠️', title: 'Surfaces what matters', body: 'Flags a bleeding-risk interaction with her current therapy and a falling platelet trend that needs attention today.' },
+                  ].map((step, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="text-2xl flex-shrink-0">{step.icon}</div>
+                      <div>
+                        <div className="text-white font-semibold mb-1">{step.title}</div>
+                        <div className="text-slate-400 text-base leading-relaxed">{step.body}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Synthesized record preview */}
+                <div className="bg-[#0A1A2F] border border-[#2DD4BF]/20 rounded-2xl p-6">
+                  <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/10">
+                    <div>
+                      <div className="text-white font-bold text-lg leading-tight">Mrs. Wanjiku</div>
+                      <div className="text-slate-500 text-xs">76 · Female · Synthesized by Kora</div>
+                    </div>
+                    <div className="text-[10px] text-[#2DD4BF] border border-[#2DD4BF]/30 rounded-full px-3 py-1 font-semibold uppercase tracking-wider">&lt; 2 min · offline</div>
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { label: 'Diagnosis', value: 'Chronic Lymphocytic Leukemia (2022)' },
+                      { label: 'Prior treatment', value: '4 cycles chemotherapy · last transfusion Jan 2026' },
+                      { label: 'Current medication', value: 'Ibrutinib · Allopurinol' },
+                      { label: 'Allergy', value: 'Penicillin' },
+                      { label: 'Latest labs (3 wks ago)', value: 'Platelets 88 ↓ · WBC 14.2' },
+                    ].map((row, i) => (
+                      <div key={i} className="flex items-start justify-between gap-4 border-b border-white/5 pb-3 last:border-0">
+                        <div className="text-xs text-slate-500 uppercase tracking-wider flex-shrink-0 pt-0.5">{row.label}</div>
+                        <div className="text-sm text-white text-right">{row.value}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 space-y-2">
+                    <div className="flex items-start gap-2 bg-red-500/10 border border-red-500/20 rounded-lg px-3 py-2">
+                      <span className="text-red-400 text-sm">⚠</span>
+                      <span className="text-xs text-red-300 leading-snug">Bleeding-risk: Ibrutinib — review before any anticoagulant or procedure.</span>
+                    </div>
+                    <div className="flex items-start gap-2 bg-[#EAB308]/10 border border-[#EAB308]/20 rounded-lg px-3 py-2">
+                      <span className="text-[#EAB308] text-sm">⚠</span>
+                      <span className="text-xs text-[#EAB308] leading-snug">Platelets trending down across last 3 results — recheck CBC today.</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 text-[11px] text-slate-600 italic">* Illustrative scenario for demonstration purposes only.</div>
+                </div>
+              </div>
+
+              <p className="relative text-slate-300 text-lg leading-relaxed mt-8 max-w-3xl">
+                In under two minutes — even with the clinic offline — the physician walks in knowing Mrs. Wanjiku&apos;s full history, current medications, and the alerts that matter. <span className="text-white font-semibold">No phone calls. No missing records. No guesswork.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CAPABILITIES */}
       <section id="capabilities" aria-label="Kora Platform Capabilities" className="px-6">
         <div className="max-w-7xl mx-auto py-14">
