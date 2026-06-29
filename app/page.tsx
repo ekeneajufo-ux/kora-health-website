@@ -1183,7 +1183,11 @@ export default function Home() {
           </div>
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-slate-600 text-sm">© 2026 Kora Health. All rights reserved.</div>
-            <div className="text-slate-600 text-sm italic">Rooted in Africa. Built for outcomes.</div>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-600">
+              <a href="/privacy/" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms/" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="/security/" className="hover:text-white transition-colors">Security &amp; Trust</a>
+            </div>
           </div>
         </div>
       </footer>
