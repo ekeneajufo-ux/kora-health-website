@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('government');
@@ -47,6 +47,127 @@ export default function Home() {
       setFormError('Network error. Please try again, or email info@korahealthafrica.com.');
     }
   };
+
+  const scenarioRef = useRef<HTMLDivElement>(null);
+  const [scenarioIdx, setScenarioIdx] = useState(0);
+  const goToScenario = (i: number) => {
+    const el = scenarioRef.current;
+    if (!el) return;
+    const idx = Math.max(0, Math.min(2, i));
+    el.scrollTo({ left: idx * el.clientWidth, behavior: 'smooth' });
+    setScenarioIdx(idx);
+  };
+
+  const scenarios = [
+    {
+      title: 'A first visit, a complete picture.',
+      tag: 'Outpatient clinic · Nairobi, Kenya',
+      intro: (
+        <>
+          A physician in Nairobi meets <span className="text-white font-semibold">Mrs. Wanjiku, 76</span>, for the first time. She mentions a leukemia diagnosis from a referral hospital three counties away, visits to two other clinics, and hands over a worn folder of paper lab results. Normally, piecing this together takes days of phone calls — or never happens. With Kora, the doctor opens one screen.
+        </>
+      ),
+      steps: [
+        { icon: '🔗', title: 'Pulls every record', body: "Connects to the referral hospital's EMR, both clinics' systems, and the national registry — gathering scattered visits into one place." },
+        { icon: '📄', title: 'Digitizes the paper folder', body: 'OCR reads the printed lab results and handwritten notes, turning the physical folder into structured clinical data.' },
+        { icon: '🧠', title: 'Synthesizes one timeline', body: 'Builds a unified history: diagnosis, prior chemotherapy, transfusions, current medications, and allergies — deduplicated and source-linked.' },
+        { icon: '⚠️', title: 'Surfaces what matters', body: 'Flags a bleeding-risk interaction with her current therapy and a falling platelet trend that needs attention today.' },
+      ],
+      record: {
+        name: 'Mrs. Wanjiku',
+        sub: '76 · Female · Synthesized by Kora',
+        badge: '< 2 min · offline',
+        rows: [
+          { label: 'Diagnosis', value: 'Chronic Lymphocytic Leukemia (2022)' },
+          { label: 'Prior treatment', value: '4 cycles chemotherapy · last transfusion Jan 2026' },
+          { label: 'Current medication', value: 'Ibrutinib · Allopurinol' },
+          { label: 'Allergy', value: 'Penicillin' },
+          { label: 'Latest labs (3 wks ago)', value: 'Platelets 88 ↓ · WBC 14.2' },
+        ],
+        flags: [
+          { level: 'red', text: 'Bleeding-risk: Ibrutinib — review before any anticoagulant or procedure.' },
+          { level: 'amber', text: 'Platelets trending down across last 3 results — recheck CBC today.' },
+        ],
+      },
+      outcome: (
+        <>
+          In under two minutes — even with the clinic offline — the physician walks in knowing Mrs. Wanjiku&apos;s full history, current medications, and the alerts that matter. <span className="text-white font-semibold">No phone calls. No missing records. No guesswork.</span>
+        </>
+      ),
+    },
+    {
+      title: 'An unconscious patient, no history.',
+      tag: 'Emergency department · Lagos, Nigeria',
+      intro: (
+        <>
+          An emergency physician receives <span className="text-white font-semibold">Mr. Adeyemi, 58</span>, brought in confused and sweating by relatives who don&apos;t know his medications or conditions. Every minute counts. She searches Kora by his name and national ID.
+        </>
+      ),
+      steps: [
+        { icon: '🔍', title: 'Finds him instantly', body: 'Matches him to records from two hospitals and a clinic he visited in the past year — no paperwork, no waiting.' },
+        { icon: '🔗', title: 'Loads recent providers', body: 'Pulls his active problem list, current medications, and most recent labs from his latest visits.' },
+        { icon: '🧠', title: 'Synthesizes the picture', body: 'Diabetes managed with insulin and a sulfonylurea, alongside reduced kidney function.' },
+        { icon: '⚠️', title: 'Surfaces the danger', body: 'Flags a high hypoglycemia risk and a critically low recent glucose — pointing straight to the likely cause of his confusion.' },
+      ],
+      record: {
+        name: 'Mr. Adeyemi',
+        sub: '58 · Male · Synthesized by Kora',
+        badge: 'ER · 90 sec',
+        rows: [
+          { label: 'Active conditions', value: 'Type 2 Diabetes · CKD Stage 3 · Hypertension' },
+          { label: 'Current medication', value: 'Insulin glargine · Glipizide · Lisinopril' },
+          { label: 'Last visit', value: '11 days ago — endocrinology clinic' },
+          { label: 'Latest labs', value: 'Glucose 2.8 mmol/L ↓ · eGFR 41' },
+          { label: 'Allergy', value: 'None recorded' },
+        ],
+        flags: [
+          { level: 'red', text: 'Sulfonylurea (Glipizide) + reduced kidney function → prolonged hypoglycemia risk.' },
+          { level: 'amber', text: 'Most recent glucose critically low — treat hypoglycemia first.' },
+        ],
+      },
+      outcome: (
+        <>
+          Within minutes — without a single answer from the family — she identifies <span className="text-white font-semibold">severe hypoglycemia</span>, treats it immediately, and admits him for monitoring. The history made the diagnosis.
+        </>
+      ),
+    },
+    {
+      title: 'Catching an outbreak before it grows.',
+      tag: 'Population health · State health department',
+      intro: (
+        <>
+          An infectious-disease physician suspects <span className="text-white font-semibold">Hepatitis B</span> cases are climbing in the north of the region. Instead of waiting for quarterly paper reports, she opens Kora&apos;s population dashboard.
+        </>
+      ),
+      steps: [
+        { icon: '📈', title: 'Spots the trend', body: 'New Hepatitis B diagnoses are up 34% over three months, concentrated in three LGAs.' },
+        { icon: '💉', title: 'Connects the gap', body: 'Those same LGAs show Hepatitis B birth-dose and childhood vaccine coverage far below target.' },
+        { icon: '🗺️', title: 'Drills into the data', body: 'Maps cases by facility and age group, revealing clusters around two specific communities.' },
+        { icon: '🎯', title: 'Acts on it', body: 'Targets a catch-up vaccination and screening campaign exactly where it is needed — and tracks impact in real time.' },
+      ],
+      record: {
+        name: 'Hepatitis B — Northern Region',
+        sub: 'Live population surveillance · Kora',
+        badge: 'Real-time',
+        rows: [
+          { label: 'New cases (90 days)', value: '412 ↑ 34%' },
+          { label: 'Hotspot LGAs', value: 'Bichi · Dawakin · Gwarzo' },
+          { label: 'Hep B birth-dose coverage', value: '48% ↓ (target 90%)' },
+          { label: 'Most affected age', value: '15–34 years' },
+          { label: 'Screening coverage', value: '22%' },
+        ],
+        flags: [
+          { level: 'red', text: 'Case uptick concentrated in 3 LGAs — investigate cluster.' },
+          { level: 'amber', text: 'Vaccine coverage 48% vs 90% target — schedule catch-up campaign.' },
+        ],
+      },
+      outcome: (
+        <>
+          She launches a targeted screening and vaccination drive in the affected communities — <span className="text-white font-semibold">weeks before a paper-based system would have flagged the rise</span> — and watches coverage climb in the same dashboard.
+        </>
+      ),
+    },
+  ];
 
   const capabilities = [
     {
@@ -347,78 +468,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOLUTION — IN PRACTICE SCENARIO */}
-      <section id="example" aria-label="How Kora Works in Practice — a clinical scenario" className="px-6">
+      {/* SOLUTION — IN PRACTICE SCENARIOS (swipeable) */}
+      <section id="example" aria-label="How Kora Works in Practice — clinical scenarios" className="px-6">
         <div className="max-w-7xl mx-auto pb-14">
-          <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
-            <div className="relative">
-              <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">See It In Practice</p>
-              <h3 className="display-serif text-2xl md:text-3xl font-bold text-white mb-5">A first visit, a complete picture.</h3>
-              <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-3xl">
-                A physician in Nairobi meets <span className="text-white font-semibold">Mrs. Wanjiku, 76</span>, for the first time. She mentions a leukemia diagnosis from a referral hospital three counties away, visits to two other clinics, and hands over a worn folder of paper lab results. Normally, piecing this together takes days of phone calls — or simply never happens. With Kora, the doctor opens one screen.
-              </p>
+          <div className="text-center mb-8">
+            <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">See It In Practice</p>
+            <h2 className="display-serif text-3xl md:text-4xl font-bold text-white mb-3">How Kora works, in three real moments.</h2>
+            <p className="text-slate-500 text-sm">Swipe, or use the arrows, to explore →</p>
+          </div>
 
-              <div className="grid md:grid-cols-2 gap-16 items-start">
-                {/* What Kora does */}
-                <div className="space-y-6">
-                  {[
-                    { icon: '🔗', title: 'Pulls every record', body: "Connects to the referral hospital's EMR, both clinics' systems, and the national registry — gathering scattered visits into one place." },
-                    { icon: '📄', title: 'Digitizes the paper folder', body: 'OCR reads the printed lab results and handwritten notes, turning the physical folder into structured clinical data.' },
-                    { icon: '🧠', title: 'Synthesizes one timeline', body: 'Builds a unified history: diagnosis, prior chemotherapy, transfusions, current medications, and allergies — deduplicated and source-linked.' },
-                    { icon: '⚠️', title: 'Surfaces what matters', body: 'Flags a bleeding-risk interaction with her current therapy and a falling platelet trend that needs attention today.' },
-                  ].map((step, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <div className="text-2xl flex-shrink-0">{step.icon}</div>
-                      <div>
-                        <div className="text-white font-semibold text-lg mb-1">{step.title}</div>
-                        <div className="text-slate-400 leading-relaxed">{step.body}</div>
+          <div className="relative">
+            <div
+              ref={scenarioRef}
+              onScroll={(e) => setScenarioIdx(Math.round(e.currentTarget.scrollLeft / Math.max(1, e.currentTarget.clientWidth)))}
+              className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {scenarios.map((s, si) => (
+                <div key={si} className="snap-center shrink-0 w-full">
+                  <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
+                    <div className="relative">
+                      <h3 className="display-serif text-2xl md:text-3xl font-bold text-white mb-1.5">{s.title}</h3>
+                      <p className="text-[#EAB308] text-sm font-semibold mb-5">{s.tag}</p>
+                      <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-3xl">{s.intro}</p>
+
+                      <div className="grid md:grid-cols-2 gap-16 items-start">
+                        <div className="space-y-6">
+                          {s.steps.map((step, i) => (
+                            <div key={i} className="flex items-start gap-4">
+                              <div className="text-2xl flex-shrink-0">{step.icon}</div>
+                              <div>
+                                <div className="text-white font-semibold text-lg mb-1">{step.title}</div>
+                                <div className="text-slate-400 leading-relaxed">{step.body}</div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="bg-[#0A1A2F] border border-[#2DD4BF]/20 rounded-2xl p-6">
+                          <div className="flex items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+                            <div>
+                              <div className="text-white font-bold text-lg leading-tight">{s.record.name}</div>
+                              <div className="text-slate-500 text-xs">{s.record.sub}</div>
+                            </div>
+                            <div className="text-[10px] text-[#2DD4BF] border border-[#2DD4BF]/30 rounded-full px-3 py-1 font-semibold uppercase tracking-wider whitespace-nowrap">{s.record.badge}</div>
+                          </div>
+                          <div className="space-y-3">
+                            {s.record.rows.map((row, i) => (
+                              <div key={i} className="flex items-start justify-between gap-4 border-b border-white/5 pb-3 last:border-0">
+                                <div className="text-xs text-slate-500 uppercase tracking-wider flex-shrink-0 pt-0.5">{row.label}</div>
+                                <div className="text-sm text-white text-right">{row.value}</div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-5 space-y-2">
+                            {s.record.flags.map((f, i) => (
+                              <div key={i} className={`flex items-start gap-2 rounded-lg px-3 py-2 border ${f.level === 'red' ? 'bg-red-500/10 border-red-500/20' : 'bg-[#EAB308]/10 border-[#EAB308]/20'}`}>
+                                <span className={`text-sm ${f.level === 'red' ? 'text-red-400' : 'text-[#EAB308]'}`}>⚠</span>
+                                <span className={`text-xs leading-snug ${f.level === 'red' ? 'text-red-300' : 'text-[#EAB308]'}`}>{f.text}</span>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-4 text-[11px] text-slate-600 italic">* Illustrative scenario for demonstration purposes only.</div>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
 
-                {/* Synthesized record preview */}
-                <div className="bg-[#0A1A2F] border border-[#2DD4BF]/20 rounded-2xl p-6">
-                  <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/10">
-                    <div>
-                      <div className="text-white font-bold text-lg leading-tight">Mrs. Wanjiku</div>
-                      <div className="text-slate-500 text-xs">76 · Female · Synthesized by Kora</div>
-                    </div>
-                    <div className="text-[10px] text-[#2DD4BF] border border-[#2DD4BF]/30 rounded-full px-3 py-1 font-semibold uppercase tracking-wider">&lt; 2 min · offline</div>
-                  </div>
-                  <div className="space-y-3">
-                    {[
-                      { label: 'Diagnosis', value: 'Chronic Lymphocytic Leukemia (2022)' },
-                      { label: 'Prior treatment', value: '4 cycles chemotherapy · last transfusion Jan 2026' },
-                      { label: 'Current medication', value: 'Ibrutinib · Allopurinol' },
-                      { label: 'Allergy', value: 'Penicillin' },
-                      { label: 'Latest labs (3 wks ago)', value: 'Platelets 88 ↓ · WBC 14.2' },
-                    ].map((row, i) => (
-                      <div key={i} className="flex items-start justify-between gap-4 border-b border-white/5 pb-3 last:border-0">
-                        <div className="text-xs text-slate-500 uppercase tracking-wider flex-shrink-0 pt-0.5">{row.label}</div>
-                        <div className="text-sm text-white text-right">{row.value}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-5 space-y-2">
-                    <div className="flex items-start gap-2 bg-red-500/10 border border-red-500/20 rounded-lg px-3 py-2">
-                      <span className="text-red-400 text-sm">⚠</span>
-                      <span className="text-xs text-red-300 leading-snug">Bleeding-risk: Ibrutinib — review before any anticoagulant or procedure.</span>
-                    </div>
-                    <div className="flex items-start gap-2 bg-[#EAB308]/10 border border-[#EAB308]/20 rounded-lg px-3 py-2">
-                      <span className="text-[#EAB308] text-sm">⚠</span>
-                      <span className="text-xs text-[#EAB308] leading-snug">Platelets trending down across last 3 results — recheck CBC today.</span>
+                      <p className="text-slate-300 text-lg leading-relaxed mt-8 max-w-3xl">{s.outcome}</p>
                     </div>
                   </div>
-                  <div className="mt-4 text-[11px] text-slate-600 italic">* Illustrative scenario for demonstration purposes only.</div>
                 </div>
-              </div>
-
-              <p className="relative text-slate-300 text-lg leading-relaxed mt-8 max-w-3xl">
-                In under two minutes — even with the clinic offline — the physician walks in knowing Mrs. Wanjiku&apos;s full history, current medications, and the alerts that matter. <span className="text-white font-semibold">No phone calls. No missing records. No guesswork.</span>
-              </p>
+              ))}
             </div>
+
+            <button type="button" aria-label="Previous scenario" onClick={() => goToScenario(scenarioIdx - 1)} disabled={scenarioIdx === 0}
+              className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#0A1A2F] border border-white/15 text-white text-xl items-center justify-center hover:border-[#2DD4BF] transition-colors disabled:opacity-30 disabled:cursor-not-allowed">‹</button>
+            <button type="button" aria-label="Next scenario" onClick={() => goToScenario(scenarioIdx + 1)} disabled={scenarioIdx === scenarios.length - 1}
+              className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#0A1A2F] border border-white/15 text-white text-xl items-center justify-center hover:border-[#2DD4BF] transition-colors disabled:opacity-30 disabled:cursor-not-allowed">›</button>
+          </div>
+
+          <div className="flex justify-center gap-2.5 mt-6">
+            {scenarios.map((_, i) => (
+              <button key={i} type="button" aria-label={`Go to scenario ${i + 1}`} onClick={() => goToScenario(i)}
+                className={`h-2.5 rounded-full transition-all ${scenarioIdx === i ? 'w-8 bg-[#2DD4BF]' : 'w-2.5 bg-white/20 hover:bg-white/40'}`} />
+            ))}
           </div>
         </div>
       </section>
