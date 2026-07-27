@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     'digital health Nigeria',
     'digital health Kenya',
     'digital health Ghana',
-    'OpenMRS integration',
-    'DHIS2 integration',
-    'KenyaEMR integration',
+    'EMR integration Africa',
+    'health information system integration Africa',
+    'clinical data integration Africa',
     'African healthcare investment',
     'African health tech startup',
     'clinical AI Africa',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     'EMR integration partner Africa',
     'clinical data aggregation EMR',
     'HL7 FHIR integration Africa',
-    'OpenMRS partner',
-    'DHIS2 API partner',
+    'health IT vendor partner Africa',
+    'clinical data API partner',
     'electronic health record interoperability Africa',
     'EMR vendor partner program',
     'patient data enrichment EMR',
@@ -123,9 +123,7 @@ const jsonLd = {
         'Clinical Data Interoperability',
         'Disease Surveillance',
         'Offline Healthcare Technology',
-        'DHIS2',
-        'OpenMRS',
-        'KenyaEMR',
+        'Health Information Systems',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
@@ -142,12 +140,12 @@ const jsonLd = {
       description:
         'An offline-first clinical intelligence platform that synthesizes patient data from multiple EMR systems, paper records, and digital sources into decision-ready intelligence. Built for African healthcare environments with edge AI inference for low-connectivity settings in Nigeria, Kenya, Ghana, and across Africa.',
       featureList: [
-        'Standards-based EMR Integration — OpenMRS, DHIS2, KenyaEMR, Epic, iClinic and other systems',
+        'Standards-based EMR Integration via HL7 FHIR and open APIs',
         'Offline-First Architecture with Edge AI Inference',
         'Population Health Engine and Real-Time Disease Surveillance',
         'Paper Record Digitization via OCR in 15+ Languages',
         'AI Clinical Decision Support trained on African patient populations',
-        'Automated DHIS2 and WHO Reporting',
+        'Automated WHO and National Health Reporting',
       ],
       offers: {
         '@type': 'Offer',
@@ -188,7 +186,7 @@ const jsonLd = {
           name: 'What EMR systems can Kora integrate with?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora is built to integrate with major EMR systems — including OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and legacy systems — using open standards (HL7 FHIR, OpenMRS REST, DHIS2 API). It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
+            text: 'Kora is built to integrate with major EMR and health information systems — including modern and legacy platforms — using open standards such as HL7 FHIR. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
           },
         },
         {
@@ -204,7 +202,7 @@ const jsonLd = {
           name: 'What population health capabilities does Kora offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Kora's Population Health Engine aggregates de-identified records into real-time district and national dashboards. Features include disease surveillance, vaccination tracking, outbreak detection, NCD burden monitoring, maternal health indicators, and automated DHIS2/WHO reporting.",
+            text: "Kora's Population Health Engine aggregates de-identified records into real-time district and national dashboards. Features include disease surveillance, vaccination tracking, outbreak detection, NCD burden monitoring, maternal health indicators, and automated WHO and national health reporting.",
           },
         },
         {
@@ -212,7 +210,7 @@ const jsonLd = {
           name: 'How can EMR vendors partner with Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration is designed to take less than a week. Schedule a demo via korahealthafrica.com to discuss a partnership.',
+            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, standard REST APIs, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration is designed to take less than a week. Schedule a demo via korahealthafrica.com to discuss a partnership.',
           },
         },
         {

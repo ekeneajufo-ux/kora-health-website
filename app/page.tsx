@@ -187,7 +187,7 @@ export default function Home() {
       icon: '🔗',
       title: 'Universal Data Synthesis',
       description:
-        'Built to connect to Epic, OpenMRS, DHIS2, KenyaEMR, iClinic, and other major EMR systems. Ingests paper records, scanned documents, voice notes, and lab results from any source — simultaneously.',
+        'Built to connect to leading EMR and health information systems. Ingests paper records, scanned documents, voice notes, and lab results from any source — simultaneously.',
     },
     {
       icon: '📡',
@@ -199,7 +199,7 @@ export default function Home() {
       icon: '🌍',
       title: 'Population Health Engine',
       description:
-        'Real-time disease surveillance across districts. Track vaccination coverage, detect outbreaks early, monitor chronic disease burden, and auto-report to DHIS2 and WHO.',
+        'Real-time disease surveillance across districts. Track vaccination coverage, detect outbreaks early, monitor chronic disease burden, and auto-report to WHO and national health authorities.',
     },
     {
       icon: '📄',
@@ -238,7 +238,7 @@ export default function Home() {
       bullets: [
         'National & sub-national dashboards: disease burden, coverage, and outcomes by state, LGA, and district',
         'Real-time disease surveillance, outbreak early-warning, and notifiable-disease reporting',
-        'Automated DHIS2, WHO, IDSR, and donor (PEPFAR, Global Fund, Gavi) reporting — no manual aggregation',
+        'Automated WHO, IDSR, and donor (PEPFAR, Global Fund, Gavi) reporting — no manual aggregation',
         'Evidence for resource allocation: target funding, staffing, and supplies to the highest-need regions',
         'Program monitoring & evaluation, impact measurement, and grant/compliance reporting',
         'Works with paper-based and digital facilities simultaneously — no facility left invisible',
@@ -253,7 +253,7 @@ export default function Home() {
         { label: 'On-time IDSR reports', value: '92.1%', trend: '+6.4%', alert: false },
         { label: 'Essential-medicine stockouts', value: '11 LGAs', trend: 'Action', alert: true },
         { label: 'Active outbreak alerts', value: '3', trend: 'New', alert: true },
-        { label: 'Donor reports automated', value: '100%', trend: 'DHIS2/WHO', alert: false },
+        { label: 'Donor reports automated', value: '100%', trend: 'WHO/IDSR', alert: false },
       ],
     },
     population: {
@@ -267,7 +267,7 @@ export default function Home() {
         'Maternal, newborn & child health (MNCH) indicators and trends',
         'NCD burden monitoring — diabetes, hypertension, cancer screening',
         'Health-equity analytics: surface underserved populations and access gaps',
-        'Automated reporting for DHIS2, WHO IDSR, and donor frameworks',
+        'Automated reporting for WHO IDSR and donor frameworks',
       ],
       stat: 'Real-time',
       statLabel: 'Population health surveillance & reporting',
@@ -337,7 +337,7 @@ export default function Home() {
     },
     {
       q: 'What data sources can Kora integrate with?',
-      a: 'Kora is built to integrate with major EMR systems — including OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and legacy systems — using open standards (HL7 FHIR, OpenMRS REST, DHIS2 API). It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
+      a: 'Kora is built to integrate with major EMR and health information systems — including modern and legacy platforms — using open standards such as HL7 FHIR. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
     },
     {
       q: 'How does Kora assist with digitization?',
@@ -345,11 +345,11 @@ export default function Home() {
     },
     {
       q: 'What population health capabilities does Kora offer?',
-      a: "Kora's Population Health Engine aggregates de-identified records into real-time district and national dashboards. Features include disease surveillance, vaccination tracking, outbreak detection, NCD burden monitoring, maternal health indicators, and automated DHIS2/WHO reporting.",
+      a: "Kora's Population Health Engine aggregates de-identified records into real-time district and national dashboards. Features include disease surveillance, vaccination tracking, outbreak detection, NCD burden monitoring, maternal health indicators, and automated WHO and national health reporting.",
     },
     {
       q: 'How does Kora partner with existing EMR systems?',
-      a: "Kora integrates with your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration is designed to take less than a week. Schedule a demo to explore an EMR partnership.",
+      a: "Kora integrates with your EMR via HL7 FHIR, standard REST APIs, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration is designed to take less than a week. Schedule a demo to explore an EMR partnership.",
     },
     {
       q: 'What is the investment opportunity?',
@@ -382,12 +382,13 @@ export default function Home() {
               <span className="text-[11px] md:text-xs font-semibold tracking-[0.42em] uppercase text-[#EAB308] mt-0.5 [text-indent:0.42em]">Health</span>
             </div>
           </a>
-          <div className="hidden md:flex items-center gap-8 text-sm text-slate-400" role="menubar">
+          <div className="hidden md:flex items-center gap-6 text-sm text-slate-400" role="menubar">
             <a href="#capabilities" title="Kora Platform Capabilities" className="hover:text-white transition-colors">Capabilities</a>
             <a href="#use-cases" title="Who Kora Serves — Clinics, Health Systems, Governments" className="hover:text-white transition-colors">Use Cases</a>
             <a href="#population" title="Population Health Engine for Africa" className="hover:text-white transition-colors">Population Health</a>
             <a href="#how-it-works" title="How Kora Works" className="hover:text-white transition-colors">How It Works</a>
             <a href="#emr-partners" title="EMR Partnership Program" className="hover:text-white transition-colors">EMR Partners</a>
+            <a href="#privacy-data" title="How Kora Protects Patient Data Privacy" className="hover:text-white transition-colors">Data Privacy</a>
             <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
             <a href="#about" title="About Kora Health — Built by Clinicians" className="hover:text-white transition-colors">About Us</a>
           </div>
@@ -665,7 +666,7 @@ export default function Home() {
                   '🏛️  National & sub-national policy dashboards (state, LGA, district)',
                   '💰  Resource allocation & donor-fund targeting by need',
                   '🌍  Health-equity & access-gap analytics',
-                  '📊  Automated DHIS2, WHO IDSR & donor reporting',
+                  '📊  Automated WHO IDSR & donor reporting',
                   '🔔  Real-time district-level alert system',
                 ].map((item, i) => (
                   <div key={i} className="text-sm text-slate-300 py-1">{item}</div>
@@ -788,7 +789,7 @@ export default function Home() {
             {[
               { icon: '📝', title: 'Handwritten Notes', body: 'OCR and AI extract clinical data from handwritten patient notes in 15+ languages, including local scripts.' },
               { icon: '🗂️', title: 'Paper Records', body: 'Scan and digitize patient folders, lab slips, prescription history, referral letters, and ward notes.' },
-              { icon: '💻', title: 'Multiple EMRs', body: 'Designed to connect OpenMRS, DHIS2, KenyaEMR, Epic, iClinic, and other systems simultaneously with zero duplication.' },
+              { icon: '💻', title: 'Multiple EMRs', body: 'Designed to connect multiple EMR and health information systems simultaneously with zero duplication.' },
               { icon: '🔬', title: 'Lab & Diagnostic Data', body: 'Ingest PDF lab results, DICOM imaging, instrument printouts, and rapid test records from any facility.' },
             ].map((item, i) => (
               <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 text-left hover:border-[#2DD4BF]/30 transition-colors">
@@ -810,7 +811,7 @@ export default function Home() {
             {[
               { step: '01', title: 'Ingest', body: 'Connect your existing EMRs, scan paper records, and upload data in any format — structured or unstructured, digital or handwritten, lab printouts or voice notes.', color: '#2DD4BF' },
               { step: '02', title: 'Synthesize', body: "Kora's engine normalizes, deduplicates, and structures all data into a unified patient record. AI extracts clinical concepts and links every data point back to its source.", color: '#F59E0B' },
-              { step: '03', title: 'Deliver', body: 'Clinicians get decision-ready summaries. Population health teams get real-time dashboards. Ministries get automated DHIS2 and WHO reports — all with full audit trails.', color: '#8B5CF6' },
+              { step: '03', title: 'Deliver', body: 'Clinicians get decision-ready summaries. Population health teams get real-time dashboards. Ministries get automated WHO and national health reports — all with full audit trails.', color: '#8B5CF6' },
             ].map((item, i) => (
               <div key={i} className="relative">
                 <div className="text-8xl font-bold mb-4 select-none" style={{ color: item.color, opacity: 0.15 }}>{item.step}</div>
@@ -888,7 +889,7 @@ export default function Home() {
               {
                 icon: '📈',
                 title: 'New Revenue Streams',
-                body: "Co-sell Kora's population health and government reporting modules alongside your EMR. Partners share in subscription revenue from district dashboards, DHIS2 reporting, and national health analytics.",
+                body: "Co-sell Kora's population health and government reporting modules alongside your EMR. Partners share in subscription revenue from district dashboards, national health reporting, and population analytics.",
               },
             ].map((item, i) => (
               <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 hover:border-[#EAB308]/40 transition-all duration-200 group">
@@ -904,9 +905,9 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-white mb-6">What EMR partners get</h3>
               <ul className="space-y-5">
                 {[
-                  { title: 'Bi-directional API integration', body: "Kora reads from and writes back to your EMR via HL7 FHIR, OpenMRS REST, DHIS2 API, or custom connectors — keeping your system the system of record." },
+                  { title: 'Bi-directional API integration', body: "Kora reads from and writes back to your EMR via HL7 FHIR, standard REST APIs, or custom connectors — keeping your system the system of record." },
                   { title: 'Patient record enrichment at point of care', body: "When a patient opens in your EMR, Kora automatically surfaces synthesized records from every other facility they've visited — paper records included — directly in your UI." },
-                  { title: 'Population health add-on module', body: "Offer your health-system clients real-time district dashboards and automated DHIS2/WHO reporting as a co-branded feature — powered by Kora's aggregation engine." },
+                  { title: 'Population health add-on module', body: "Offer your health-system clients real-time district dashboards and automated WHO and national health reporting as a co-branded feature — powered by Kora's aggregation engine." },
                   { title: 'Zero infrastructure burden', body: "Kora runs on the client's existing hardware or Kora's cloud. No new servers, no new contracts for your clients to manage." },
                   { title: 'Shared implementation support', body: "Kora's clinical integration team works alongside your onboarding team at joint accounts — cutting time-to-value for clients without adding to your support load." },
                 ].map((item, i) => (
@@ -947,7 +948,7 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { metric: 'FHIR', label: 'Standards-based — HL7 FHIR, OpenMRS, DHIS2' },
+                  { metric: 'FHIR', label: 'Standards-based — HL7 FHIR and open APIs' },
                   { metric: '< 1 wk', label: 'Target API integration time' },
                   { metric: '0', label: 'Rip-and-replace required' },
                 ].map((m, i) => (
@@ -1040,7 +1041,7 @@ export default function Home() {
                   { title: 'Paper + digital synthesis', body: 'No other platform synthesizes both paper and digital data at scale in Africa. This is the moat.' },
                   { title: 'Physician-built, physician-led', body: 'Designed collaboratively by physicians practicing domestically and abroad — comprehensive by design, not by assumption.' },
                   { title: 'Complementary to every EMR', body: 'Not a rip-and-replace play. Kora augments existing EMR investments, reducing sales friction and accelerating adoption.' },
-                  { title: 'Dual revenue model', body: 'Clinic and health system subscriptions, plus government and donor revenue streams via population health and DHIS2 reporting.' },
+                  { title: 'Dual revenue model', body: 'Clinic and health system subscriptions, plus government and donor revenue streams via population health and national health reporting.' },
                   { title: 'Proven GTM path', body: 'Private clinics → health systems → national ministries. Each stage funds the next and expands the data network effect.' },
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-4">
