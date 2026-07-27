@@ -483,6 +483,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* UNIFIED RECORD — WHY CENTRALIZING MATTERS */}
+      <section id="unified-record" aria-label="One Unified Patient Record — Continuity, Safety, and Efficiency Across Every EMR" className="px-6 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto text-center py-14">
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">One Unified Record</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Many EMRs. One complete patient story.</h2>
+          <p className="text-xl text-slate-400 mb-16 max-w-3xl mx-auto leading-relaxed">
+            Patients move between clinics, hospitals, labs, and pharmacies — each running its own EMR, each holding only a fragment. Kora connects to the systems already in place and centralizes those fragments into a single longitudinal record, so every clinician sees the whole patient instead of a piece of them.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            {[
+              { title: 'Continuity of Care', body: "The full history follows the patient across every facility and system — no starting from zero at each new visit or referral." },
+              { title: 'Patient Safety', body: 'A complete view of medications, allergies, and prior diagnoses helps close the gaps that lead to dangerous interactions and avoidable errors.' },
+              { title: 'Less Redundancy', body: 'When prior results are already on hand, clinicians can avoid repeat labs, duplicate imaging, and re-taken histories.' },
+              { title: 'Greater Efficiency', body: 'Less time hunting for scattered records means more time with patients — and less wasted cost and effort across the system.' },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-7 hover:border-[#2DD4BF]/30 transition-colors">
+                <div className="w-10 h-1 rounded-full bg-[#EAB308] mb-5" />
+                <h3 className="text-white font-bold mb-3">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SOLUTION — IN PRACTICE SCENARIOS (swipeable) */}
       <section id="example" aria-label="How Kora Works in Practice — clinical scenarios" className="px-6">
         <div className="max-w-7xl mx-auto pb-4">
