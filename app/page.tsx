@@ -823,6 +823,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INFRASTRUCTURE REALITY */}
+      <section id="infrastructure" aria-label="Built for African Infrastructure Reality — Connectivity, Power, Satellite, and Government Partnerships" className="px-6">
+        <div className="max-w-7xl mx-auto text-center py-14">
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Infrastructure</p>
+          <h2 className="text-4xl font-bold text-white mb-6">Built for African Infrastructure Reality</h2>
+          <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
+            Kora works in the real Africa — where internet goes down, where clinics run on generators, where data can&apos;t be lost because it&apos;s the difference between life and death.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: 'Connectivity', body: "We plan to partner with mobile network providers — such as Safaricom, MTN, Airtel, and Vodafone — to make affordable, reliable data available to healthcare clinics." },
+              { title: 'Power & Energy', body: "We plan to work with solar and off-grid energy providers — such as d.light, PowerTech, and SunCulture — to help keep clinics powered." },
+              { title: 'Satellite Backup', body: "We plan to explore satellite providers — such as Starlink and OneWeb — for redundant connectivity when primary internet fails." },
+              { title: 'Government Alignment', body: "We intend to engage health ministries across Nigeria, Kenya, and Ghana to align Kora with national digital health infrastructure." },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 text-left hover:border-[#2DD4BF]/30 transition-colors">
+                <div className="w-10 h-1 rounded-full bg-[#EAB308] mb-5" />
+                <h3 className="text-white font-bold mb-3">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-14 bg-[#0F172A] border border-[#2DD4BF]/20 rounded-2xl px-8 py-10 max-w-2xl mx-auto">
+            <p className="text-white text-xl font-bold mb-6">Want to partner with Kora?</p>
+            <a href="#contact" className="inline-block bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors">
+              Get in touch
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* EMR PARTNERSHIP */}
       <section id="emr-partners" aria-label="EMR Partnership Program — Integrate Kora with Your Electronic Medical Records System" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EAB308]/5 via-transparent to-[#2DD4BF]/5 pointer-events-none" />
