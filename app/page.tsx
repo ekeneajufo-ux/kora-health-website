@@ -969,6 +969,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRIVACY & DATA PROTECTION */}
+      <section id="privacy-data" aria-label="Privacy and Data Protection — How Kora Keeps Clinical and Patient Data Private" className="px-6 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto text-center py-14">
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Privacy &amp; Data Protection</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Health data is sacred. We protect it by design.</h2>
+          <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
+            Patient information is among the most sensitive data that exists. Privacy and security are built into Kora from the ground up — not bolted on afterward.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            {[
+              { title: 'Encrypted end to end', body: 'Data is encrypted in transit using modern TLS and encrypted at rest, so records stay protected both on the network and on disk.' },
+              { title: 'In-country data residency', body: "Kora is built to store and process clinical data inside the country it comes from, in line with national health-data and data-protection laws." },
+              { title: 'Private by staying local', body: "Because Kora's AI runs on-device or on a facility server, sensitive data often never has to leave the clinic to deliver clinical intelligence." },
+              { title: 'Least-privilege access', body: 'Role-based access controls and audit logging mean people and systems see only the data they need — and every access is recorded.' },
+              { title: 'De-identified by default', body: "Population-health analytics run on de-identified, aggregated data wherever individual-level records aren't required." },
+              { title: 'Built for African data law', body: 'Our practices are designed to align with data-protection laws in Nigeria, Kenya, Ghana, and other markets, under agreements with the partners whose data we handle.' },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-7 hover:border-[#2DD4BF]/30 transition-colors">
+                <div className="w-10 h-1 rounded-full bg-[#EAB308] mb-5" />
+                <h3 className="text-white font-bold mb-3">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12">
+            <a href="/security/" className="inline-flex items-center gap-2 text-[#2DD4BF] font-semibold hover:text-[#1BBFA8] transition-colors">
+              Read our full Security &amp; Trust commitments
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* INVESTOR */}
       <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
