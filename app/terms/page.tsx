@@ -28,14 +28,14 @@ export default function TermsPage() {
 
       <h2>5. Medical disclaimer</h2>
       <p>
-        Kora is a clinical-intelligence and decision-<strong>support</strong> tool. It is intended to assist qualified healthcare professionals and does <strong>not</strong> provide medical advice, diagnosis, or treatment, and is <strong>not a substitute for professional clinical judgment</strong>. Healthcare professionals remain solely responsible for all clinical decisions. Use of the Site does not create a doctor–patient relationship. In an emergency, contact local emergency services.
+        Kora is a clinical-intelligence and decision-<strong>support</strong> tool. It is intended to assist qualified healthcare professionals and does <strong>not</strong> provide medical advice, diagnosis, or treatment, and is <strong>not a substitute for professional clinical judgment</strong>. Healthcare professionals remain solely responsible for all clinical decisions. Use of the Site does not create a doctor-patient relationship. In an emergency, contact local emergency services.
       </p>
 
       <h2>6. Acceptable use</h2>
       <p>You agree not to: use the Site unlawfully; attempt to gain unauthorized access to our systems or data; interfere with the Site&apos;s operation or security; scrape or harvest data without permission; or submit malicious code or false information.</p>
 
       <h2>7. Intellectual property</h2>
-      <p>The Site and its content — including the Kora name, logo, text, graphics, and software — are owned by Kora or its licensors and are protected by intellectual-property laws. You may not copy, modify, distribute, or create derivative works without our prior written consent.</p>
+      <p>The Site and its content, including the Kora name, logo, text, graphics, and software, are owned by Kora or its licensors and are protected by intellectual-property laws. You may not copy, modify, distribute, or create derivative works without our prior written consent.</p>
 
       <h2>8. Third-party links and services</h2>
       <p>The Site may link to or rely on third-party services (for example, email delivery or scheduling). We are not responsible for the content or practices of third parties, which are governed by their own terms and policies.</p>

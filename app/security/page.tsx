@@ -4,7 +4,7 @@ import LegalShell from '../components/LegalShell';
 export const metadata: Metadata = {
   title: 'Security & Trust',
   description:
-    'How Kora Health protects clinical and personal data — encryption, access control, data residency, breach response, and our compliance posture across Africa.',
+    'How Kora Health protects clinical and personal data: encryption, access control, data residency, breach response, and our compliance posture across Africa.',
 };
 
 export default function SecurityPage() {
@@ -15,7 +15,7 @@ export default function SecurityPage() {
       intro="Health data is among the most sensitive information that exists. Protecting it is foundational to everything Kora builds. This page summarizes the safeguards and practices we use to keep clinical and personal data secure."
     >
       <h2>Our commitment</h2>
-      <p>Kora is built for environments where trust, reliability, and data protection are non-negotiable — clinics, hospitals, and ministries of health. Security and privacy are designed into the platform, not added afterward.</p>
+      <p>Kora is built for environments where trust, reliability, and data protection are non-negotiable: clinics, hospitals, and ministries of health. Security and privacy are designed into the platform, not added afterward.</p>
 
       <h2>Encryption</h2>
       <ul>
@@ -25,7 +25,7 @@ export default function SecurityPage() {
 
       <h2>Access control</h2>
       <ul>
-        <li>Role-based access and the principle of least privilege — people and systems get only the access they need.</li>
+        <li>Role-based access and the principle of least privilege: people and systems get only the access they need.</li>
         <li>Authentication controls and audit logging of access to sensitive data.</li>
       </ul>
 
@@ -45,7 +45,7 @@ export default function SecurityPage() {
       <p>We maintain procedures to detect, contain, and respond to security incidents, and to notify affected clients, individuals, and regulators within the timeframes required by applicable law.</p>
 
       <h2>Compliance posture</h2>
-      <p>We design our practices to align with applicable African data-protection laws — including Nigeria&apos;s Data Protection Act, Kenya&apos;s Data Protection Act, and Ghana&apos;s Data Protection Act — and with recognized security standards and health-data safeguards (for example, ISO 27001-style controls and HIPAA-aligned practices). We enter into Data Processing Agreements with the providers, health systems, and government partners whose data we process. <em>[Specific certifications and audit status to be listed here as they are obtained.]</em></p>
+      <p>We design our practices to align with applicable African data-protection laws, including Nigeria&apos;s Data Protection Act, Kenya&apos;s Data Protection Act, and Ghana&apos;s Data Protection Act, and with recognized security standards and health-data safeguards (for example, ISO 27001-style controls and HIPAA-aligned practices). We enter into Data Processing Agreements with the providers, health systems, and government partners whose data we process. <em>[Specific certifications and audit status to be listed here as they are obtained.]</em></p>
 
       <h2>Responsible disclosure</h2>
       <p>If you believe you have found a security vulnerability, please contact us at <a href="mailto:info@korahealthafrica.com">info@korahealthafrica.com</a> so we can investigate and respond. We appreciate responsible disclosure.</p>

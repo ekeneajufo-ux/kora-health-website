@@ -7,7 +7,7 @@ const siteUrl = 'https://korahealthafrica.com'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Kora Health — Clinical Intelligence Platform for Africa | EMR Integration & Population Health AI',
+    default: 'Kora Health: Clinical Intelligence Platform for Africa | EMR Integration & Population Health AI',
     template: '%s | Kora Health',
   },
   description:
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'Kora Health',
-    title: "Kora Health — Africa's Clinical Intelligence Engine",
+    title: "Kora Health: Africa's Clinical Intelligence Engine",
     description:
       'Synthesizing fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Offline-first. Built for Nigeria, Kenya, Ghana, and all of Africa.',
     locale: 'en_US',
@@ -82,13 +82,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Kora Health — Clinical Intelligence Platform for Africa',
+        alt: 'Kora Health: Clinical Intelligence Platform for Africa',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Kora Health — Africa's Clinical Intelligence Engine",
+    title: "Kora Health: Africa's Clinical Intelligence Engine",
     description:
       'AI-powered clinical intelligence platform for Africa. Synthesizes EMRs, paper records, and digital data. Works offline. Deploying across Nigeria, Kenya, and Ghana.',
     images: ['/og-image.png'],
@@ -104,7 +104,7 @@ const jsonLd = {
       name: 'Kora Health',
       url: siteUrl,
       description:
-        "Africa's Clinical Intelligence Engine — synthesizing fragmented patient data into decision-ready clinical intelligence across Nigeria, Kenya, Ghana, and the broader African continent.",
+        "Africa's Clinical Intelligence Engine, synthesizing fragmented patient data into decision-ready clinical intelligence across Nigeria, Kenya, Ghana, and the broader African continent.",
       foundingDate: '2024',
       areaServed: [
         { '@type': 'Continent', name: 'Africa' },
@@ -170,7 +170,7 @@ const jsonLd = {
           name: 'What is Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Kora is Africa's Clinical Intelligence Engine — a platform that synthesizes fragmented patient data from multiple EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Purpose-built for Africa's healthcare infrastructure, with initial deployment in Nigeria, Kenya, and Ghana.",
+            text: "Kora is Africa's Clinical Intelligence Engine, a platform that synthesizes fragmented patient data from multiple EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Purpose-built for Africa's healthcare infrastructure, with initial deployment in Nigeria, Kenya, and Ghana.",
           },
         },
         {
@@ -178,7 +178,7 @@ const jsonLd = {
           name: 'How does Kora work without internet connectivity?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora uses an offline-first architecture with edge AI inference. The AI models run entirely on the local device or facility server — no internet required for core clinical functions. When connectivity returns, Kora automatically syncs data and pushes population health updates.',
+            text: 'Kora uses an offline-first architecture with edge AI inference. The AI models run entirely on the local device or facility server, no internet required for core clinical functions. When connectivity returns, Kora automatically syncs data and pushes population health updates.',
           },
         },
         {
@@ -186,7 +186,7 @@ const jsonLd = {
           name: 'What EMR systems can Kora integrate with?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora is built to integrate with major EMR and health information systems — including modern and legacy platforms — using open standards such as HL7 FHIR. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
+            text: 'Kora is built to integrate with major EMR and health information systems, including modern and legacy platforms, using open standards such as HL7 FHIR. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
           },
         },
         {
@@ -194,7 +194,7 @@ const jsonLd = {
           name: 'How does Kora assist with medical record digitization in Africa?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Kora's Digitization Engine converts paper records and handwritten notes into structured clinical data using OCR and AI extraction. It supports 15+ languages and local handwriting styles used across Africa. No manual data entry required — clinics in Nigeria, Kenya, Ghana, and across the continent can digitize years of paper records at scale.",
+            text: "Kora's Digitization Engine converts paper records and handwritten notes into structured clinical data using OCR and AI extraction. It supports 15+ languages and local handwriting styles used across Africa. No manual data entry required, clinics in Nigeria, Kenya, Ghana, and across the continent can digitize years of paper records at scale.",
           },
         },
         {
@@ -210,7 +210,7 @@ const jsonLd = {
           name: 'How can EMR vendors partner with Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, standard REST APIs, or custom connectors — without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration is designed to take less than a week. Schedule a demo via korahealthafrica.com to discuss a partnership.',
+            text: 'Kora integrates with existing EMR systems as an intelligence layer via HL7 FHIR, standard REST APIs, or custom connectors, without replacing the EMR. Partner EMR vendors can enrich patient records at point of care with Kora\'s cross-system synthesis, add population health dashboards, and extend offline capability to their clients. Integration is designed to take less than a week. Schedule a demo via korahealthafrica.com to discuss a partnership.',
           },
         },
         {
@@ -218,7 +218,7 @@ const jsonLd = {
           name: 'What is the investment opportunity with Kora Health?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. The company is currently raising to fund initial deployment across Nigeria, Kenya, and Ghana, targeting 54 countries with critical health data infrastructure gaps. Schedule a demo via korahealthafrica.com.',
+            text: 'Kora is building the infrastructure layer for African healthcare data, a $45B market by 2030. The company is currently raising to fund initial deployment across Nigeria, Kenya, and Ghana, targeting 54 countries with critical health data infrastructure gaps. Schedule a demo via korahealthafrica.com.',
           },
         },
       ],
@@ -236,7 +236,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* DM Sans (body) + Libre Baskerville (display — brand equivalent of Liberation Serif) */}
+        {/* DM Sans (body) + Libre Baskerville (display, brand equivalent of Liberation Serif) */}
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"

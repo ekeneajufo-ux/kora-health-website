@@ -77,13 +77,13 @@ export default function Home() {
       tag: 'Outpatient clinic · Nairobi, Kenya',
       intro: (
         <>
-          A physician in Nairobi meets <span className="text-white font-semibold">Mrs. Wanjiku, 76</span>, for the first time. She mentions a leukemia diagnosis from a referral hospital three counties away, visits to two other clinics, and hands over a worn folder of paper lab results. Normally, piecing this together takes days of phone calls — or never happens. With Kora, the doctor opens one screen.
+          A physician in Nairobi meets <span className="text-white font-semibold">Mrs. Wanjiku, 76</span>, for the first time. She mentions a leukemia diagnosis from a referral hospital three counties away, visits to two other clinics, and hands over a worn folder of paper lab results. Normally, piecing this together takes days of phone calls, or never happens. With Kora, the doctor opens one screen.
         </>
       ),
       steps: [
-        { icon: '🔗', title: 'Pulls every record', body: "Connects to the referral hospital's EMR, both clinics' systems, and the national registry — gathering scattered visits into one place." },
+        { icon: '🔗', title: 'Pulls every record', body: "Connects to the referral hospital's EMR, both clinics' systems, and the national registry, gathering scattered visits into one place." },
         { icon: '📄', title: 'Digitizes the paper folder', body: 'OCR reads the printed lab results and handwritten notes, turning the physical folder into structured clinical data.' },
-        { icon: '🧠', title: 'Synthesizes one timeline', body: 'Builds a unified history: diagnosis, prior chemotherapy, transfusions, current medications, and allergies — deduplicated and source-linked.' },
+        { icon: '🧠', title: 'Synthesizes one timeline', body: 'Builds a unified history: diagnosis, prior chemotherapy, transfusions, current medications, and allergies, deduplicated and source-linked.' },
         { icon: '⚠️', title: 'Surfaces what matters', body: 'Flags a bleeding-risk interaction with her current therapy and a falling platelet trend that needs attention today.' },
       ],
       record: {
@@ -98,13 +98,13 @@ export default function Home() {
           { label: 'Latest labs (3 wks ago)', value: 'Platelets 88 ↓ · WBC 14.2' },
         ],
         flags: [
-          { level: 'red', text: 'Bleeding-risk: Ibrutinib — review before any anticoagulant or procedure.' },
-          { level: 'amber', text: 'Platelets trending down across last 3 results — recheck CBC today.' },
+          { level: 'red', text: 'Bleeding-risk: Ibrutinib. Review before any anticoagulant or procedure.' },
+          { level: 'amber', text: 'Platelets trending down across last 3 results. Recheck CBC today.' },
         ],
       },
       outcome: (
         <>
-          In under two minutes — even with the clinic offline — the physician walks in knowing Mrs. Wanjiku&apos;s full history, current medications, and the alerts that matter. <span className="text-white font-semibold">No phone calls. No missing records. No guesswork.</span>
+          In under two minutes, even with the clinic offline, the physician walks in knowing Mrs. Wanjiku&apos;s full history, current medications, and the alerts that matter. <span className="text-white font-semibold">No phone calls. No missing records. No guesswork.</span>
         </>
       ),
     },
@@ -117,10 +117,10 @@ export default function Home() {
         </>
       ),
       steps: [
-        { icon: '🔍', title: 'Finds him instantly', body: 'Matches him to records from two hospitals and a clinic he visited in the past year — no paperwork, no waiting.' },
+        { icon: '🔍', title: 'Finds him instantly', body: 'Matches him to records from two hospitals and a clinic he visited in the past year, no paperwork, no waiting.' },
         { icon: '🔗', title: 'Loads recent providers', body: 'Pulls his active problem list, current medications, and most recent labs from his latest visits.' },
         { icon: '🧠', title: 'Synthesizes the picture', body: 'Diabetes managed with insulin and a sulfonylurea, alongside reduced kidney function.' },
-        { icon: '⚠️', title: 'Surfaces the danger', body: 'Flags a high hypoglycemia risk and a critically low recent glucose — pointing straight to the likely cause of his confusion.' },
+        { icon: '⚠️', title: 'Surfaces the danger', body: 'Flags a high hypoglycemia risk and a critically low recent glucose, pointing straight to the likely cause of his confusion.' },
       ],
       record: {
         name: 'Mr. Adeyemi',
@@ -129,18 +129,18 @@ export default function Home() {
         rows: [
           { label: 'Active conditions', value: 'Type 2 Diabetes · CKD Stage 3 · Hypertension' },
           { label: 'Current medication', value: 'Insulin glargine · Glipizide · Lisinopril' },
-          { label: 'Last visit', value: '11 days ago — endocrinology clinic' },
+          { label: 'Last visit', value: '11 days ago, endocrinology clinic' },
           { label: 'Latest labs', value: 'Glucose 2.8 mmol/L ↓ · eGFR 41' },
           { label: 'Allergy', value: 'None recorded' },
         ],
         flags: [
           { level: 'red', text: 'Sulfonylurea (Glipizide) + reduced kidney function → prolonged hypoglycemia risk.' },
-          { level: 'amber', text: 'Most recent glucose critically low — treat hypoglycemia first.' },
+          { level: 'amber', text: 'Most recent glucose critically low. Treat hypoglycemia first.' },
         ],
       },
       outcome: (
         <>
-          Within minutes — without a single answer from the family — she identifies <span className="text-white font-semibold">severe hypoglycemia</span>, treats it immediately, and admits him for monitoring. The history made the diagnosis.
+          Within minutes, without a single answer from the family, she identifies <span className="text-white font-semibold">severe hypoglycemia</span>, treats it immediately, and admits him for monitoring. The history made the diagnosis.
         </>
       ),
     },
@@ -156,27 +156,27 @@ export default function Home() {
         { icon: '📈', title: 'Spots the trend', body: 'New Hepatitis B diagnoses are up 34% over three months, concentrated in three LGAs.' },
         { icon: '💉', title: 'Connects the gap', body: 'Those same LGAs show Hepatitis B birth-dose and childhood vaccine coverage far below target.' },
         { icon: '🗺️', title: 'Drills into the data', body: 'Maps cases by facility and age group, revealing clusters around two specific communities.' },
-        { icon: '🎯', title: 'Acts on it', body: 'Targets a catch-up vaccination and screening campaign exactly where it is needed — and tracks impact in real time.' },
+        { icon: '🎯', title: 'Acts on it', body: 'Targets a catch-up vaccination and screening campaign exactly where it is needed, and tracks impact in real time.' },
       ],
       record: {
-        name: 'Hepatitis B — Northern Region',
+        name: 'Hepatitis B, Northern Region',
         sub: 'Live population surveillance · Kora',
         badge: 'Real-time',
         rows: [
           { label: 'New cases (90 days)', value: '412 ↑ 34%' },
           { label: 'Hotspot LGAs', value: 'Bichi · Dawakin · Gwarzo' },
           { label: 'Hep B birth-dose coverage', value: '48% ↓ (target 90%)' },
-          { label: 'Most affected age', value: '15–34 years' },
+          { label: 'Most affected age', value: '15-34 years' },
           { label: 'Screening coverage', value: '22%' },
         ],
         flags: [
-          { level: 'red', text: 'Case uptick concentrated in 3 LGAs — investigate cluster.' },
-          { level: 'amber', text: 'Vaccine coverage 48% vs 90% target — schedule catch-up campaign.' },
+          { level: 'red', text: 'Case uptick concentrated in 3 LGAs. Investigate cluster.' },
+          { level: 'amber', text: 'Vaccine coverage 48% vs 90% target. Schedule catch-up campaign.' },
         ],
       },
       outcome: (
         <>
-          She launches a targeted screening and vaccination drive in the affected communities — <span className="text-white font-semibold">weeks before a paper-based system would have flagged the rise</span> — and watches coverage climb in the same dashboard.
+          She launches a targeted screening and vaccination drive in the affected communities, <span className="text-white font-semibold">weeks before a paper-based system would have flagged the rise</span>, and watches coverage climb in the same dashboard.
         </>
       ),
     },
@@ -187,7 +187,7 @@ export default function Home() {
       icon: '🔗',
       title: 'Universal Data Synthesis',
       description:
-        'Built to connect to leading EMR and health information systems. Ingests paper records, scanned documents, voice notes, and lab results from any source — simultaneously.',
+        'Built to connect to leading EMR and health information systems. Ingests paper records, scanned documents, voice notes, and lab results from any source, simultaneously.',
     },
     {
       icon: '📡',
@@ -211,7 +211,7 @@ export default function Home() {
       icon: '🧠',
       title: 'Clinical Decision Support',
       description:
-        'AI models trained on African patient populations — malaria, sickle cell, TB, HIV/AIDS, hypertension, and maternal health — surface relevant decision aids at the point of care.',
+        'AI models trained on African patient populations (malaria, sickle cell, TB, HIV/AIDS, hypertension, and maternal health) surface relevant decision aids at the point of care.',
     },
     {
       icon: '📊',
@@ -234,19 +234,19 @@ export default function Home() {
     government: {
       label: 'Governments & NGOs',
       headline: 'National health intelligence, without the infrastructure overhaul.',
-      body: "Ministries of Health, public health agencies, NGOs, and international health organizations use Kora to see the entire health system in real time — disease burden, service coverage, and population outcomes — without requiring uniform EMR adoption across every facility. Kora unifies paper-based and digital facilities into a single, policy-ready evidence base for national and sub-national decision-making.",
+      body: "Ministries of Health, public health agencies, NGOs, and international health organizations use Kora to see the entire health system in real time (disease burden, service coverage, and population outcomes) without requiring uniform EMR adoption across every facility. Kora unifies paper-based and digital facilities into a single, policy-ready evidence base for national and sub-national decision-making.",
       bullets: [
         'National & sub-national dashboards: disease burden, coverage, and outcomes by state, LGA, and district',
         'Real-time disease surveillance, outbreak early-warning, and notifiable-disease reporting',
-        'Automated WHO, IDSR, and donor (PEPFAR, Global Fund, Gavi) reporting — no manual aggregation',
+        'Automated WHO, IDSR, and donor (PEPFAR, Global Fund, Gavi) reporting, no manual aggregation',
         'Evidence for resource allocation: target funding, staffing, and supplies to the highest-need regions',
         'Program monitoring & evaluation, impact measurement, and grant/compliance reporting',
-        'Works with paper-based and digital facilities simultaneously — no facility left invisible',
+        'Works with paper-based and digital facilities simultaneously, no facility left invisible',
         'Data sovereignty: de-identified aggregation hosted in-country, aligned to national data-protection law',
       ],
       stat: 'National',
       statLabel: 'Real-time health intelligence across every facility',
-      panelTitle: 'National Health Intelligence — Sample View',
+      panelTitle: 'National Health Intelligence: Sample View',
       panel: [
         { label: 'States / regions live', value: '36', trend: 'National', alert: false },
         { label: 'Facilities reporting', value: '4,218', trend: '+312', alert: false },
@@ -259,23 +259,23 @@ export default function Home() {
     population: {
       label: 'Population Health',
       headline: 'From individual records to national health intelligence.',
-      body: "Kora's Population Health Engine transforms fragmented patient records into district-wide and national intelligence ministries can act on. Track disease burden, monitor immunization and maternal-health coverage, detect outbreaks before they spread, model resource needs, and report to WHO and donors — all in real time, even where most facilities are still on paper.",
+      body: "Kora's Population Health Engine transforms fragmented patient records into district-wide and national intelligence ministries can act on. Track disease burden, monitor immunization and maternal-health coverage, detect outbreaks before they spread, model resource needs, and report to WHO and donors, all in real time, even where most facilities are still on paper.",
       bullets: [
         'Disease surveillance dashboards by region, state, LGA, and facility',
         'Outbreak detection with early-warning alerts and case-cluster mapping',
         'Vaccination coverage, immunization-gap, and cold-chain tracking',
         'Maternal, newborn & child health (MNCH) indicators and trends',
-        'NCD burden monitoring — diabetes, hypertension, cancer screening',
+        'NCD burden monitoring: diabetes, hypertension, cancer screening',
         'Health-equity analytics: surface underserved populations and access gaps',
         'Automated reporting for WHO IDSR and donor frameworks',
       ],
       stat: 'Real-time',
       statLabel: 'Population health surveillance & reporting',
-      panelTitle: 'Population Surveillance — Sample View',
+      panelTitle: 'Population Surveillance: Sample View',
       panel: [
         { label: 'Districts monitored', value: '774', trend: 'Live', alert: false },
         { label: 'Indicators tracked', value: '120+', trend: 'Active', alert: false },
-        { label: 'Malaria cases — Kano North', value: '2,847', trend: '+12%', alert: true },
+        { label: 'Malaria cases, Kano North', value: '2,847', trend: '+12%', alert: true },
         { label: 'DPT3 vaccination coverage', value: '73.4%', trend: '+4.2%', alert: false },
         { label: 'Reporting latency', value: '< 24h', trend: 'Real-time', alert: false },
         { label: 'Outbreak early-warnings', value: '5', trend: 'Flagged', alert: true },
@@ -288,11 +288,11 @@ export default function Home() {
       bullets: [
         'Unified patient record across all facilities in the network',
         'Aggregate analytics across departments and campuses',
-        'Integrates with existing EMR investments — no rip-and-replace',
+        'Integrates with existing EMR investments, no rip-and-replace',
       ],
       stat: 'Multi-EMR',
       statLabel: 'Built to unify records across systems',
-      panelTitle: 'Network Operations — Sample View',
+      panelTitle: 'Network Operations: Sample View',
       panel: [
         { label: 'Facilities unified', value: '38', trend: '1 network', alert: false },
         { label: 'EMR systems unified', value: 'Multi-source', trend: 'No replace', alert: false },
@@ -305,7 +305,7 @@ export default function Home() {
     clinics: {
       label: 'Clinics',
       headline: 'Complete patient history. Every visit.',
-      body: 'Clinicians at private primary care and pediatric clinics spend 40+ minutes per patient hunting through paper records and disconnected digital systems. Kora synthesizes the complete patient record in under 2 minutes — from any source — so clinicians walk into every encounter fully informed.',
+      body: 'Clinicians at private primary care and pediatric clinics spend 40+ minutes per patient hunting through paper records and disconnected digital systems. Kora synthesizes the complete patient record in under 2 minutes, from any source, so clinicians walk into every encounter fully informed.',
       bullets: [
         'See all prior records from any clinic or hospital the patient visited',
         'Works offline during power or internet outages',
@@ -314,7 +314,7 @@ export default function Home() {
       ],
       stat: '40 min → 2 min',
       statLabel: 'Chart review time',
-      panelTitle: 'At the Point of Care — Sample View',
+      panelTitle: 'At the Point of Care: Sample View',
       panel: [
         { label: 'Chart review time', value: '40→2 min', trend: '-95%', alert: false },
         { label: 'Records unified / patient', value: 'All visits', trend: 'Any source', alert: false },
@@ -329,19 +329,19 @@ export default function Home() {
   const faqs = [
     {
       q: 'What is Kora?',
-      a: "Kora is Africa's Clinical Intelligence Engine — a platform that synthesizes fragmented patient data from multiple EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Think xCures, purpose-built for Africa's healthcare infrastructure.",
+      a: "Kora is Africa's Clinical Intelligence Engine, a platform that synthesizes fragmented patient data from multiple EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Think xCures, purpose-built for Africa's healthcare infrastructure.",
     },
     {
       q: 'How does Kora work without internet connectivity?',
-      a: "Kora uses an offline-first architecture with edge AI inference. The AI models run entirely on the local device or facility server — no internet required for core clinical functions. When connectivity returns, Kora automatically syncs data and pushes population health updates.",
+      a: "Kora uses an offline-first architecture with edge AI inference. The AI models run entirely on the local device or facility server, no internet required for core clinical functions. When connectivity returns, Kora automatically syncs data and pushes population health updates.",
     },
     {
       q: 'What data sources can Kora integrate with?',
-      a: 'Kora is built to integrate with major EMR and health information systems — including modern and legacy platforms — using open standards such as HL7 FHIR. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
+      a: 'Kora is built to integrate with major EMR and health information systems, including modern and legacy platforms, using open standards such as HL7 FHIR. It also accepts paper records via scanning/OCR, handwritten notes, voice recordings, lab result PDFs, DICOM images, and exports from any system.',
     },
     {
       q: 'How does Kora assist with digitization?',
-      a: "Kora's Digitization Engine converts paper records and handwritten notes into structured clinical data using OCR and AI extraction. It supports 15+ languages and local handwriting styles. No manual data entry required — clinics can digitize years of paper records at scale.",
+      a: "Kora's Digitization Engine converts paper records and handwritten notes into structured clinical data using OCR and AI extraction. It supports 15+ languages and local handwriting styles. No manual data entry required. Clinics can digitize years of paper records at scale.",
     },
     {
       q: 'What population health capabilities does Kora offer?',
@@ -349,11 +349,11 @@ export default function Home() {
     },
     {
       q: 'How does Kora partner with existing EMR systems?',
-      a: "Kora integrates with your EMR via HL7 FHIR, standard REST APIs, or custom connectors — reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration is designed to take less than a week. Schedule a demo to explore an EMR partnership.",
+      a: "Kora integrates with your EMR via HL7 FHIR, standard REST APIs, or custom connectors, reading from and writing back to your system without replacing it. Partners use Kora to enrich patient records at point of care, add population health dashboards, and extend offline capability. Integration is designed to take less than a week. Schedule a demo to explore an EMR partnership.",
     },
     {
       q: 'What is the investment opportunity?',
-      a: 'Kora is building the infrastructure layer for African healthcare data — a $45B market by 2030. We are currently raising to fund initial deployment across Nigeria, Kenya, and Ghana. Schedule a demo to receive our investor deck and financial model.',
+      a: 'Kora is building the infrastructure layer for African healthcare data, a $45B market by 2030. We are currently raising to fund initial deployment across Nigeria, Kenya, and Ghana. Schedule a demo to receive our investor deck and financial model.',
     },
   ];
 
@@ -384,13 +384,13 @@ export default function Home() {
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm text-slate-400" role="menubar">
             <a href="#capabilities" title="Kora Platform Capabilities" className="hover:text-white transition-colors">Capabilities</a>
-            <a href="#use-cases" title="Who Kora Serves — Clinics, Health Systems, Governments" className="hover:text-white transition-colors">Use Cases</a>
+            <a href="#use-cases" title="Who Kora Serves, Clinics, Health Systems, Governments" className="hover:text-white transition-colors">Use Cases</a>
             <a href="#population" title="Population Health Engine for Africa" className="hover:text-white transition-colors">Population Health</a>
             <a href="#how-it-works" title="How Kora Works" className="hover:text-white transition-colors">How It Works</a>
             <a href="#emr-partners" title="EMR Partnership Program" className="hover:text-white transition-colors">EMR Partners</a>
             <a href="#privacy-data" title="How Kora Protects Patient Data Privacy" className="hover:text-white transition-colors">Data Privacy</a>
             <a href="#investors" title="Kora Health Investment Opportunity" className="hover:text-white transition-colors">Investors</a>
-            <a href="#about" title="About Kora Health — Built by Clinicians" className="hover:text-white transition-colors">About Us</a>
+            <a href="#about" title="About Kora Health, Built by Clinicians" className="hover:text-white transition-colors">About Us</a>
           </div>
           <a
             href="#contact"
@@ -404,12 +404,12 @@ export default function Home() {
       <main>
 
       {/* HERO */}
-      <section id="hero" aria-label="Hero — Kora Clinical Intelligence Platform for Africa" className="relative pt-36 px-6 overflow-hidden">
+      <section id="hero" aria-label="Hero, Kora Clinical Intelligence Platform for Africa" className="relative pt-36 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
         <div className="absolute top-1/3 right-0 w-[700px] h-[700px] rounded-full bg-[#2DD4BF]/4 blur-3xl pointer-events-none" />
         <div className="relative max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
-            {/* Left — headline + CTAs */}
+            {/* Left, headline + CTAs */}
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-10 bg-[#EAB308]" />
@@ -426,7 +426,7 @@ export default function Home() {
                 <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
               </div>
             </div>
-            {/* Right — stats panel */}
+            {/* Right, stats panel */}
             <div className="grid grid-cols-2 gap-4">
               {heroStats.map((s, i) => (
                 <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between">
@@ -440,7 +440,7 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" aria-label="The Problem — Fragmented Healthcare Data in Africa" className="px-6 bg-[#0F172A]">
+      <section id="problem" aria-label="The Problem, Fragmented Healthcare Data in Africa" className="px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -449,7 +449,7 @@ export default function Home() {
                 Africa doesn&apos;t have a data shortage. It has a <em className="text-[#EAB308] not-italic">clarity crisis.</em>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                African health systems generate enormous clinical data — but 80% is locked in paper records, siloed EMRs, and low-connectivity environments where data can&apos;t move, be read, or be trusted.
+                African health systems generate enormous clinical data, but 80% is locked in paper records, siloed EMRs, and low-connectivity environments where data can&apos;t move, be read, or be trusted.
               </p>
               <p className="text-slate-400 text-lg leading-relaxed">
                 Clinicians spend hours hunting fragmented records. Population insights are invisible. Paper never becomes digital. Critical decisions get made with incomplete information.
@@ -473,30 +473,30 @@ export default function Home() {
       </section>
 
       {/* SOLUTION INTRO */}
-      <section id="solution" aria-label="The Solution — Kora Clinical Intelligence Engine" className="px-6 text-center">
+      <section id="solution" aria-label="The Solution, Kora Clinical Intelligence Engine" className="px-6 text-center">
         <div className="max-w-4xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">The Solution</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Kora Clinical Intelligence Engine</h2>
           <p className="text-xl text-slate-400 leading-relaxed">
-            Kora retrieves, synthesizes, and structures patient data from every source — EMRs, paper records, scanned documents, and voice — into decision-ready clinical intelligence. Delivered in minutes. Works offline. Scales to populations.
+            Kora retrieves, synthesizes, and structures patient data from every source (EMRs, paper records, scanned documents, and voice) into decision-ready clinical intelligence. Delivered in minutes. Works offline. Scales to populations.
           </p>
         </div>
       </section>
 
-      {/* UNIFIED RECORD — WHY CENTRALIZING MATTERS */}
-      <section id="unified-record" aria-label="One Unified Patient Record — Continuity, Safety, and Efficiency Across Every EMR" className="px-6 bg-[#0F172A]">
+      {/* UNIFIED RECORD, WHY CENTRALIZING MATTERS */}
+      <section id="unified-record" aria-label="One Unified Patient Record, Continuity, Safety, and Efficiency Across Every EMR" className="px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto text-center py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">One Unified Record</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Many EMRs. One complete patient story.</h2>
           <p className="text-xl text-slate-400 mb-16 max-w-3xl mx-auto leading-relaxed">
-            Patients move between clinics, hospitals, labs, and pharmacies — each running its own EMR, each holding only a fragment. Kora connects to the systems already in place and centralizes those fragments into a single longitudinal record, so every clinician sees the whole patient instead of a piece of them.
+            Patients move between clinics, hospitals, labs, and pharmacies, each running its own EMR, each holding only a fragment. Kora connects to the systems already in place and centralizes those fragments into a single longitudinal record, so every clinician sees the whole patient instead of a piece of them.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             {[
-              { title: 'Continuity of Care', body: "The full history follows the patient across every facility and system — no starting from zero at each new visit or referral." },
+              { title: 'Continuity of Care', body: "The full history follows the patient across every facility and system, no starting from zero at each new visit or referral." },
               { title: 'Patient Safety', body: 'A complete view of medications, allergies, and prior diagnoses helps close the gaps that lead to dangerous interactions and avoidable errors.' },
               { title: 'Less Redundancy', body: 'When prior results are already on hand, clinicians can avoid repeat labs, duplicate imaging, and re-taken histories.' },
-              { title: 'Greater Efficiency', body: 'Less time hunting for scattered records means more time with patients — and less wasted cost and effort across the system.' },
+              { title: 'Greater Efficiency', body: 'Less time hunting for scattered records means more time with patients, and less wasted cost and effort across the system.' },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A1A2F] border border-white/10 rounded-2xl p-7 hover:border-[#2DD4BF]/30 transition-colors">
                 <div className="w-10 h-1 rounded-full bg-[#EAB308] mb-5" />
@@ -508,8 +508,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOLUTION — IN PRACTICE SCENARIOS (swipeable) */}
-      <section id="example" aria-label="How Kora Works in Practice — clinical scenarios" className="px-6">
+      {/* SOLUTION, IN PRACTICE SCENARIOS (swipeable) */}
+      <section id="example" aria-label="How Kora Works in Practice, clinical scenarios" className="px-6">
         <div className="max-w-7xl mx-auto pb-4">
           <div className="text-center mb-8">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">See It In Practice</p>
@@ -611,7 +611,7 @@ export default function Home() {
       </section>
 
       {/* USE CASES */}
-      <section id="use-cases" aria-label="Who Kora Serves — Clinics, Health Systems, Governments, and NGOs in Africa" className="px-6 bg-[#0F172A]">
+      <section id="use-cases" aria-label="Who Kora Serves, Clinics, Health Systems, Governments, and NGOs in Africa" className="px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">Who We Serve</p>
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Built for every layer of the health system.</h2>
@@ -670,7 +670,7 @@ export default function Home() {
       </section>
 
       {/* POPULATION HEALTH */}
-      <section id="population" aria-label="Population Health Engine — Disease Surveillance and Outbreak Detection across Africa" className="px-6 relative overflow-hidden">
+      <section id="population" aria-label="Population Health Engine, Disease Surveillance and Outbreak Detection across Africa" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent pointer-events-none" />
         <div className="relative max-w-7xl mx-auto py-14">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -680,7 +680,7 @@ export default function Home() {
                 From individual records to national health intelligence.
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Kora&apos;s Population Health Engine aggregates de-identified clinical records into real-time district and national dashboards — turning individual patient encounters into system-wide intelligence that drives policy and saves lives.
+                Kora&apos;s Population Health Engine aggregates de-identified clinical records into real-time district and national dashboards, turning individual patient encounters into system-wide intelligence that drives policy and saves lives.
               </p>
               <div className="space-y-2">
                 {[
@@ -701,7 +701,7 @@ export default function Home() {
               <div className="mt-8 bg-[#0F172A] border border-[#EAB308]/20 rounded-2xl p-6">
                 <div className="text-xs text-[#EAB308] font-semibold mb-3 uppercase tracking-widest">For Ministries of Health &amp; Donors</div>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  Kora gives government decision-makers a single, real-time evidence base across every facility — even where most still run on paper — so policy, budgets, and emergency response are driven by current data, not last year&apos;s survey.
+                  Kora gives government decision-makers a single, real-time evidence base across every facility, even where most still run on paper, so policy, budgets, and emergency response are driven by current data, not last year&apos;s survey.
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   {[
@@ -718,10 +718,10 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-[#0F172A] border border-[#2DD4BF]/20 rounded-2xl p-8">
-              <div className="text-xs text-[#EAB308] font-semibold mb-5 uppercase tracking-widest">Population Dashboard — Sample View</div>
+              <div className="text-xs text-[#EAB308] font-semibold mb-5 uppercase tracking-widest">Population Dashboard: Sample View</div>
               <div className="space-y-4">
                 {[
-                  { label: 'Malaria Cases — Kano North', value: '2,847', change: '+12%', alert: true },
+                  { label: 'Malaria Cases, Kano North', value: '2,847', change: '+12%', alert: true },
                   { label: 'DPT3 Vaccination Coverage', value: '73.4%', change: '+4.2%', alert: false },
                   { label: 'TB Treatment Adherence Rate', value: '81.2%', change: '-2.1%', alert: true },
                   { label: 'Antenatal Care Visits (Q2)', value: '14,203', change: '+8.6%', alert: false },
@@ -780,12 +780,12 @@ export default function Home() {
                 Built for Africa&apos;s realities. Works at 0% connectivity.
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                60% of African clinics operate in low or no-connectivity environments. Kora&apos;s AI runs entirely on-device via edge inference — no internet required for clinical intelligence, patient records, or decision support.
+                60% of African clinics operate in low or no-connectivity environments. Kora&apos;s AI runs entirely on-device via edge inference, no internet required for clinical intelligence, patient records, or decision support.
               </p>
               <div className="space-y-5">
                 {[
                   { title: 'Edge AI Inference', body: 'Clinical AI models run locally on-device or on a facility server. Full capability without cloud dependency.' },
-                  { title: 'Smart Sync', body: 'When connectivity returns, only changed data syncs — minimizing bandwidth costs on expensive mobile data.' },
+                  { title: 'Smart Sync', body: 'When connectivity returns, only changed data syncs, minimizing bandwidth costs on expensive mobile data.' },
                   { title: 'Device-Agnostic', body: 'Runs on low-end Android tablets, laptops, and shared workstations. No specialized hardware required.' },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -803,12 +803,12 @@ export default function Home() {
       </section>
 
       {/* DATA SYNTHESIS */}
-      <section id="data-synthesis" aria-label="Data Synthesis — Paper Records, EMRs, and Digital Sources" className="px-6">
+      <section id="data-synthesis" aria-label="Data Synthesis, Paper Records, EMRs, and Digital Sources" className="px-6">
         <div className="max-w-7xl mx-auto text-center py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Data Synthesis</p>
           <h2 className="text-4xl font-bold text-white mb-6">Written. Digital. Spoken. We take it all.</h2>
           <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
-            Kora doesn&apos;t require data to already be digital. We meet health systems where they are — and bring everything into a unified, structured clinical record.
+            Kora doesn&apos;t require data to already be digital. We meet health systems where they are, and bring everything into a unified, structured clinical record.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -828,15 +828,15 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" aria-label="How Kora Works — Ingest, Synthesize, Deliver" className="px-6 bg-[#0F172A]">
+      <section id="how-it-works" aria-label="How Kora Works, Ingest, Synthesize, Deliver" className="px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">How It Works</p>
           <h2 className="text-4xl font-bold text-white mb-16 text-center">From fragmented data to decision-ready intelligence in three steps.</h2>
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { step: '01', title: 'Ingest', body: 'Connect your existing EMRs, scan paper records, and upload data in any format — structured or unstructured, digital or handwritten, lab printouts or voice notes.', color: '#2DD4BF' },
+              { step: '01', title: 'Ingest', body: 'Connect your existing EMRs, scan paper records, and upload data in any format, structured or unstructured, digital or handwritten, lab printouts or voice notes.', color: '#2DD4BF' },
               { step: '02', title: 'Synthesize', body: "Kora's engine normalizes, deduplicates, and structures all data into a unified patient record. AI extracts clinical concepts and links every data point back to its source.", color: '#F59E0B' },
-              { step: '03', title: 'Deliver', body: 'Clinicians get decision-ready summaries. Population health teams get real-time dashboards. Ministries get automated WHO and national health reports — all with full audit trails.', color: '#8B5CF6' },
+              { step: '03', title: 'Deliver', body: 'Clinicians get decision-ready summaries. Population health teams get real-time dashboards. Ministries get automated WHO and national health reports, all with full audit trails.', color: '#8B5CF6' },
             ].map((item, i) => (
               <div key={i} className="relative">
                 <div className="text-8xl font-bold mb-4 select-none" style={{ color: item.color, opacity: 0.15 }}>{item.step}</div>
@@ -850,12 +850,12 @@ export default function Home() {
       </section>
 
       {/* INFRASTRUCTURE REALITY */}
-      <section id="infrastructure" aria-label="Built for African Infrastructure Reality — Connectivity, Power, Satellite, and Government Partnerships" className="px-6">
+      <section id="infrastructure" aria-label="Built for African Infrastructure Reality, Connectivity, Power, Satellite, and Government Partnerships" className="px-6">
         <div className="max-w-7xl mx-auto text-center py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Infrastructure</p>
           <h2 className="text-4xl font-bold text-white mb-6">Built for African Infrastructure Reality</h2>
           <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
-            Kora works in the real Africa — where internet goes down, where clinics run on generators, where data can&apos;t be lost because it&apos;s the difference between life and death.
+            Kora works in the real Africa, where internet goes down, where clinics run on generators, where data can&apos;t be lost because it&apos;s the difference between life and death.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -881,7 +881,7 @@ export default function Home() {
       </section>
 
       {/* EMR PARTNERSHIP */}
-      <section id="emr-partners" aria-label="EMR Partnership Program — Integrate Kora with Your Electronic Medical Records System" className="px-6 relative overflow-hidden">
+      <section id="emr-partners" aria-label="EMR Partnership Program, Integrate Kora with Your Electronic Medical Records System" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EAB308]/5 via-transparent to-[#2DD4BF]/5 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto py-14">
           <div className="text-center mb-16">
@@ -890,7 +890,7 @@ export default function Home() {
               Make your EMR the most powerful clinical platform in Africa.
             </h2>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Kora plugs into your existing EMR as an intelligence layer — adding AI-powered data synthesis, population health, and offline capability without displacing a single workflow your clients depend on. Your EMR gets smarter. Your clients get better outcomes. You grow.
+              Kora plugs into your existing EMR as an intelligence layer, adding AI-powered data synthesis, population health, and offline capability without displacing a single workflow your clients depend on. Your EMR gets smarter. Your clients get better outcomes. You grow.
             </p>
           </div>
 
@@ -899,12 +899,12 @@ export default function Home() {
               {
                 icon: '⚡',
                 title: 'Supercharge Your Product',
-                body: "Add cross-system data synthesis, AI clinical decision support, and real-time population dashboards to your EMR product suite — without building it yourself. Kora's API is designed to integrate in days, not months.",
+                body: "Add cross-system data synthesis, AI clinical decision support, and real-time population dashboards to your EMR product suite, without building it yourself. Kora's API is designed to integrate in days, not months.",
               },
               {
                 icon: '🔒',
                 title: 'Deepen Client Retention',
-                body: "Clients who see better outcomes stay longer. When Kora synthesizes the full patient record — including data from outside your EMR — your clients deliver higher-quality care and attribute that value to your platform.",
+                body: "Clients who see better outcomes stay longer. When Kora synthesizes the full patient record, including data from outside your EMR, your clients deliver higher-quality care and attribute that value to your platform.",
               },
               {
                 icon: '🌍',
@@ -930,11 +930,11 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-white mb-6">What EMR partners get</h3>
               <ul className="space-y-5">
                 {[
-                  { title: 'Bi-directional API integration', body: "Kora reads from and writes back to your EMR via HL7 FHIR, standard REST APIs, or custom connectors — keeping your system the system of record." },
-                  { title: 'Patient record enrichment at point of care', body: "When a patient opens in your EMR, Kora automatically surfaces synthesized records from every other facility they've visited — paper records included — directly in your UI." },
-                  { title: 'Population health add-on module', body: "Offer your health-system clients real-time district dashboards and automated WHO and national health reporting as a co-branded feature — powered by Kora's aggregation engine." },
+                  { title: 'Bi-directional API integration', body: "Kora reads from and writes back to your EMR via HL7 FHIR, standard REST APIs, or custom connectors, keeping your system the system of record." },
+                  { title: 'Patient record enrichment at point of care', body: "When a patient opens in your EMR, Kora automatically surfaces synthesized records from every other facility they've visited, paper records included, directly in your UI." },
+                  { title: 'Population health add-on module', body: "Offer your health-system clients real-time district dashboards and automated WHO and national health reporting as a co-branded feature, powered by Kora's aggregation engine." },
                   { title: 'Zero infrastructure burden', body: "Kora runs on the client's existing hardware or Kora's cloud. No new servers, no new contracts for your clients to manage." },
-                  { title: 'Shared implementation support', body: "Kora's clinical integration team works alongside your onboarding team at joint accounts — cutting time-to-value for clients without adding to your support load." },
+                  { title: 'Shared implementation support', body: "Kora's clinical integration team works alongside your onboarding team at joint accounts, cutting time-to-value for clients without adding to your support load." },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <span className="text-[#EAB308] font-bold flex-shrink-0 mt-1">✓</span>
@@ -973,7 +973,7 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { metric: 'FHIR', label: 'Standards-based — HL7 FHIR and open APIs' },
+                  { metric: 'FHIR', label: 'Standards-based: HL7 FHIR and open APIs' },
                   { metric: '< 1 wk', label: 'Target API integration time' },
                   { metric: '0', label: 'Rip-and-replace required' },
                 ].map((m, i) => (
@@ -996,19 +996,19 @@ export default function Home() {
       </section>
 
       {/* PRIVACY & DATA PROTECTION */}
-      <section id="privacy-data" aria-label="Privacy and Data Protection — How Kora Keeps Clinical and Patient Data Private" className="px-6 bg-[#0F172A]">
+      <section id="privacy-data" aria-label="Privacy and Data Protection, How Kora Keeps Clinical and Patient Data Private" className="px-6 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto text-center py-14">
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">Privacy &amp; Data Protection</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Health data is sacred. We protect it by design.</h2>
           <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
-            Patient information is among the most sensitive data that exists. Privacy and security are built into Kora from the ground up — not bolted on afterward.
+            Patient information is among the most sensitive data that exists. Privacy and security are built into Kora from the ground up, not bolted on afterward.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {[
               { title: 'Encrypted end to end', body: 'Data is encrypted in transit using modern TLS and encrypted at rest, so records stay protected both on the network and on disk.' },
               { title: 'In-country data residency', body: "Kora is built to store and process clinical data inside the country it comes from, in line with national health-data and data-protection laws." },
               { title: 'Private by staying local', body: "Because Kora's AI runs on-device or on a facility server, sensitive data often never has to leave the clinic to deliver clinical intelligence." },
-              { title: 'Least-privilege access', body: 'Role-based access controls and audit logging mean people and systems see only the data they need — and every access is recorded.' },
+              { title: 'Least-privilege access', body: 'Role-based access controls and audit logging mean people and systems see only the data they need, and every access is recorded.' },
               { title: 'De-identified by default', body: "Population-health analytics run on de-identified, aggregated data wherever individual-level records aren't required." },
               { title: 'Built for African data law', body: 'Our practices are designed to align with data-protection laws in Nigeria, Kenya, Ghana, and other markets, under agreements with the partners whose data we handle.' },
             ].map((item, i) => (
@@ -1029,16 +1029,16 @@ export default function Home() {
       </section>
 
       {/* INVESTOR */}
-      <section id="investors" aria-label="Investor Information — African Digital Health Market Opportunity" className="px-6 relative overflow-hidden">
+      <section id="investors" aria-label="Investor Information, African Digital Health Market Opportunity" className="px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/8 via-transparent to-[#EAB308]/4 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto pt-14 pb-4">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            {/* Left column — narrative */}
+            {/* Left column, narrative */}
             <div>
               <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">For Investors</p>
               <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">The infrastructure layer for African healthcare data.</h2>
               <p className="text-lg text-slate-400 leading-relaxed mb-8">
-                Kora sits at the highest-value layer of the African health tech stack — the clinical data infrastructure that every EMR, diagnostic company, insurer, and ministry will depend on. Founded by a physician and clinical AI consultant with deep expertise in African health systems. Kora was designed and built collaboratively by physicians practicing domestically and abroad — bringing together frontline clinical insight from multiple healthcare environments to create the most comprehensive clinical intelligence system for Africa.
+                Kora sits at the highest-value layer of the African health tech stack, the clinical data infrastructure that every EMR, diagnostic company, insurer, and ministry will depend on. Founded by a physician and clinical AI consultant with deep expertise in African health systems. Kora was designed and built collaboratively by physicians practicing domestically and abroad, bringing together frontline clinical insight from multiple healthcare environments to create the most comprehensive clinical intelligence system for Africa.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {[
@@ -1057,14 +1057,14 @@ export default function Home() {
                 <a href="#contact" className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-center">Partner With Us</a>
               </div>
             </div>
-            {/* Right column — Why Kora Wins */}
+            {/* Right column, Why Kora Wins */}
             <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 h-full">
               <h3 className="text-white font-bold text-xl mb-6">Why Kora Wins</h3>
               <div className="space-y-5">
                 {[
-                  { title: 'Offline-first architecture', body: 'Purpose-built for African connectivity realities — clinical AI runs entirely on-device, no cloud required.' },
+                  { title: 'Offline-first architecture', body: 'Purpose-built for African connectivity realities: clinical AI runs entirely on-device, no cloud required.' },
                   { title: 'Paper + digital synthesis', body: 'No other platform synthesizes both paper and digital data at scale in Africa. This is the moat.' },
-                  { title: 'Physician-built, physician-led', body: 'Designed collaboratively by physicians practicing domestically and abroad — comprehensive by design, not by assumption.' },
+                  { title: 'Physician-built, physician-led', body: 'Designed collaboratively by physicians practicing domestically and abroad, comprehensive by design, not by assumption.' },
                   { title: 'Complementary to every EMR', body: 'Not a rip-and-replace play. Kora augments existing EMR investments, reducing sales friction and accelerating adoption.' },
                   { title: 'Dual revenue model', body: 'Clinic and health system subscriptions, plus government and donor revenue streams via population health and national health reporting.' },
                   { title: 'Proven GTM path', body: 'Private clinics → health systems → national ministries. Each stage funds the next and expands the data network effect.' },
@@ -1083,14 +1083,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT — BUILT BY CLINICIANS */}
-      <section id="about" aria-label="About Kora Health — Built by Clinicians, for Clinicians" className="px-6">
+      {/* ABOUT, BUILT BY CLINICIANS */}
+      <section id="about" aria-label="About Kora Health, Built by Clinicians, for Clinicians" className="px-6">
         <div className="max-w-7xl mx-auto pt-4 pb-14">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">About Us</p>
             <h2 className="display-serif text-4xl md:text-5xl font-bold text-white mb-6">Built by clinicians, for clinicians.</h2>
             <p className="text-slate-400 text-lg leading-relaxed">
-              Kora is designed and built by a collaborative team of practicing physicians — pairing frontline clinical insight with applied AI expertise to solve the problems they face at the bedside every day.
+              Kora is designed and built by a collaborative team of practicing physicians, pairing frontline clinical insight with applied AI expertise to solve the problems they face at the bedside every day.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -1098,14 +1098,14 @@ export default function Home() {
               <div className="text-3xl mb-4">🩺</div>
               <h3 className="text-white font-bold text-lg mb-3">Multi-specialty physicians</h3>
               <p className="text-slate-400 leading-relaxed">
-                Expertise across <span className="text-white">pediatrics, internal medicine, hospital medicine, and infectious diseases</span> — the front lines of everyday care.
+                Expertise across <span className="text-white">pediatrics, internal medicine, hospital medicine, and infectious diseases</span>, the front lines of everyday care.
               </p>
             </div>
             <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-7">
               <div className="text-4xl font-bold text-[#2DD4BF] mb-3">40+</div>
               <h3 className="text-white font-bold text-lg mb-3">Combined years of clinical experience</h3>
               <p className="text-slate-400 leading-relaxed">
-                Decades at the bedside across diverse healthcare settings — Kora is built on real clinical workflows, not assumptions.
+                Decades at the bedside across diverse healthcare settings, Kora is built on real clinical workflows, not assumptions.
               </p>
             </div>
             <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-7">
@@ -1117,7 +1117,7 @@ export default function Home() {
             </div>
           </div>
           <p className="text-center text-slate-500 text-sm mt-8 italic">
-            A collaborative team effort — physicians practicing domestically and abroad, building Kora together.
+            A collaborative team effort, physicians practicing domestically and abroad, building Kora together.
           </p>
         </div>
       </section>
@@ -1158,7 +1158,7 @@ export default function Home() {
           {formStatus === 'success' ? (
             <div className="bg-[#0F172A] border border-[#2DD4BF]/30 rounded-2xl p-10 text-center">
               <div className="text-4xl mb-4">✓</div>
-              <h3 className="text-2xl font-bold text-white mb-3">Thank you — request received.</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">Thank you, request received.</h3>
               <p className="text-slate-400">Our team will reach out shortly. For anything urgent, email <a href="mailto:info@korahealthafrica.com" className="text-[#2DD4BF] hover:underline">info@korahealthafrica.com</a>.</p>
             </div>
           ) : (
@@ -1246,7 +1246,7 @@ export default function Home() {
                 <img src="/kora-logo-light.webp" alt="Kora Health" className="h-[120px] w-auto flex-shrink-0" />
               </div>
               <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-                Pulse Hub for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence — online or offline.
+                Pulse Hub for Africa&apos;s Health Systems. Synthesizing fragmented patient data into decision-ready intelligence, online or offline.
               </p>
               <p className="text-[#EAB308]/60 text-xs mt-3 tracking-wide italic">Rooted in Africa. Built for outcomes.</p>
             </div>

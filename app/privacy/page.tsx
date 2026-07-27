@@ -4,7 +4,7 @@ import LegalShell from '../components/LegalShell';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Kora Health collects, uses, protects, and shares personal data — and your rights under Nigerian, Kenyan, Ghanaian, and other African data-protection laws.',
+    'How Kora Health collects, uses, protects, and shares personal data, and your rights under Nigerian, Kenyan, Ghanaian, and other African data-protection laws.',
 };
 
 export default function PrivacyPage() {
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
 
       <h2>2. Scope of this policy</h2>
       <p>
-        This policy covers personal data for which Kora is the <strong>data controller</strong> — for example, information from website visitors, prospective clients, and partners. Where Kora processes patient or clinical data <strong>on behalf of</strong> a healthcare provider, hospital, ministry, or other client, Kora acts as a <strong>data processor</strong>; that processing is governed by our agreement (Data Processing Agreement) with that client and by applicable health-data laws, not solely by this policy.
+        This policy covers personal data for which Kora is the <strong>data controller</strong>, for example, information from website visitors, prospective clients, and partners. Where Kora processes patient or clinical data <strong>on behalf of</strong> a healthcare provider, hospital, ministry, or other client, Kora acts as a <strong>data processor</strong>; that processing is governed by our agreement (Data Processing Agreement) with that client and by applicable health-data laws, not solely by this policy.
       </p>
 
       <h2>3. Information we collect</h2>
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
       <p>We keep personal data only for as long as necessary for the purposes described here, to comply with legal obligations, resolve disputes, and enforce agreements, after which it is deleted or anonymized.</p>
 
       <h2>10. Data security</h2>
-      <p>We apply technical and organizational measures — including encryption in transit and at rest, access controls, and monitoring — described further on our <a href="/security/">Security &amp; Trust</a> page. No system is perfectly secure, but we work to protect your information and to notify affected parties and regulators of breaches as required by law.</p>
+      <p>We apply technical and organizational measures, including encryption in transit and at rest, access controls, and monitoring, described further on our <a href="/security/">Security &amp; Trust</a> page. No system is perfectly secure, but we work to protect your information and to notify affected parties and regulators of breaches as required by law.</p>
 
       <h2>11. Cookies and analytics</h2>
       <p>We use a minimal set of cookies and similar technologies necessary to run the site and understand usage. You can control cookies through your browser settings; disabling some may affect functionality.</p>
