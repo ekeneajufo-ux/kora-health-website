@@ -833,9 +833,9 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Connectivity', body: "We plan to partner with mobile network providers — such as Safaricom, MTN, Airtel, and Vodafone — to make affordable, reliable data available to healthcare clinics." },
-              { title: 'Power & Energy', body: "We plan to work with solar and off-grid energy providers — such as d.light, PowerTech, and SunCulture — to help keep clinics powered." },
-              { title: 'Satellite Backup', body: "We plan to explore satellite providers — such as Starlink and OneWeb — for redundant connectivity when primary internet fails." },
+              { title: 'Connectivity', body: "We plan to partner with mobile network providers to make affordable, reliable data available to healthcare clinics." },
+              { title: 'Power & Energy', body: "We plan to work with solar and off-grid energy providers to help keep clinics powered." },
+              { title: 'Satellite Backup', body: "We plan to explore satellite providers for redundant connectivity when primary internet fails." },
               { title: 'Government Alignment', body: "We intend to engage health ministries across Nigeria, Kenya, and Ghana to align Kora with national digital health infrastructure." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0F172A] border border-white/10 rounded-2xl p-7 text-left hover:border-[#2DD4BF]/30 transition-colors">
