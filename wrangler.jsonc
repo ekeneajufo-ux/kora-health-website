@@ -2,7 +2,7 @@
   // Cloudflare Worker that serves the Next.js static export (./out) and handles
   // the /api/contact form endpoint. Static assets are served first; requests with
   // no matching asset (e.g. /api/contact) fall through to the Worker in index.js.
-  "name": "korahealthafrica",
+  "name": "kora-health-website",
   "main": "worker/index.js",
   "compatibility_date": "2025-06-01",
   "assets": {
