@@ -420,7 +420,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#1BBFA8]">All of them.</span>
               </h1>
               <p className="text-xl text-slate-400 mb-10 leading-relaxed">
-                Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence. Works offline. Digitizes paper. Tracks populations. Built for Africa.
+                Kora synthesizes fragmented patient data from multiple EMRs, paper records, and digital sources into decision-ready clinical intelligence that works offline, digitizes paper, and scales from a single clinic to a national population. Built for Africa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-[#2DD4BF] text-[#0A1A2F] font-bold px-8 py-4 rounded-xl hover:bg-[#1BBFA8] transition-colors text-center">Schedule a Demo</a>
@@ -478,7 +478,7 @@ export default function Home() {
           <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4">The Solution</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Kora Clinical Intelligence Engine</h2>
           <p className="text-xl text-slate-400 leading-relaxed">
-            Kora retrieves, synthesizes, and structures patient data from every source (EMRs, paper records, scanned documents, and voice) into decision-ready clinical intelligence. Delivered in minutes. Works offline. Scales to populations.
+            Kora retrieves, synthesizes, and structures patient data from every source (EMRs, paper records, scanned documents, and voice) into decision-ready clinical intelligence, delivered in minutes, working offline, and scaling from one patient to a whole population.
           </p>
         </div>
       </section>
@@ -890,7 +890,7 @@ export default function Home() {
               Make your EMR the most powerful clinical platform in Africa.
             </h2>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Kora plugs into your existing EMR as an intelligence layer, adding AI-powered data synthesis, population health, and offline capability without displacing a single workflow your clients depend on. Your EMR gets smarter. Your clients get better outcomes. You grow.
+              Kora plugs into your existing EMR as an intelligence layer, adding AI-powered data synthesis, population health, and offline capability without displacing a single workflow your clients depend on. Your EMR gets smarter, your clients get better outcomes, and you grow alongside them.
             </p>
           </div>
 
@@ -898,7 +898,7 @@ export default function Home() {
             {[
               {
                 icon: '⚡',
-                title: 'Supercharge Your Product',
+                title: 'Strengthen Your Product',
                 body: "Add cross-system data synthesis, AI clinical decision support, and real-time population dashboards to your EMR product suite, without building it yourself. Kora's API is designed to integrate in days, not months.",
               },
               {
