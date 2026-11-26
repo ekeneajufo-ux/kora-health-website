@@ -332,6 +332,10 @@ export default function Home() {
       a: "Kora is Africa's Clinical Intelligence Engine, a platform that synthesizes fragmented patient data from multiple EMR systems, paper records, and digital sources into decision-ready clinical intelligence. Think xCures, purpose-built for Africa's healthcare infrastructure.",
     },
     {
+      q: 'What is federated learning, and is it part of Kora?',
+      a: "Federated learning is on Kora's roadmap and is in development. Instead of pooling patient records in one place, each hospital trains Kora's models locally and shares only anonymous model updates, which are combined into a shared model that improves for every facility. Patient records stay inside each hospital.",
+    },
+    {
       q: 'How does Kora work without internet connectivity?',
       a: "Kora uses an offline-first architecture with edge AI inference. The AI models run entirely on the local device or facility server, no internet required for core clinical functions. When connectivity returns, Kora automatically syncs data and pushes population health updates.",
     },
@@ -1025,6 +1029,34 @@ export default function Home() {
               <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* FEDERATED LEARNING (ROADMAP) */}
+      <section id="federated-learning" aria-label="Federated Learning Layer, Privacy-Preserving Intelligence on the Kora Roadmap" className="px-6">
+        <div className="max-w-7xl mx-auto py-14">
+          <p className="text-[#EAB308] text-sm font-semibold uppercase tracking-widest mb-4 text-center">On Our Roadmap</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Privacy-preserving intelligence, coming next.</h2>
+          <p className="text-xl text-slate-400 mb-16 max-w-3xl mx-auto text-center">
+            Kora is building a federated learning layer. Each hospital&apos;s data stays inside its own walls, and only anonymous model updates are shared to improve Kora for everyone. Hospitals gain from a shared network without handing over patient records.
+          </p>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              { step: '01', title: 'Learn locally', body: "Each facility trains Kora's models on its own data, behind its own security. Patient records never leave the building.", color: '#2DD4BF' },
+              { step: '02', title: 'Share only updates', body: 'Only anonymous model updates are sent back, protected by secure aggregation, never the records themselves.', color: '#F59E0B' },
+              { step: '03', title: 'Improve together', body: "Updates from many hospitals are combined into a smarter shared model, tuned to local handwriting, terminology, and disease patterns, and sent back to every facility.", color: '#8B5CF6' },
+            ].map((item, i) => (
+              <div key={i} className="relative">
+                <div className="text-8xl font-bold mb-4 select-none" style={{ color: item.color, opacity: 0.15 }}>{item.step}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                {i < 2 && <div className="hidden md:block absolute top-10 -right-5 text-slate-700 text-3xl select-none">→</div>}
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-slate-500 mt-12 text-center max-w-2xl mx-auto">
+            Federated learning is in development and is not yet available. It is designed to work over low-bandwidth, intermittent connections and to align with national data-protection laws.
+          </p>
         </div>
       </section>
 
